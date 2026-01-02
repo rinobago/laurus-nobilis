@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Hero() {
     return (
         <section className="flex flex-col items-center relative">
-            <div className="absolute inset-0 bg-center bg-cover opacity-[0.08] pointer-events-none" style={{ backgroundImage: "url('/texture/Sand Hero.png')" }} />
+            <div className="absolute inset-0 bg-center bg-cover opacity-[0.08] pointer-events-none" style={{ backgroundImage: "url('/texture/Sand-Hero.png')" }} />
             <div className="container flex flex-col items-center bg-brown-100">
                 <div className="flex flex-col lg:flex-row gap-64">
                     <div className="flex flex-col gap-10 lg:gap-[48px] items-start">

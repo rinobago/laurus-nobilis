@@ -33,9 +33,9 @@ export default function LanguageMenu({
 
     return (
         <div ref={rootRef} className={`relative ${sizeClass}`}>
-            <div onClick={() => setOpen((v) => !v)}>
+            <button type="button" aria-label="Change Language" onClick={() => setOpen((v) => !v)}>
                 <LanguageButton locale={locale} />
-            </div>
+            </button>
 
             {open && (
                 <div className="flex gap-7.5 absolute left-1/2 z-1001 -translate-x-1/2 rounded-[10px] bg-brown-060 border border-white/20 px-8 py-2.5" style={{ top: `calc(100% + ${offsetY}px)` }}>

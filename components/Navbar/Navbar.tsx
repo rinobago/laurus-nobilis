@@ -17,7 +17,7 @@ export default function Navbar({ showCta = true }: { showCta?: boolean }) {
             <nav className="w-full sticky flex justify-center top-0 z-1000 bg-brown-060 py-1.25">
                 <div className="w-full max-w-360 flex justify-center items-center px-24 md:px-64">
                     <div className="flex justify-center mr-auto">
-                        <img src="/Laurus Nobilis Logo.png" alt="Laurus Nobilis Logo" className="w-[54px] sm:w-[60px] aspect-square" />
+                        <img src="/Laurus-Nobilis-Logo.png" alt="Laurus Nobilis Logo" className="w-[54px] sm:w-[60px] aspect-square" />
                     </div>
 
                     <ul className="justify-center gap-32 hidden lg:flex">
