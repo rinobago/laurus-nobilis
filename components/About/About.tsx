@@ -1,6 +1,6 @@
 export default function About() {
     return (
-        <section className="flex flex-col items-center relative bg-brown-080">
+        <section id="about" className="flex flex-col items-center relative bg-brown-080">
             <div className="absolute inset-0 bg-center bg-cover opacity-[0.03] pointer-events-none" style={{ backgroundImage: "url('/texture/stone-texture.png')" }}></div>
             <div className="container flex flex-col lg:flex-row gap-[80px] justify-start items-start">
                 <h2 className="shrink-[0.8] text-left w-full text-beige-dark font-bold text-[clamp(36px,3.33vw,48px)] leading-120">Your modern escape in Lovran</h2>

@@ -2,7 +2,7 @@ import PricingTable from "./PricingTable";
 
 export default function Pricing() {
     return (
-        <section className="flex flex-col items-center bg-beige relative">
+        <section id="pricing" className="flex flex-col items-center bg-beige relative">
             <div
                 className="absolute inset-0 pointer-events-none opacity-[0.03]"
                 style={{

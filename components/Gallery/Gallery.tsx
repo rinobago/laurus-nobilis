@@ -2,7 +2,7 @@ import CarouselWithGallery from "./CarouselWithGallery";
 
 export default function Gallery() {
     return (
-        <section className="py-64 md:py-112 bg-brown-100 flex flex-col items-center">
+        <section id="gallery" className="py-64 md:py-112 bg-brown-100 flex flex-col items-center">
             <CarouselWithGallery
                 images={[
                     { src: "/apartment-images/IMG_7222.jpg", alt: "Pool" },

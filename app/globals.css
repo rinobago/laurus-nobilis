@@ -90,6 +90,9 @@
     /* Shadows */
 }
 
+html {
+    scroll-behavior: smooth;
+}
 body {
     @apply bg-brown-100 text-white antialiased;
 }
