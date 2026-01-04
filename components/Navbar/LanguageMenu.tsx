@@ -33,7 +33,7 @@ export default function LanguageMenu({
 
     return (
         <div ref={rootRef} className={`relative ${sizeClass}`}>
-            <button type="button" aria-label="Change Language" onClick={() => setOpen((v) => !v)}>
+            <button type="button" className="active:brightness-75" aria-label="Change Language" onClick={() => setOpen((v) => !v)}>
                 <LanguageButton locale={locale} />
             </button>
 
@@ -42,10 +42,10 @@ export default function LanguageMenu({
                     <div className="flex flex-col items-start gap-16">
                         <button
                             onClick={() => selectLanguage("en")}
-                            className="font-normal flex gap-20 w-33.5 py-0.5 px-4 rounded-[5px] hover:bg-brown-080 text-16 leading-150 cursor-pointer text-white items-center"
+                            className="font-normal flex gap-20 w-33.5 py-0.5 px-4 rounded-[5px] hover:bg-brown-080 active:bg-brown-080 text-16 leading-150 cursor-pointer text-white items-center"
                             type="button"
                         >
-                            <div className="w-5">
+                            <div className="w-5 h-5">
                                 <LanguageButton locale="en" />
                             </div>
                             English
@@ -53,10 +53,10 @@ export default function LanguageMenu({
 
                         <button
                             onClick={() => selectLanguage("de")}
-                            className="font-normal flex gap-20 w-33.5 py-0.5 px-4 rounded-[5px] hover:bg-brown-080 text-16 leading-150 cursor-pointer text-white items-center"
+                            className="font-normal flex gap-20 w-33.5 py-0.5 px-4 rounded-[5px] hover:bg-brown-080 active:bg-brown-080 text-16 leading-150 cursor-pointer text-white items-center"
                             type="button"
                         >
-                            <div className="w-5">
+                            <div className="w-5 h-5">
                                 <LanguageButton locale="de" />
                             </div>
                             German
@@ -64,10 +64,10 @@ export default function LanguageMenu({
 
                         <button
                             onClick={() => selectLanguage("sl")}
-                            className="font-normal flex gap-20 w-33.5 py-0.5 px-4 rounded-[5px] hover:bg-brown-080 text-16 leading-150 cursor-pointer text-white items-center"
+                            className="font-normal flex gap-20 w-33.5 py-0.5 px-4 rounded-[5px] hover:bg-brown-080 active:bg-brown-080 text-16 leading-150 cursor-pointer text-white items-center"
                             type="button"
                         >
-                            <div className="w-5">
+                            <div className="w-5 h-5">
                                 <LanguageButton locale="sl" />
                             </div>
                             Slovenian
@@ -75,10 +75,10 @@ export default function LanguageMenu({
 
                         <button
                             onClick={() => selectLanguage("cs")}
-                            className="font-normal flex gap-20 w-33.5 py-0.5 px-4 rounded-[5px] hover:bg-brown-080 text-16 leading-150 cursor-pointer text-white items-center"
+                            className="font-normal flex gap-20 w-33.5 py-0.5 px-4 rounded-[5px] hover:bg-brown-080 active:bg-brown-080 text-16 leading-150 cursor-pointer text-white items-center"
                             type="button"
                         >
-                            <div className="w-5">
+                            <div className="w-5 h-5">
                                 <LanguageButton locale="cs" />
                             </div>
                             Czech
@@ -86,10 +86,10 @@ export default function LanguageMenu({
 
                         <button
                             onClick={() => selectLanguage("es")}
-                            className="font-normal flex gap-20 w-33.5 py-0.5 px-4 rounded-[5px] hover:bg-brown-080 text-16 leading-150 cursor-pointer text-white items-center"
+                            className="font-normal flex gap-20 w-33.5 py-0.5 px-4 rounded-[5px] hover:bg-brown-080 active:bg-brown-080 text-16 leading-150 cursor-pointer text-white items-center"
                             type="button"
                         >
-                            <div className="w-5">
+                            <div className="w-5 h-5">
                                 <LanguageButton locale="es" />
                             </div>
                             Spanish
@@ -99,10 +99,10 @@ export default function LanguageMenu({
                     <div className="flex flex-col items-start gap-16">
                         <button
                             onClick={() => selectLanguage("hr")}
-                            className="font-normal flex gap-20 w-33.5 py-0.5 px-4 rounded-[5px] hover:bg-brown-080 text-16 leading-150 cursor-pointer text-white items-center"
+                            className="font-normal flex gap-20 w-33.5 py-0.5 px-4 rounded-[5px] hover:bg-brown-080 active:bg-brown-080 text-16 leading-150 cursor-pointer text-white items-center"
                             type="button"
                         >
-                            <div className="w-5">
+                            <div className="w-5 h-5">
                                 <LanguageButton locale="hr" />
                             </div>
                             Croatian
@@ -110,10 +110,10 @@ export default function LanguageMenu({
 
                         <button
                             onClick={() => selectLanguage("it")}
-                            className="font-normal flex gap-20 w-33.5 py-0.5 px-4 rounded-[5px] hover:bg-brown-080 text-16 leading-150 cursor-pointer text-white items-center"
+                            className="font-normal flex gap-20 w-33.5 py-0.5 px-4 rounded-[5px] hover:bg-brown-080 active:bg-brown-080 text-16 leading-150 cursor-pointer text-white items-center"
                             type="button"
                         >
-                            <div className="w-5">
+                            <div className="w-5 h-5">
                                 <LanguageButton locale="it" />
                             </div>
                             Italian
@@ -121,10 +121,10 @@ export default function LanguageMenu({
 
                         <button
                             onClick={() => selectLanguage("pl")}
-                            className="font-normal flex gap-20 w-33.5 py-0.5 px-4 rounded-[5px] hover:bg-brown-080 text-16 leading-150 cursor-pointer text-white items-center"
+                            className="font-normal flex gap-20 w-33.5 py-0.5 px-4 rounded-[5px] hover:bg-brown-080 active:bg-brown-080 text-16 leading-150 cursor-pointer text-white items-center"
                             type="button"
                         >
-                            <div className="w-5">
+                            <div className="w-5 h-5">
                                 <LanguageButton locale="pl" />
                             </div>
                             Polish
@@ -132,10 +132,10 @@ export default function LanguageMenu({
 
                         <button
                             onClick={() => selectLanguage("hu")}
-                            className="font-normal flex gap-20 w-33.5 py-0.5 px-4 rounded-[5px] hover:bg-brown-080 text-16 leading-150 cursor-pointer text-white items-center"
+                            className="font-normal flex gap-20 w-33.5 py-0.5 px-4 rounded-[5px] hover:bg-brown-080 active:bg-brown-080 text-16 leading-150 cursor-pointer text-white items-center"
                             type="button"
                         >
-                            <div className="w-5">
+                            <div className="w-5 h-5">
                                 <LanguageButton locale="hu" />
                             </div>
                             Hungarian
@@ -143,10 +143,10 @@ export default function LanguageMenu({
 
                         <button
                             onClick={() => selectLanguage("fr")}
-                            className="font-normal flex gap-20 w-33.5 py-0.5 px-4 rounded-[5px] hover:bg-brown-080 text-16 leading-150 cursor-pointer text-white items-center"
+                            className="font-normal flex gap-20 w-33.5 py-0.5 px-4 rounded-[5px] hover:bg-brown-080 active:bg-brown-080 text-16 leading-150 cursor-pointer text-white items-center"
                             type="button"
                         >
-                            <div className="w-5">
+                            <div className="w-5 h-5">
                                 <LanguageButton locale="fr" />
                             </div>
                             French

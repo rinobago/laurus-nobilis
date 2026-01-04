@@ -208,8 +208,10 @@ body {
     border-radius: 6px;
 }
 
-.rdp-day:not(.rdp-disabled):not(.rdp-selected):hover {
-    background-color: var(--color-beige-dark);
+@media (min-width: 768px) {
+    .rdp-day:not(.rdp-disabled):not(.rdp-selected):hover {
+        background-color: var(--color-beige-dark);
+    }
 }
 
 /* Clickable button inside thecell */
@@ -225,8 +227,36 @@ body {
 
 @media (max-width: 639px) {
     .rdp-day {
-        width: 38px;
-        height: 38px;
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .rdp-day_button {
+        font-size: 18px;
+    }
+
+    .rdp-caption_label {
+        font-size: 20px;
+    }
+}
+@media (max-width: 430px) {
+    .rdp-day {
+        width: 44px !important;
+        height: 44px !important;
+    }
+
+    .rdp-day_button {
+        font-size: 16px;
+    }
+
+    .rdp-caption_label {
+        font-size: 18px;
+    }
+}
+@media (max-width: 380px) {
+    .rdp-day {
+        width: 38px !important;
+        height: 38px !important;
     }
 
     .rdp-day_button {
