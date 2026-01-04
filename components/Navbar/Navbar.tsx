@@ -21,17 +21,35 @@ export default function Navbar({ showCta = true }: { showCta?: boolean }) {
                     </div>
 
                     <ul className="justify-center gap-32 hidden lg:flex">
-                        <li className="navbar-item">Amenities</li>
-                        <li className="navbar-item">Gallery</li>
-                        <li className="navbar-item">About</li>
-                        <li className="navbar-item">Map</li>
-                        <li className="navbar-item">Pricing</li>
-                        <li className="navbar-item">Booking</li>
+                        <a href="/#amenities">
+                            <li className="navbar-item">Amenities</li>
+                        </a>
+                        <a href="/#gallery">
+                            <li className="navbar-item">Gallery</li>
+                        </a>
+                        <a href="/#about">
+                            <li className="navbar-item">About</li>
+                        </a>
+                        <a href="/#map">
+                            <li className="navbar-item">Map</li>
+                        </a>
+                        <a href="/#pricing">
+                            <li className="navbar-item">Pricing</li>
+                        </a>
+                        <a href="/#booking">
+                            <li className="navbar-item">Booking</li>
+                        </a>
                         <LanguageMenu locale="en" offsetY={35} sizeClass="w-5" />
                     </ul>
 
                     <div className="flex ml-auto items-center justify-center gap-24">
-                        <div className="flex justify-center ml-auto">{showCta && <button className="btn-beige py-8 px-20">Book now</button>}</div>
+                        <div className="flex justify-center ml-auto">
+                            {showCta && (
+                                <a href="/#booking">
+                                    <button className="btn-beige py-8 px-20">Book now</button>
+                                </a>
+                            )}
+                        </div>
 
                         <div className="flex lg:hidden">
                             <HamburgerButton open={menuOpen} onToggle={() => setMenuOpen((v) => !v)} />

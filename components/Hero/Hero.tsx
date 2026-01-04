@@ -15,14 +15,16 @@ export default function Hero() {
                             <p className="font-semibold text-[clamp(0.875rem,3.75vw,1.5rem)] lg:text-[clamp(1rem,1.66vw,1.5rem)] leading-120 text-brown-160">
                                 Enjoy a private pool, BBQ terrace, space for seven, all just minutes from the beach.
                             </p>
-                            <button className="btn-beige">Check availability</button>
+                            <a href="/#booking">
+                                <button className="btn-beige">Check availability</button>
+                            </a>
                         </div>
                     </div>
                     <div className="flex flex-col items-center w-full max-w-169.75">
-                        <Image src="/apartment images/IMG_7224.jpg" alt="Hero Image" width={323.3} height={242.48} className="rounded-lg w-[94.25%] mr-auto" />
+                        <Image src="/apartment-images/IMG_7224.jpg" alt="Hero Image" width={323.3} height={242.48} className="rounded-lg w-[94.25%] mr-auto" />
 
                         <Image
-                            src="/apartment images/IMG_7225.jpg"
+                            src="/apartment-images/IMG_7225.jpg"
                             alt="Hero Image Smaller"
                             width={169.9}
                             height={127.43}
