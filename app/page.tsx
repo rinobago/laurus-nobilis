@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import Amenities from "@/components/Amenities/Amenities";
+import Booking from "@/components/Booking/Booking";
 import Gallery from "@/components/Gallery/Gallery";
 import Hero from "@/components/Hero/Hero";
 import Map from "@/components/Map/Map";
@@ -16,6 +17,7 @@ const Page = () => {
             <About />
             <Map />
             <Pricing />
+            <Booking />
         </>
     );
 };

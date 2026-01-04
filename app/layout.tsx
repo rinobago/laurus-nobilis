@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import "react-day-picker/dist/style.css";
 import "./globals.css";
 
 const montserrat = Montserrat({

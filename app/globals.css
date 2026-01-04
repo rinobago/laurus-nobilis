@@ -176,3 +176,149 @@ body {
     transform-box: fill-box;
     transform-origin: center;
 }
+
+/*================
+  Date Picker
+=================*/
+
+.rdp-months {
+    flex-wrap: nowrap;
+}
+
+.rdp-button_previous,
+.rdp-button_next {
+    border-radius: 6px;
+}
+
+.rdp-button_previous:hover,
+.rdp-button_next:hover {
+    background-color: var(--color-beige-dark);
+}
+
+.rdp-day {
+    width: clamp(32px, 3.06vw, 44px) !important;
+    height: clamp(32px, 3.06vw, 44px) !important;
+    border-radius: 6px;
+}
+
+.rdp-day:not(.rdp-disabled):not(.rdp-selected):hover {
+    background-color: var(--color-beige-dark);
+}
+
+/* Clickable button inside thecell */
+.rdp-day_button {
+    width: 100%;
+    height: 100%;
+    font-size: clamp(12px, 1.11vw, 16px);
+}
+
+.rdp-caption_label {
+    font-size: clamp(14px, 1.25vw, 18px);
+}
+
+@media (max-width: 639px) {
+    .rdp-day {
+        width: 38px;
+        height: 38px;
+    }
+
+    .rdp-day_button {
+        font-size: 14px;
+    }
+
+    .rdp-caption_label {
+        font-size: 16px;
+    }
+}
+
+.rdp-month_grid {
+    border-collapse: separate;
+    border-spacing: 0 4px;
+    width: max-content;
+}
+
+/* Default: every day button has rounded corners */
+.rdp-day_button {
+    border-radius: 6px !important;
+}
+
+/* If it's a range, remove rounding everywhere in the range */
+.rdp-range_start .rdp-day_button,
+.rdp-range_middle .rdp-day_button,
+.rdp-range_end .rdp-day_button {
+    border-radius: 0 !important;
+}
+
+/* If you want the selected outline (blue border) gone */
+.rdp-selected .rdp-day_button {
+    border: 0 !important;
+}
+
+/* Selected (single day) */
+.rdp-selected {
+    background-color: var(--color-brown-070);
+    color: var(--color-white);
+    font-weight: 400;
+    border-radius: 6px;
+}
+
+/* Middle of range */
+.rdp-range_middle {
+    background-color: var(--color-beige-darker);
+    color: var(--color-black);
+    border-radius: 0;
+}
+
+.rdp-range_middle .rdp-day_button {
+    background: transparent;
+    color: var(--color-black);
+    border-radius: 0;
+}
+
+/* Start of range */
+.rdp-range_start {
+    z-index: 0;
+    background-color: var(--color-beige-darker);
+    color: var(--color-white);
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    background-image: none;
+}
+
+.rdp-range_start .rdp-day_button {
+    z-index: 1;
+    background: var(--color-brown-070);
+    color: var(--color-white);
+    border-radius: 6px !important;
+}
+
+/* End of range */
+.rdp-range_end {
+    z-index: 0;
+    background-color: var(--color-beige-darker);
+    color: var(--color-white);
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+    background-image: none;
+}
+
+.rdp-range_end .rdp-day_button {
+    z-index: 1;
+    background: var(--color-brown-070);
+    color: var(--color-white);
+    border-radius: 6px !important;
+}
+
+.rdp-week .rdp-day:first-child {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.rdp-week .rdp-day:last-child {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
