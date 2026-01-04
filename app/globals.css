@@ -190,8 +190,12 @@ body {
     border-radius: 6px;
 }
 
-.rdp-button_previous:hover,
-.rdp-button_next:hover {
+.rdp-button_previous:not(:disabled):not([aria-disabled="true"]):hover,
+.rdp-button_next:not(:disabled):not([aria-disabled="true"]):hover {
+    background-color: var(--color-beige-dark);
+}
+.rdp-button_previous:not(:disabled):not([aria-disabled="true"]):active,
+.rdp-button_next:not(:disabled):not([aria-disabled="true"]):active {
     background-color: var(--color-beige-dark);
 }
 
