@@ -3,17 +3,17 @@ import { Facebook, Instagram, Whatsapp } from "../svg_icons/SocialsIcons";
 
 export default function Footer() {
     return (
-        <section className="flex flex-col items-center bg-brown-060">
+        <footer className="flex flex-col items-center bg-brown-060">
             <div className="container md:py-[80px] flex flex-col items-center gap-[80px] text-white">
                 <div className="flex w-full items-start justify-center gap-64">
                     <div className=" flex flex-col items-start justify-start gap-32 w-full">
-                        <a href="/#">
+                        <a href="/#top">
                             <img src="/Laurus-Nobilis-Logo.png" alt="Laurus Nobilis Logo" className="w-25 md:w-35 aspect-square" />
                         </a>
                         <div className="flex flex-col items-start justify-start gap-24 w-full text-14 leading-150">
                             <div className="flex flex-col items-start justify-start gap-4 w-full">
                                 <p className="font-semibold">Address:</p>
-                                <p>Rezine 7G, 51415, Lovran, Croatia</p>
+                                <address className="not-italic">Rezine 7G, 51415, Lovran, Croatia</address>
                             </div>
                             <div className="flex flex-col items-start justify-start gap-4 w-full">
                                 <p className="font-semibold">Contact:</p>
@@ -85,6 +85,6 @@ export default function Footer() {
                     <p className="text-14 leading-150 order-1 lg:order-0">© {new Date().getFullYear()} | Laurus Nobilis</p>
                 </div>
             </div>
-        </section>
+        </footer>
     );
 }

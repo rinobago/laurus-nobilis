@@ -359,3 +359,17 @@ body {
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
 }
+
+/*================
+  Date Picker
+=================*/
+
+.paragraph-h2 {
+    @apply w-full font-bold text-[clamp(30px,3.33vw,48px)] leading-120;
+}
+.paragraph-h3 {
+    @apply w-full font-semibold text-[clamp(20px,2.22vw,32px)] leading-120;
+}
+.paragraph-text {
+    @apply w-full font-normal text-[clamp(14px,1.11vw,16px)] leading-150;
+}

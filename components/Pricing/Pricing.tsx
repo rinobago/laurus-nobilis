@@ -18,8 +18,8 @@ export default function Pricing() {
                     <p className="text-center text-16 lg:text-18 text-black">Prices vary depending on the season</p>
                 </div>
                 <PricingTable />
-                <a href="/#booking">
-                    <button className="btn-brown">Request dates</button>
+                <a href="/#booking" className="btn-brown">
+                    Request dates
                 </a>
             </div>
         </section>

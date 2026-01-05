@@ -9,14 +9,14 @@ export default function Hero() {
                     <div className="flex flex-col gap-10 lg:gap-[48px] items-start">
                         <div className="flex flex-col gap-8 items-start">
                             <h1 className="whitespace-nowrap font-bold text-[clamp(2rem,12vw,5rem)] lg:text-[clamp(2.875rem,5.55vw,5rem)] leading-[0.8] lg:leading-120">Laurus Nobilis</h1>{" "}
-                            <p className="font-semibold text-[clamp(1.125rem,6.25vw,2.5rem)] lg:text-[clamp(1.375rem,2.77vw,2.5rem)] leading-120">Modern holiday apartment in Lovran</p>{" "}
+                            <h2 className="font-semibold text-[clamp(1.125rem,6.25vw,2.5rem)] lg:text-[clamp(1.375rem,2.77vw,2.5rem)] leading-120">Modern holiday apartment in Lovran</h2>{" "}
                         </div>
                         <div className="flex flex-col gap-32 items-start">
                             <p className="font-semibold text-[clamp(0.875rem,3.75vw,1.5rem)] lg:text-[clamp(1rem,1.66vw,1.5rem)] leading-120 text-brown-160">
                                 Enjoy a private pool, BBQ terrace, space for seven, all just minutes from the beach.
                             </p>
-                            <a href="/#booking">
-                                <button className="btn-beige">Check availability</button>
+                            <a href="/#booking" className="btn-beige">
+                                Check availability
                             </a>
                         </div>
                     </div>
