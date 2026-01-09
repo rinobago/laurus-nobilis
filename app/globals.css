@@ -373,3 +373,11 @@ body {
 .paragraph-text {
     @apply w-full font-normal text-[clamp(14px,1.11vw,16px)] leading-150;
 }
+
+/*================
+  Forms
+=================*/
+
+@utility formLabel {
+    @apply inline w-full text-black text-left text-16;
+}

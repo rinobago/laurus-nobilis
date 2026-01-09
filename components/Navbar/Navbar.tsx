@@ -11,7 +11,7 @@ export default function Navbar({ showCta = true }: { showCta?: boolean }) {
     return (
         <>
             {/* OVERLAY (behind navbar) */}
-            <NavbarOverlay open={menuOpen} locale="en" />
+            <NavbarOverlay open={menuOpen} locale="en" onClose={() => setMenuOpen(false)} />
 
             {/* NAVBAR */}
             <nav className="w-full sticky flex justify-center top-0 z-1000 bg-brown-060 py-1.25">
@@ -59,7 +59,7 @@ export default function Navbar({ showCta = true }: { showCta?: boolean }) {
                     <div className="flex ml-auto items-center justify-center gap-24">
                         <div className="flex justify-center ml-auto">
                             {showCta && (
-                                <a href="/#booking" className="btn-beige py-8 px-20">
+                                <a href="/#booking" onClick={() => setMenuOpen(false)} className="btn-beige py-8 px-20">
                                     Book now
                                 </a>
                             )}

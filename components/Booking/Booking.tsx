@@ -1,3 +1,4 @@
+import Link from "next/link";
 import BookingCalendarDouble from "./BookingCalendarDouble";
 
 export default function Booking() {
@@ -9,7 +10,9 @@ export default function Booking() {
                     <div className="flex bg-beige rounded-lg p-12" aria-label="Booking calendar">
                         <BookingCalendarDouble />
                     </div>
-                    <button className="btn-beige">Reserve</button>
+                    <Link href="/checkout/details" className="btn-beige">
+                        Reserve
+                    </Link>
                 </div>
             </div>
         </section>
