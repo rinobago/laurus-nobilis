@@ -15,6 +15,7 @@
 
     /* Text */
     --color-muted-text: #737373;
+    --color-placeholder-text: #a9a9ac;
 
     /* UI */
     --color-button-border: rgb(255 255 255 / 0.2);
