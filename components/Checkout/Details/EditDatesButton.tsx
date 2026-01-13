@@ -1,3 +1,5 @@
+"use client";
+
 import BookingCalendar from "@/components/Booking/BookingCalendar";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";

@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 const COOKIE = "checkout_step";
 
-export function middleware(req: NextRequest) {
+export function proxy(req: NextRequest) {
     const { pathname, searchParams } = req.nextUrl;
 
     const step = req.cookies.get(COOKIE)?.value; // "payment" | "complete" | undefined

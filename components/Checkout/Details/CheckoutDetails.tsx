@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Suspense } from "react";
 import { PreviousButton } from "../../svg_icons/ChevronButtons";
 import DetailsCard from "./DetailsCard";
 import FormDetails from "./FormDetails";
@@ -21,7 +22,9 @@ export default function CheckoutDetails() {
                         </div>
                         <FormDetails />
                     </div>
-                    <DetailsCard />
+                    <Suspense>
+                        <DetailsCard />
+                    </Suspense>
                 </div>
             </div>
         </section>
