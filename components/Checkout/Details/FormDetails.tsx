@@ -1,10 +1,11 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { PreviousButton } from "../../svg_icons/ChevronButtons";
 
 export default function FormDetails() {
     const router = useRouter();
+    const searchParams = useSearchParams();
 
     async function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
@@ -15,7 +16,8 @@ export default function FormDetails() {
             body: JSON.stringify({ step: "payment" }),
         });
         document.cookie = "checkout-details-complete=true; path=/";
-        router.push("/checkout/payment");
+        const qs = searchParams.toString();
+        router.push(`/checkout/payment?${qs}`);
     }
 
     return (

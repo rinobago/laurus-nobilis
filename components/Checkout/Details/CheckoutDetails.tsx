@@ -20,9 +20,11 @@ export default function CheckoutDetails() {
                             <h1 className="text-left font-bold leading-120 text-[clamp(2.25rem,6vw,3rem)]">Your Details</h1>
                             <p className="text-left leading-150 text-[clamp(1rem,2.34vw,1.125rem)]">Please enter your details to continue with your reservation.</p>
                         </div>
-                        <FormDetails />
+                        <Suspense fallback={null}>
+                            <FormDetails />
+                        </Suspense>
                     </div>
-                    <Suspense>
+                    <Suspense fallback={null}>
                         <DetailsCard />
                     </Suspense>
                 </div>
