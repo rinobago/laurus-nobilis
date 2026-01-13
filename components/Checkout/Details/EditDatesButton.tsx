@@ -1,7 +1,12 @@
 import BookingCalendar from "@/components/Booking/BookingCalendar";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 function CalendarModal({ open, onClose }: { open: boolean; onClose: () => void }) {
+    const router = useRouter();
+    const pathname = usePathname();
+    const searchParams = useSearchParams();
+
     useEffect(() => {
         document.body.style.overflow = open ? "hidden" : "";
         return () => {
@@ -10,6 +15,14 @@ function CalendarModal({ open, onClose }: { open: boolean; onClose: () => void }
     }, [open]);
 
     if (!open) return null;
+
+    const clearDates = () => {
+        const sp = new URLSearchParams(searchParams.toString());
+        sp.delete("check_in");
+        sp.delete("check_out");
+        const qs = sp.toString();
+        router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
+    };
 
     return (
         <div className="fixed flex justify-center items-center z-1010 inset-0 bg-black/60" onMouseDown={onClose}>
@@ -21,7 +34,9 @@ function CalendarModal({ open, onClose }: { open: boolean; onClose: () => void }
                     <BookingCalendar />
                 </div>
                 <div className="flex justify-center items-center gap-8">
-                    <button className="btn-brown-outline">Clear dates</button>
+                    <button className="btn-brown-outline" onClick={clearDates}>
+                        Clear dates
+                    </button>
                     <button className="btn-brown" onClick={onClose}>
                         Close
                     </button>
