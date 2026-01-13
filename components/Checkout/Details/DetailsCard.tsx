@@ -1,13 +1,17 @@
 "use client";
 
-import RequiredCheckbox from "../Interactive/RequiredCheckbox";
+import Image from "next/image";
+import EditDatesButton from "./EditDatesButton";
 
-export default function PaymentCard() {
+export default function DetailsCard() {
     return (
         <div className="max-w-107.5 w-full bg-beige rounded-2xl overflow-hidden" style={{ boxShadow: "0px 6px 16px 4px rgba(0, 0, 0, 0.12)" }}>
+            <div className="relative w-full aspect-[1.79/1]">
+                <Image src="/apartment-images/IMG_7224.jpg" alt="Image of the view from apartment" fill className="object-cover" />
+            </div>
             <div className="flex flex-col gap-24 items-start justify-center px-24 py-16 w-full text-black">
-                <p className="font-semibold leading-120 text-h3 text-left pb-4 border-b border-beige-darkest w-full">Laurus Nobilis</p>
-                <div className="flex flex-col w-full items-start justify-center">
+                <p className="font-semibold leading-150 text-16 text-left pb-4 border-b border-beige-darkest w-full">Laurus Nobilis</p>
+                <div className="flex flex-col gap-3.5 w-full items-start justify-center">
                     <div className="flex max-w-65 w-full justify-start items-center gap-0">
                         <div className="flex flex-col justify-center items-start gap-0.5 w-full">
                             <p className="leading-150 font-semibold text-12 text-left w-full">Check In</p>
@@ -22,6 +26,7 @@ export default function PaymentCard() {
                             </div>
                         </div>
                     </div>
+                    <EditDatesButton />
                 </div>
                 <hr className="w-full h-px border-0 bg-beige-darkest" />
                 <div className="flex flex-col justify-start items-center gap-8 w-full">
@@ -42,24 +47,11 @@ export default function PaymentCard() {
                     <p className="text-14 text-left w-full leading-150 font-medium">Total</p>
                     <p className="text-18 font-semibold leading-150 w-full text-left">€ ___</p>
                 </div>
-                <label htmlFor="terms-payment" className="flex justify-start items-center w-full gap-8 cursor-pointer">
-                    <RequiredCheckbox id="terms-payment" name="terms-payment" />
-                    <p className="text-12 leading-150">
-                        I agree to the{" "}
-                        <a href="/cancellation-policy" target="_blank" rel="noopener noreferrer" className="underline" onClick={(e) => e.stopPropagation()}>
-                            Cancellation Policy
-                        </a>{" "}
-                        and{" "}
-                        <a href="/terms-of-service" target="_blank" rel="noopener noreferrer" className="underline" onClick={(e) => e.stopPropagation()}>
-                            Terms of Service
-                        </a>
-                    </p>
-                </label>
                 <div className="flex flex-col justify-center items-center gap-4 w-full">
                     <button type="submit" form="details-form" className="btn-brown">
-                        Pay & confirm reservation
+                        Continue to payment
                     </button>
-                    <p className="w-full text-center text-10 leading-150 ">Secure payment powered by Stripe</p>
+                    <p className="w-full text-center text-10 leading-150 ">You will review payment details on the next step</p>
                 </div>
             </div>
         </div>

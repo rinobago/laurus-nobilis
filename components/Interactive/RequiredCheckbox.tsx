@@ -1,4 +1,4 @@
-import Check from "../svg_icons/Check";
+import { Check } from "../svg_icons/Check";
 
 type RequiredCheckboxProps = {
     id: string;

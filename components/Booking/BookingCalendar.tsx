@@ -13,16 +13,7 @@ export default function BookingCalendar() {
     const [months, setMonths] = useState(2);
 
     useEffect(() => {
-        const update = () => {
-            const w = window.innerWidth;
-
-            if (w < 640) {
-                setMonths(1);
-                return;
-            }
-            setMonths(2);
-        };
-
+        const update = () => setMonths(window.innerWidth < 640 ? 1 : 2);
         update();
         window.addEventListener("resize", update);
         return () => window.removeEventListener("resize", update);

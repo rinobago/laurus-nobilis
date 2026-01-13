@@ -1,5 +1,5 @@
 import Link from "next/link";
-import BookingCalendarDouble from "./BookingCalendarDouble";
+import BookingCalendar from "./BookingCalendar";
 
 export default function Booking() {
     return (
@@ -8,7 +8,7 @@ export default function Booking() {
                 <h2 className="w-full text-left text-white font-bold text-[clamp(36px,3.33vw,48px)] leading-120">Ready to book your stay at Laurus Nobilis?</h2>
                 <div className="flex flex-col gap-64 lg:gap-14 items-center">
                     <div className="flex bg-beige rounded-lg p-12" aria-label="Booking calendar">
-                        <BookingCalendarDouble />
+                        <BookingCalendar />
                     </div>
                     <Link href="/checkout/details" className="btn-beige">
                         Reserve

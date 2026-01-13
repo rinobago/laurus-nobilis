@@ -1,17 +1,20 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { PreviousButton } from "../svg_icons/ChevronButtons";
+import { PreviousButton } from "../../svg_icons/ChevronButtons";
 
 export default function FormDetails() {
     const router = useRouter();
 
-    function handleSubmit(e: React.FormEvent) {
+    async function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
 
-        // validate / save form data here
-        // (context, server action, localStorage, etc.)
-
+        await fetch("/api/checkout/progress", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ step: "payment" }),
+        });
+        document.cookie = "checkout-details-complete=true; path=/";
         router.push("/checkout/payment");
     }
 
