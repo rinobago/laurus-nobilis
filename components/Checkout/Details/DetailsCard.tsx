@@ -1,6 +1,6 @@
 "use client";
 
-import { formatDMY, fromYMD, nightsBetween } from "@/lib/dateParams";
+import { formatDMY, fromYMD, nightsBetween, pricePerNight } from "@/lib/dateParams";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import EditDatesButton from "./EditDatesButton";
@@ -19,32 +19,9 @@ export default function DetailsCard() {
 
     const nights = nightsBetween(checkIn, checkOut);
 
-    // --- pricing per night based on check-in date ---
-    const pricePerNight = (() => {
-        if (!checkOut) return 0;
+    const priceNight = pricePerNight(checkOut);
 
-        const m = checkOut.getUTCMonth() + 1; // 1 - 12
-        const d = checkOut.getUTCDate(); // 1 - 31
-
-        // 1.11 - 1.3 (Nov 1 -> Mar 1)
-        if ((m === 11 && d >= 1) || m === 12 || m === 1 || m === 2 || (m === 3 && d <= 1)) {
-            return 150;
-        }
-
-        // 2.3 - 30.5 (Mar 2 -> May 30)
-        if ((m === 3 && d >= 2) || m === 4 || (m === 5 && d <= 30)) {
-            return 200;
-        }
-
-        // 1.6 - 31.10 (Jun 1 -> Oct 31)
-        if ((m === 6 && d >= 1) || m === 7 || m === 8 || m === 9 || (m === 10 && d <= 31)) {
-            return 300;
-        }
-
-        return 0;
-    })();
-
-    const rentPrice = nights * pricePerNight;
+    const rentPrice = nights * priceNight;
     const cleaningFee = 50;
     const totalPrice = rentPrice + cleaningFee;
 
@@ -78,7 +55,7 @@ export default function DetailsCard() {
                     <div className="flex justify-between items-start w-full leading-150 text-14 text-left ">
                         <div className="flex flex-col justify-start items-center">
                             <p className="w-full">
-                                {nights} nights x € {pricePerNight}
+                                {nights} nights x € {priceNight}
                             </p>
                             <p className="w-full">Cleaning fee</p>
                         </div>

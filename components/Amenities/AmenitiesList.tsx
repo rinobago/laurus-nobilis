@@ -7,10 +7,10 @@ export default function AmenitiesList() {
                 <AmenitiesFeature amenitiy="queenbed" text="2 queen beds" />
             </li>
             <li className="hidden w-full sm:flex flex-col justify-center items-center px-2.5 py-8 bg-brown-110 rounded-[18px]">
-                <AmenitiesFeature amenitiy="singlebed" text="1 kid's bed" />
+                <AmenitiesFeature amenitiy="singlebed" text="1 single bed" />
             </li>
             <li className="hidden w-full lg:flex flex-col justify-center items-center px-2.5 py-8 bg-brown-110 rounded-[18px]">
-                <AmenitiesFeature amenitiy="sofa" text="Extendable couch" />
+                <AmenitiesFeature amenitiy="sofa" text="Large sofa" />
             </li>
             <li className="w-full flex flex-col justify-center items-center px-2.5 py-8 bg-brown-110 rounded-[18px]">
                 <AmenitiesFeature amenitiy="pool" text="Private pool" />

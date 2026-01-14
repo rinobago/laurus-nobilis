@@ -42,6 +42,14 @@ export function proxy(req: NextRequest) {
         res.cookies.delete(COOKIE);
         return res;
     }
+    if (pathname === "/checkout/failed") {
+        if (step !== "complete") {
+            const res = NextResponse.redirect(new URL("/", req.url));
+            res.cookies.delete(COOKIE);
+            return res;
+        }
+        return NextResponse.next();
+    }
 
     // Any other /checkout pages: allow
     return NextResponse.next();

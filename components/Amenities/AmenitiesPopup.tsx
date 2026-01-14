@@ -24,8 +24,8 @@ export default function AmenitiesPopup({ open, onClose }: { open: boolean; onClo
                 </div>
                 <div className="flex flex-col items-center gap-[clamp(20px,2.77vw,40px)] w-full h-130 px-[clamp(24px,3.88vw,56px)] pb-24 overflow-y-auto">
                     <AmenitiesFeaturePopup amenitiy="queenbed" text="2 queen beds" />
-                    <AmenitiesFeaturePopup amenitiy="singlebed" text="1 kid's bed" />
-                    <AmenitiesFeaturePopup amenitiy="sofa" text="Extendable couch" />
+                    <AmenitiesFeaturePopup amenitiy="singlebed" text="1 single bed" />
+                    <AmenitiesFeaturePopup amenitiy="sofa" text="Large couch" />
                     <AmenitiesFeaturePopup amenitiy="pool" text="Private pool" />
                     <AmenitiesFeaturePopup amenitiy="bbq" text="Terrace with BBQ" />
                     <AmenitiesFeaturePopup amenitiy="parking" text="Private parking" />

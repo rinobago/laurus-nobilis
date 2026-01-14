@@ -18,7 +18,9 @@ export default function CheckoutPayment() {
                         </div>
                         <FormPayment />
                     </div>
-                    <PaymentCard />
+                    <Suspense fallback={null}>
+                        <PaymentCard />
+                    </Suspense>
                 </div>
             </div>
         </section>

@@ -1,12 +1,15 @@
-import CheckoutComplete from "@/components/Checkout/Complete/CheckoutComplete";
+import CheckoutFailed from "@/components/Checkout/Failed/CheckoutFailed";
 import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
+import { Suspense } from "react";
 
 export default function Page() {
     return (
         <>
             <Navbar showCta={false} />
-            <CheckoutComplete />
+            <Suspense fallback={null}>
+                <CheckoutFailed />
+            </Suspense>
             <Footer showMainLinks={false} />
         </>
     );

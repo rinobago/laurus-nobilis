@@ -21,3 +21,27 @@ export function nightsBetween(from?: Date, to?: Date) {
     const days = Math.round(ms / (1000 * 60 * 60 * 24));
     return Math.max(0, days);
 }
+
+export function pricePerNight(to?: Date) {
+    if (!to) return 0;
+
+    const m = to.getUTCMonth() + 1; // 1 - 12
+    const d = to.getUTCDate(); // 1 - 31
+
+    // 1.11 - 1.3 (Nov 1 -> Mar 1)
+    if ((m === 11 && d >= 1) || m === 12 || m === 1 || m === 2 || (m === 3 && d <= 1)) {
+        return 150;
+    }
+
+    // 2.3 - 30.5 (Mar 2 -> May 30)
+    if ((m === 3 && d >= 2) || m === 4 || (m === 5 && d <= 30)) {
+        return 200;
+    }
+
+    // 1.6 - 31.10 (Jun 1 -> Oct 31)
+    if ((m === 6 && d >= 1) || m === 7 || m === 8 || m === 9 || (m === 10 && d <= 31)) {
+        return 300;
+    }
+
+    return 0;
+}

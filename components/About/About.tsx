@@ -6,8 +6,8 @@ export default function About() {
                 <h2 className="shrink-[0.8] text-left w-full text-beige-dark font-bold text-[clamp(36px,3.33vw,48px)] leading-120">Your modern escape in Lovran</h2>
                 <article className="flex flex-col gap-24">
                     <p className="text-beige-dark w-full text-18 leading-150 text-left">
-                        Laurus Nobilis is a modern, fully equipped holiday apartment in Lovran, ideal for families and groups. With two queen-size bedrooms, a separate kids bed, and an extendable
-                        couch for two, the apartment accommodates up to 7 guests in total.
+                        Laurus Nobilis is a modern, fully equipped holiday apartment in Lovran, ideal for families and groups. With two queen beds and a separate single bed, the apartment comfortably
+                        accommodates up to 7 guests (5 in beds + 2 on the sofa).
                     </p>
                     <p className="text-beige-dark w-full text-18 leading-150 text-left">
                         The interior is modern and comfortable, with a fully equipped kitchen, air conditioning in all rooms, fast WiFi, and a TV in every bedroom. Outside, the private pool, terrace,

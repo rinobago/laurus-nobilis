@@ -7,8 +7,23 @@ export default function FormDetails() {
     const router = useRouter();
     const searchParams = useSearchParams();
 
-    async function handleSubmit(e: React.FormEvent) {
+    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
+
+        const sp = new URLSearchParams(searchParams.toString());
+        const fd = new FormData(e.currentTarget);
+
+        const setOrDelete = (key: string, value: string) => {
+            const v = value.trim();
+            if (v) sp.set(key, v);
+            else sp.delete(key);
+        };
+
+        setOrDelete("firstName", String(fd.get("firstName") || ""));
+        setOrDelete("lastName", String(fd.get("lastName") || ""));
+        setOrDelete("email", String(fd.get("email") || ""));
+        setOrDelete("phone", String(fd.get("phone") || ""));
+        setOrDelete("guests", String(fd.get("guests") || ""));
 
         await fetch("/api/checkout/progress", {
             method: "POST",
@@ -16,7 +31,8 @@ export default function FormDetails() {
             body: JSON.stringify({ step: "payment" }),
         });
         document.cookie = "checkout-details-complete=true; path=/";
-        const qs = searchParams.toString();
+
+        const qs = sp.toString();
         router.push(`/checkout/payment?${qs}`);
     }
 
@@ -33,6 +49,7 @@ export default function FormDetails() {
                         id="firstName"
                         autoComplete="given-name"
                         required
+                        defaultValue={searchParams.get("firstName") ?? ""}
                         className="w-full bg-beige-dark border border-beige-darker px-3.5 py-2.5 rounded-md text-black text-16 leading-150"
                     />
                 </div>
@@ -46,6 +63,7 @@ export default function FormDetails() {
                         id="lastName"
                         autoComplete="family-name"
                         required
+                        defaultValue={searchParams.get("lastName") ?? ""}
                         className="w-full bg-beige-dark border border-beige-darker px-3.5 py-2.5 rounded-md text-black text-16 leading-150"
                     />
                 </div>
@@ -60,6 +78,7 @@ export default function FormDetails() {
                     id="email"
                     autoComplete="email"
                     required
+                    defaultValue={searchParams.get("email") ?? ""}
                     className="w-full bg-beige-dark border border-beige-darker px-3.5 py-2.5 rounded-md text-black text-16 leading-150"
                 />
             </div>
@@ -74,6 +93,7 @@ export default function FormDetails() {
                     id="phone"
                     autoComplete="tel"
                     required
+                    defaultValue={searchParams.get("phone") ?? ""}
                     className="w-full bg-beige-dark border border-beige-darker px-3.5 py-2.5 rounded-md text-black text-16 leading-150"
                 />
             </div>
@@ -87,6 +107,7 @@ export default function FormDetails() {
                         name="guests"
                         autoComplete="off"
                         required
+                        defaultValue={searchParams.get("guests") ?? "1"}
                         className="cursor-pointer appearance-none w-17 flex bg-beige-dark border border-beige-darker px-3.5 py-2.5 rounded-md text-black text-16 leading-150"
                     >
                         <option value="1">1</option>
