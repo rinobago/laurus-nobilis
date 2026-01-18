@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import BackToBookingButton from "./BackToBookingButton";
 import FormPayment from "./FormPayment";
 import PaymentCard from "./PaymentCard";
+import StripeElementsProvider from "./StripeElementsProvider";
 
 export default function CheckoutPayment() {
     return (
@@ -16,7 +17,9 @@ export default function CheckoutPayment() {
                             <h1 className="text-left font-bold leading-120 text-[clamp(2.25rem,6vw,3rem)]">Payment Details</h1>
                             <p className="text-left leading-150 text-[clamp(1rem,2.34vw,1.125rem)]">Enter your card information to complete your reservation.</p>
                         </div>
-                        <FormPayment />
+                        <StripeElementsProvider>
+                            <FormPayment />
+                        </StripeElementsProvider>
                     </div>
                     <Suspense fallback={null}>
                         <PaymentCard />
