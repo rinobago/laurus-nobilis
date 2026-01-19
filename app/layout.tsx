@@ -3,7 +3,7 @@ import { Montserrat } from "next/font/google";
 import "react-day-picker/dist/style.css";
 import "./globals.css";
 
-const montserrat = Montserrat({
+export const montserrat = Montserrat({
     subsets: ["latin"],
 });
 

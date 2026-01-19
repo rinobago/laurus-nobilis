@@ -16,7 +16,7 @@ export default function FormPayment() {
 
         const qs = searchParams.toString();
 
-        const { error } = await stripe.confirmPayment({
+        const { error, paymentIntent } = await stripe.confirmPayment({
             elements,
             confirmParams: {
                 return_url: `${window.location.origin}/checkout/complete?${qs}`,
@@ -25,11 +25,22 @@ export default function FormPayment() {
         });
 
         if (error) {
-            // show error.message in UI
+            router.push(`/checkout/failed?${qs}`);
             return;
         }
 
-        router.push(`/checkout/complete`);
+        if (paymentIntent?.status === "succeeded") {
+            await fetch("/api/checkout/progress", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ step: "complete" }),
+            });
+
+            router.push(`/checkout/complete?${qs}`);
+            return;
+        }
+
+        router.push(`/checkout/failed?${qs}`);
     }
 
     return (
@@ -47,8 +58,18 @@ export default function FormPayment() {
                     className="w-full bg-beige-dark border border-beige-darker px-3.5 py-2.5 rounded-md text-black text-16 leading-150"
                 />
             </div>
-            <div className="flex w-full justify-center items-start">
-                <PaymentElement />
+            <div className="w-full">
+                <PaymentElement
+                    options={{
+                        layout: {
+                            type: "tabs",
+                            defaultCollapsed: false,
+                        },
+                        wallets: {
+                            link: "never",
+                        },
+                    }}
+                />
             </div>
         </form>
     );

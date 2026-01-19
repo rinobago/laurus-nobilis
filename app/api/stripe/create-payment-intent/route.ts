@@ -21,7 +21,7 @@ export async function POST(req: Request) {
     const intent = await stripe.paymentIntents.create({
         amount: total * 100, // convert € -> cents
         currency: "eur",
-        automatic_payment_methods: { enabled: true },
+        payment_method_types: ["card"],
         metadata: {
             check_in,
             check_out,

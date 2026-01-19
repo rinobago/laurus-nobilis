@@ -12,8 +12,8 @@ export default function CheckoutFailed() {
         const qs = searchParams.toString();
 
         const timer = setTimeout(() => {
-            router.replace(qs ? `/checkout/payment?${qs}` : "/checkout/payment");
-        }, 10000);
+            router.replace(qs ? `/checkout/payment?${qs}` : "/");
+        }, 5000);
 
         return () => clearTimeout(timer);
     }, [router, searchParams]);
