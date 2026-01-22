@@ -32,23 +32,6 @@ export function proxy(req: NextRequest) {
         return NextResponse.next();
     }
 
-    // Protect complete + clear cookie after you reach it
-    if (pathname === "/checkout/complete") {
-        if (step !== "complete") {
-            return NextResponse.redirect(new URL(step === "payment" ? "/checkout/payment" : "/", req.url));
-        }
-
-        const res = NextResponse.next();
-        res.cookies.delete(COOKIE);
-        return res;
-    }
-    if (pathname === "/checkout/failed") {
-        if (step !== "payment") {
-            return NextResponse.redirect(new URL("/", req.url));
-        }
-        return NextResponse.next();
-    }
-
     // Any other /checkout pages: allow
     return NextResponse.next();
 }

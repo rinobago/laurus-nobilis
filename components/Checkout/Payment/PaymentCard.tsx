@@ -1,11 +1,16 @@
 "use client";
 
+import Spinner from "@/components/svg_icons/Spinner";
 import { formatDMY, fromYMD, nightsBetween, pricePerNight } from "@/lib/dateParams";
 import { useSearchParams } from "next/navigation";
 import RequiredCheckbox from "../../Interactive/RequiredCheckbox";
+import { usePaymentUi } from "./PaymentUiContext";
 
 export default function PaymentCard() {
     const searchParams = useSearchParams();
+
+    const { ui } = usePaymentUi();
+    const isProcessing = ui === "processing";
 
     const checkInStr = searchParams.get("check_in");
     const checkOutStr = searchParams.get("check_out");
@@ -79,8 +84,8 @@ export default function PaymentCard() {
                     </p>
                 </label>
                 <div className="flex flex-col justify-center items-center gap-4 w-full">
-                    <button type="submit" form="payment-form" className="btn-brown">
-                        Pay & confirm reservation
+                    <button type="submit" form="payment-form" className="btn-brown" disabled={isProcessing} aria-busy={isProcessing}>
+                        {isProcessing ? <Spinner /> : "Pay & confirm reservation"}
                     </button>
                     <p className="w-full text-center text-10 leading-150 ">Secure payment powered by Stripe</p>
                 </div>

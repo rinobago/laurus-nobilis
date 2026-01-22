@@ -7,12 +7,15 @@ import { DateRange, DayPicker, getDefaultClassNames } from "react-day-picker";
 import { enUS } from "react-day-picker/locale";
 import { NextButton, PreviousButton } from "../svg_icons/ChevronButtons";
 
+type BlockedRange = { from: Date; to: Date };
+
 export default function BookingCalendar() {
     const today = new Date();
     const minMonth = new Date(today.getFullYear(), today.getMonth() + 1, 1);
     const cn = getDefaultClassNames();
 
     const [months, setMonths] = useState(2);
+    const [blockedRanges, setBlockedRanges] = useState<BlockedRange[]>([]);
 
     const router = useRouter();
     const pathname = usePathname();
@@ -22,10 +25,14 @@ export default function BookingCalendar() {
     const checkIn = searchParams.get("check_in");
     const checkOut = searchParams.get("check_out");
 
-    const selected: DateRange | undefined = checkIn ? { from: fromYMD(checkIn), to: checkOut ? fromYMD(checkOut) : undefined } : undefined;
+    const selected: DateRange | undefined = checkIn
+        ? { from: fromYMD(checkIn), to: checkOut ? fromYMD(checkOut) : undefined }
+        : undefined;
 
     const monthStart = useMemo(() => {
-        return selected?.from ? new Date(selected.from.getFullYear(), selected.from.getMonth() + 1, 1) : new Date(today.getFullYear(), today.getMonth(), 1);
+        return selected?.from
+            ? new Date(selected.from.getFullYear(), selected.from.getMonth() + 1, 1)
+            : new Date(today.getFullYear(), today.getMonth(), 1);
     }, [selected?.from, today]);
 
     useEffect(() => {
@@ -33,6 +40,42 @@ export default function BookingCalendar() {
         update();
         window.addEventListener("resize", update);
         return () => window.removeEventListener("resize", update);
+    }, []);
+
+    useEffect(() => {
+        let active = true;
+
+        const loadBlocked = async () => {
+            try {
+                const res = await fetch("/api/bookings/blocked");
+                if (!res.ok) return;
+                const payload = (await res.json()) as {
+                    ranges?: { checkin_date: string; checkout_date: string }[];
+                };
+
+                if (!active) return;
+
+                const ranges: BlockedRange[] = (payload.ranges || [])
+                    .map((range) => {
+                        const from = fromYMD(range.checkin_date);
+                        const to = fromYMD(range.checkout_date);
+                        to.setUTCDate(to.getUTCDate() - 1);
+
+                        if (to < from) return null;
+                        return { from, to };
+                    })
+                    .filter((range): range is BlockedRange => Boolean(range));
+
+                setBlockedRanges(ranges);
+            } catch {
+                // Silent fail; calendar remains usable.
+            }
+        };
+
+        loadBlocked();
+        return () => {
+            active = false;
+        };
     }, []);
 
     // ALWAYS update params when selection changes
@@ -64,7 +107,7 @@ export default function BookingCalendar() {
             min={2}
             defaultMonth={monthStart}
             startMonth={minMonth}
-            disabled={{ before: today }}
+            disabled={[{ before: today }, ...blockedRanges]}
             locale={enUS}
             timeZone="UTC"
             selected={selected}
@@ -74,18 +117,22 @@ export default function BookingCalendar() {
                 caption_label: `${cn.caption_label} text-black font-medium`,
                 weekday: `${cn.weekday} text-muted-text`,
                 day: `${cn.day} text-black`,
-                disabled: `${cn.disabled} text-muted-text`,
+                disabled: `${cn.disabled} line-through text-muted-text`,
                 today: `text-black`,
                 chevron: `fill-black`,
             }}
             components={{
                 PreviousMonthButton: (props) => (
-                    <button {...props} className="rdp-button_previous flex items-center justify-center">
+                    <button
+                        {...props}
+                        className="rdp-button_previous flex items-center justify-center">
                         <PreviousButton className="w-2.5 h-16 fill-none stroke-black" />
                     </button>
                 ),
                 NextMonthButton: (props) => (
-                    <button {...props} className="rdp-button_next flex items-center justify-center">
+                    <button
+                        {...props}
+                        className="rdp-button_next flex items-center justify-center">
                         <NextButton className="w-2.5 h-16 fill-none stroke-black" />
                     </button>
                 ),

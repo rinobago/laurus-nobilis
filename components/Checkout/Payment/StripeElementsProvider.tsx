@@ -47,13 +47,18 @@ export default function StripeElementsProvider({ children }: { children: React.R
     useEffect(() => {
         const check_in = sp.get("check_in");
         const check_out = sp.get("check_out");
+        const firstName = sp.get("firstName");
+        const lastName = sp.get("lastName");
+        const email = sp.get("email");
+        const phone = sp.get("phone");
+        const guests = sp.get("guests");
 
-        if (!check_in || !check_out) return;
+        if (!check_in || !check_out || !firstName || !lastName || !email || !phone || !guests) return;
 
         fetch("/api/stripe/create-payment-intent", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ check_in, check_out }),
+            body: JSON.stringify({ check_in, check_out, firstName, lastName, email, phone, guests }),
         })
             .then((r) => r.json())
             .then((d) => setClientSecret(d.clientSecret));
