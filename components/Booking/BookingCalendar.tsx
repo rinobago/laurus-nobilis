@@ -108,6 +108,7 @@ export default function BookingCalendar() {
             defaultMonth={monthStart}
             startMonth={minMonth}
             disabled={[{ before: today }, ...blockedRanges]}
+            excludeDisabled
             locale={enUS}
             timeZone="UTC"
             selected={selected}

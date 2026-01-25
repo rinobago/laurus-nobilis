@@ -1,3 +1,5 @@
+import CookieBanner from "@/components/Cookies/CookieBanner";
+import { getConsent } from "@/lib/cookies/getConsent";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "react-day-picker/dist/style.css";
@@ -12,14 +14,21 @@ export const metadata: Metadata = {
     description: "Apartment Laurus Nobilis",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    const consent = await getConsent();
+
     return (
-        <html lang="en" className={montserrat.className}>
-            <body>{children}</body>
+        <html
+            lang="en"
+            className={montserrat.className}>
+            <body>
+                {children}
+                <CookieBanner initialConsent={consent} />
+            </body>
         </html>
     );
 }
