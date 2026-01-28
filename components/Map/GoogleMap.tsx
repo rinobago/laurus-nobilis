@@ -1,4 +1,5 @@
 import { getConsent } from "@/lib/cookies/getConsent";
+import CookiePreferencesButton from "../Footer/CookiePreferencesButton";
 
 export default async function GoogleMap() {
     const functionalEnabled = (await getConsent())?.functional === true;
@@ -19,7 +20,7 @@ export default async function GoogleMap() {
                 <div className="bg-brown-090 w-full h-full flex flex-col justify-center items-center text-center text-white text-16 leading-150 px-16">
                     <p>Google Maps is disabled</p>
                     <p>To view the map, please accept functional cookies.</p>
-                    <button className="cursor-pointer underline">Cookie preferences</button>
+                    <CookiePreferencesButton className="cursor-pointer underline" />
                 </div>
             )}
         </div>

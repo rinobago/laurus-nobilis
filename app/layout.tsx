@@ -1,4 +1,6 @@
 import CookieBanner from "@/components/Cookies/CookieBanner";
+import { CookiePrefsProvider } from "@/components/Cookies/CookiePreferencesContext";
+import { CookiePrefsModalHost } from "@/components/Cookies/CookiePreferencesHost";
 import { getConsent } from "@/lib/cookies/getConsent";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
@@ -26,8 +28,11 @@ export default async function RootLayout({
             lang="en"
             className={montserrat.className}>
             <body>
-                {children}
-                <CookieBanner initialConsent={consent} />
+                <CookiePrefsProvider>
+                    {children}
+                    <CookieBanner initialConsent={consent} />
+                    <CookiePrefsModalHost />
+                </CookiePrefsProvider>
             </body>
         </html>
     );
