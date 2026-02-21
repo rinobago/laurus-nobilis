@@ -21,7 +21,7 @@ export default function Toggle({
         relative ${className}
         aspect-5/3
         rounded-full p-[4%]
-        transition-colors duration-200
+        transition-colors duration-200 cursor-pointer
         ${on ? "bg-emerald-500" : "bg-brown-100"}
       `}>
             <span
