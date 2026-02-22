@@ -10,9 +10,22 @@ export type Img = { src: string; alt: string };
 const ACTIVE_W = 1080;
 const INACTIVE_W = 900;
 
-export default function InfiniteStage({ images, openGallery, showDots = true }: { images: Img[]; openGallery?: (i: number) => void; showDots?: boolean }) {
+export default function InfiniteStage({
+    images,
+    openGallery,
+    showDots = true,
+}: {
+    images: Img[];
+    openGallery?: (i: number) => void;
+    showDots?: boolean;
+}) {
     const [active, setActive] = useState(0);
     const [isMobile, setIsMobile] = useState(false);
+
+    const [touchStartX, setTouchStartX] = useState<number | null>(null);
+    const [touchEndX, setTouchEndX] = useState<number | null>(null);
+
+    const SWIPE_THRESHOLD = 50; // minimum px to count as swipe
 
     // ✅ derived widths instead of scaling
     const [activeW, setActiveW] = useState(ACTIVE_W);
@@ -65,10 +78,37 @@ export default function InfiniteStage({ images, openGallery, showDots = true }: 
         return () => window.removeEventListener("resize", update);
     }, []);
 
+    const handleTouchStart = (e: React.TouchEvent) => {
+        setTouchEndX(null); // reset
+        setTouchStartX(e.targetTouches[0].clientX);
+    };
+
+    const handleTouchMove = (e: React.TouchEvent) => {
+        setTouchEndX(e.targetTouches[0].clientX);
+    };
+
+    const handleTouchEnd = () => {
+        if (!touchStartX || !touchEndX) return;
+
+        const distance = touchStartX - touchEndX;
+
+        if (distance > SWIPE_THRESHOLD) {
+            // swiped left
+            next();
+        }
+
+        if (distance < -SWIPE_THRESHOLD) {
+            // swiped right
+            prev();
+        }
+    };
+
     return (
         <div className="w-full">
             {/* STAGE (full width) */}
-            <div className="relative w-full overflow-hidden" style={{ height: stageH }}>
+            <div
+                className="relative w-full overflow-hidden"
+                style={{ height: stageH }}>
                 {/* ARROWS */}
                 {isMobile ? (
                     <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-between px-8">
@@ -76,8 +116,7 @@ export default function InfiniteStage({ images, openGallery, showDots = true }: 
                             onClick={prev}
                             type="button"
                             aria-label="Previous image"
-                            className="pointer-events-auto cursor-pointer w-[48px] h-[48px] rounded-full bg-white flex items-center justify-center"
-                        >
+                            className="pointer-events-auto cursor-pointer w-[48px] h-[48px] rounded-full bg-white flex items-center justify-center">
                             <ArrowLeft className="w-16 aspect-square fill-brown-100 stroke-brown-100" />
                         </button>
 
@@ -85,19 +124,19 @@ export default function InfiniteStage({ images, openGallery, showDots = true }: 
                             onClick={next}
                             type="button"
                             aria-label="Next image"
-                            className="pointer-events-auto cursor-pointer w-[48px] h-[48px] rounded-full bg-white flex items-center justify-center"
-                        >
+                            className="pointer-events-auto cursor-pointer w-[48px] h-[48px] rounded-full bg-white flex items-center justify-center">
                             <ArrowRight className="w-16 aspect-square fill-brown-100 stroke-brown-100" />
                         </button>
                     </div>
                 ) : (
-                    <div className="pointer-events-none absolute left-1/2 top-0 z-10 h-full -translate-x-1/2 flex items-center justify-between" style={{ width: `${activeW}px` }}>
+                    <div
+                        className="pointer-events-none absolute left-1/2 top-0 z-10 h-full -translate-x-1/2 flex items-center justify-between"
+                        style={{ width: `${activeW}px` }}>
                         <button
                             onClick={prev}
                             type="button"
                             aria-label="Previous image"
-                            className="pointer-events-auto cursor-pointer w-[48px] h-[48px] rounded-full bg-white flex items-center justify-center -translate-x-7"
-                        >
+                            className="pointer-events-auto cursor-pointer w-[48px] h-[48px] rounded-full bg-white flex items-center justify-center -translate-x-7">
                             <ArrowLeft className="w-16 aspect-square fill-brown-100 stroke-brown-100" />
                         </button>
 
@@ -105,8 +144,7 @@ export default function InfiniteStage({ images, openGallery, showDots = true }: 
                             onClick={next}
                             type="button"
                             aria-label="Next image"
-                            className="pointer-events-auto cursor-pointer w-[48px] h-[48px] rounded-full bg-white flex items-center justify-center translate-x-7"
-                        >
+                            className="pointer-events-auto cursor-pointer w-[48px] h-[48px] rounded-full bg-white flex items-center justify-center translate-x-7">
                             <ArrowRight className="w-16 aspect-square fill-brown-100 stroke-brown-100" />
                         </button>
                     </div>
@@ -115,10 +153,14 @@ export default function InfiniteStage({ images, openGallery, showDots = true }: 
                 {/* TRACK */}
                 <div
                     className="flex items-center transition-transform duration-500 ease-out"
+                    onTouchStart={isMobile ? handleTouchStart : undefined}
+                    onTouchMove={isMobile ? handleTouchMove : undefined}
+                    onTouchEnd={isMobile ? handleTouchEnd : undefined}
                     style={{
-                        transform: isMobile ? `translateX(-${active * 100}%)` : `translateX(calc(50% - ${centerOffset}px))`,
-                    }}
-                >
+                        transform: isMobile
+                            ? `translateX(-${active * 100}%)`
+                            : `translateX(calc(50% - ${centerOffset}px))`,
+                    }}>
                     {images.map((img, i) => {
                         const isActive = i === active;
 
@@ -127,17 +169,31 @@ export default function InfiniteStage({ images, openGallery, showDots = true }: 
                                 key={img.src}
                                 className={`shrink-0 flex items-center justify-center transition-[width,filter] duration-300 ${isActive ? "brightness-100" : "brightness-50"}`}
                                 style={{
-                                    width: isMobile ? "100%" : isActive ? `${activeW}px` : `${inactiveW}px`,
-                                }}
-                            >
+                                    width: isMobile
+                                        ? "100%"
+                                        : isActive
+                                          ? `${activeW}px`
+                                          : `${inactiveW}px`,
+                                }}>
                                 <div className="relative w-full aspect-3/2">
                                     <button
                                         type="button"
                                         onClick={isActive ? () => openGallery?.(i) : undefined}
                                         className={`absolute inset-0 focus:outline-none ${isActive ? "cursor-pointer" : "pointer-events-none"}`}
-                                        aria-label={isActive ? "Open gallery" : undefined}
-                                    >
-                                        <Image src={img.src} alt={img.alt} fill className="object-contain" sizes={isMobile ? "100vw" : isActive ? `${activeW}px` : `${inactiveW}px`} />
+                                        aria-label={isActive ? "Open gallery" : undefined}>
+                                        <Image
+                                            src={img.src}
+                                            alt={img.alt}
+                                            fill
+                                            className="object-contain"
+                                            sizes={
+                                                isMobile
+                                                    ? "100vw"
+                                                    : isActive
+                                                      ? `${activeW}px`
+                                                      : `${inactiveW}px`
+                                            }
+                                        />
                                     </button>
                                 </div>
                             </div>
@@ -149,7 +205,11 @@ export default function InfiniteStage({ images, openGallery, showDots = true }: 
             {/* DOTS */}
             {showDots && (
                 <div className="mt-[48px]">
-                    <Dots count={count} active={active} onGo={setActive} />
+                    <Dots
+                        count={count}
+                        active={active}
+                        onGo={setActive}
+                    />
                 </div>
             )}
         </div>

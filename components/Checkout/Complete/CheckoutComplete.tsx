@@ -118,6 +118,20 @@ export default function CheckoutComplete() {
             // Silent fail: booking can be retried via webhook or admin tooling.
             console.log(err);
         });
+
+        fetch("/api/mail/send", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                email: sp.get("email"),
+                firstName: sp.get("firstName"),
+                lastName: sp.get("lastName"),
+                check_in: sp.get("check_in"),
+                check_out: sp.get("check_out"),
+            }),
+        }).catch((err) => {
+            console.log(err);
+        });
     }, [view, sp]);
 
     const content = useMemo(() => {
