@@ -1,0 +1,11 @@
+{
+    "Navbar": {
+        "Amenities": "Servicios",
+        "Gallery": "Galería",
+        "About": "Acerca de",
+        "Map": "Mapa",
+        "Pricing": "Precios",
+        "Booking": "Reserva",
+        "Button": "Reservar ahora"
+    }
+}

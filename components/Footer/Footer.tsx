@@ -1,8 +1,12 @@
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { Facebook, Instagram, Whatsapp } from "../svg_icons/SocialsIcons";
 import CookiePreferencesButton from "./CookiePreferencesButton";
 
 export default function Footer({ showMainLinks = true }: { showMainLinks?: boolean }) {
+    const t = useTranslations("Footer");
+    const s = useTranslations("Navbar");
+
     return (
         <footer className="flex flex-col items-center bg-brown-060">
             <div className="container md:py-[80px] flex flex-col items-center gap-[80px] text-white">
@@ -19,13 +23,13 @@ export default function Footer({ showMainLinks = true }: { showMainLinks?: boole
                         )}
                         <div className="flex flex-col items-start justify-start gap-24 w-full text-14 leading-150">
                             <div className="flex flex-col items-start justify-start gap-4 w-full">
-                                <p className="font-semibold">Address:</p>
+                                <p className="font-semibold">{t("Address")}</p>
                                 <address className="not-italic">
                                     Rezine 7G, 51415, Lovran, Croatia
                                 </address>
                             </div>
                             <div className="flex flex-col items-start justify-start gap-4 w-full">
-                                <p className="font-semibold">Contact:</p>
+                                <p className="font-semibold">{t("Contact")}</p>
                                 <a
                                     href="tel:+385992170459"
                                     className="hover:text-brown-160 active:text-brown-160">
@@ -55,37 +59,37 @@ export default function Footer({ showMainLinks = true }: { showMainLinks?: boole
                             <a
                                 href="/#amenities"
                                 className="py-8 hover:text-brown-160 active:text-brown-160">
-                                Amenities
+                                {s("Amenities")}
                             </a>
 
                             <a
                                 href="/#gallery"
                                 className="py-8 hover:text-brown-160 active:text-brown-160">
-                                Gallery
+                                {s("Gallery")}
                             </a>
 
                             <a
                                 href="/#about"
                                 className="py-8 hover:text-brown-160 active:text-brown-160">
-                                About
+                                {s("About")}
                             </a>
 
                             <a
                                 href="/#map"
                                 className="py-8 hover:text-brown-160 active:text-brown-160">
-                                Map
+                                {s("Map")}
                             </a>
 
                             <a
                                 href="/#pricing"
                                 className="py-8 hover:text-brown-160 active:text-brown-160">
-                                Pricing
+                                {s("Pricing")}
                             </a>
 
                             <a
                                 href="/#booking"
                                 className="py-8 hover:text-brown-160 active:text-brown-160">
-                                Booking
+                                {s("Booking")}
                             </a>
                         </div>
                     )}
@@ -97,19 +101,19 @@ export default function Footer({ showMainLinks = true }: { showMainLinks?: boole
                                 <Link
                                     href="/privacy-policy"
                                     className="hover:text-brown-160 active:text-brown-160">
-                                    Privacy Policy
+                                    {t("PrivacyPolicy")}
                                 </Link>
                                 <Link
                                     href="/terms-of-service"
                                     className="hover:text-brown-160 active:text-brown-160">
-                                    Terms of Service
+                                    {t("TermsOfService")}
                                 </Link>
                             </div>
                             <div className="flex flex-col lg:flex-row gap-24">
                                 <Link
                                     href="/cancellation-policy"
                                     className="hover:text-brown-160 active:text-brown-160">
-                                    Cancellation Policy
+                                    {t("CancelationPolicy")}
                                 </Link>
                                 <CookiePreferencesButton className="hover:text-brown-160 active:text-brown-160 cursor-pointer" />
                             </div>
@@ -121,7 +125,7 @@ export default function Footer({ showMainLinks = true }: { showMainLinks?: boole
                                 <Link
                                     href="/privacy-policy"
                                     className="hover:text-brown-160 active:text-brown-160">
-                                    Privacy Policy
+                                    {t("PrivacyPolicy")}
                                 </Link>
                             </div>
 
@@ -130,7 +134,7 @@ export default function Footer({ showMainLinks = true }: { showMainLinks?: boole
                                 <Link
                                     href="/cancellation-policy"
                                     className="hover:text-brown-160 active:text-brown-160">
-                                    Cancellation Policy
+                                    {t("CancelationPolicy")}
                                 </Link>
                             </div>
 
@@ -139,7 +143,7 @@ export default function Footer({ showMainLinks = true }: { showMainLinks?: boole
                                 <Link
                                     href="/terms-of-service"
                                     className="hover:text-brown-160 active:text-brown-160">
-                                    Terms of Service
+                                    {t("TermsOfService")}
                                 </Link>
                             </div>
                         </div>

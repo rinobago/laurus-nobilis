@@ -3,6 +3,8 @@ import { CookiePrefsProvider } from "@/components/Cookies/CookiePreferencesConte
 import { CookiePrefsModalHost } from "@/components/Cookies/CookiePreferencesHost";
 import { getConsent } from "@/lib/cookies/getConsent";
 import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale } from "next-intl/server";
 import { Montserrat } from "next/font/google";
 import "react-day-picker/dist/style.css";
 import "./globals.css";
@@ -22,17 +24,20 @@ export default async function RootLayout({
     children: React.ReactNode;
 }>) {
     const consent = await getConsent();
+    const locale = await getLocale();
 
     return (
         <html
-            lang="en"
+            lang={locale}
             className={montserrat.className}>
             <body>
-                <CookiePrefsProvider>
-                    {children}
-                    <CookieBanner initialConsent={consent} />
-                    <CookiePrefsModalHost />
-                </CookiePrefsProvider>
+                <NextIntlClientProvider>
+                    <CookiePrefsProvider>
+                        {children}
+                        <CookieBanner initialConsent={consent} />
+                        <CookiePrefsModalHost />
+                    </CookiePrefsProvider>
+                </NextIntlClientProvider>
             </body>
         </html>
     );

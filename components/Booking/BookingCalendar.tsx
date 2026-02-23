@@ -1,15 +1,35 @@
 "use client";
 
 import { fromYMD, toYMD } from "@/lib/dateParams";
+import { useLocale } from "next-intl";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { DateRange, DayPicker, getDefaultClassNames } from "react-day-picker";
-import { enUS } from "react-day-picker/locale";
+import { cs, de, enUS, es, fr, hr, hu, it, pl, sl } from "react-day-picker/locale";
 import { NextButton, PreviousButton } from "../svg_icons/ChevronButtons";
 
 type BlockedRange = { from: Date; to: Date };
+const DAY_PICKER_LOCALES = {
+    en: enUS,
+    de,
+    sl,
+    cs,
+    es,
+    hr,
+    it,
+    pl,
+    hu,
+    fr,
+} as const;
+
+function getDayPickerLocale(locale: string) {
+    const normalizedLocale = locale.toLowerCase().split("-")[0];
+    return DAY_PICKER_LOCALES[normalizedLocale as keyof typeof DAY_PICKER_LOCALES] ?? enUS;
+}
 
 export default function BookingCalendar() {
+    const locale = useLocale();
+    const dayPickerLocale = useMemo(() => getDayPickerLocale(locale), [locale]);
     const today = new Date();
     const minMonth = new Date(today.getFullYear(), today.getMonth() + 1, 1);
     const cn = getDefaultClassNames();
@@ -29,11 +49,9 @@ export default function BookingCalendar() {
         ? { from: fromYMD(checkIn), to: checkOut ? fromYMD(checkOut) : undefined }
         : undefined;
 
-    const monthStart = useMemo(() => {
-        return selected?.from
-            ? new Date(selected.from.getFullYear(), selected.from.getMonth() + 1, 1)
-            : new Date(today.getFullYear(), today.getMonth(), 1);
-    }, [selected?.from, today]);
+    const monthStart = selected?.from
+        ? new Date(selected.from.getFullYear(), selected.from.getMonth() + 1, 1)
+        : new Date(today.getFullYear(), today.getMonth(), 1);
 
     useEffect(() => {
         const update = () => setMonths(window.innerWidth < 640 ? 1 : 2);
@@ -109,7 +127,7 @@ export default function BookingCalendar() {
             startMonth={minMonth}
             disabled={[{ before: today }, ...blockedRanges]}
             excludeDisabled
-            locale={enUS}
+            locale={dayPickerLocale}
             timeZone="UTC"
             selected={selected}
             onSelect={onSelect}

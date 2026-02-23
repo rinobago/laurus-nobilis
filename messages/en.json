@@ -1,0 +1,69 @@
+{
+    "Navbar": {
+        "Amenities": "Amenities",
+        "Gallery": "Gallery",
+        "About": "About",
+        "Map": "Map",
+        "Pricing": "Pricing",
+        "Booking": "Booking",
+        "Button": "Book Now"
+    },
+    "Hero": {
+        "Title": "Modern holiday apartment in Lovran",
+        "Subtitle": "Enjoy a private pool, BBQ terrace, space for seven, all just minutes from the beach.",
+        "Button": "Check availability"
+    },
+    "Amenities": {
+        "Title": "Amenities",
+        "List": {
+            "queenbed": "2 queen beds",
+            "singlebed": "1 single bed",
+            "sofa": "Large couch",
+            "pool": "Private pool",
+            "bbq": "Terrace with BBQ",
+            "parking": "Private parking",
+            "ac": "Air conditioning",
+            "wifi": "WiFi",
+            "beach": "Nearby beach",
+            "tv": "TV in every bedroom",
+            "campfire": "Outdoor lounge area",
+            "lounge": "Sun loungers",
+            "dishes": "Dishwasher",
+            "hairdryer": "Hair dryer",
+            "heating": "Heating",
+            "towel": "Bed linens and towels"
+        },
+        "Button": "Book Now"
+    },
+    "About": {
+        "Title": "Your modern escape in Lovran",
+        "Description1": "Laurus Nobilis is a modern, fully equipped holiday apartment in Lovran, ideal for families and groups. With two queen beds and a separate single bed, the apartment comfortably accommodates up to 7 guests (5 in beds + 2 on the sofa).",
+        "Description2": "The interior is modern and comfortable, with a fully equipped kitchen, air conditioning in all rooms, fast WiFi, and a TV in every bedroom. Outside, the private pool, terrace, and BBQ area offer a relaxing space to enjoy the sun and spend time together.",
+        "Description3": "The apartment is located in a peaceful area, just a few minutes' walk from the beach, shops, and restaurants."
+    },
+    "Map": {
+        "Title": "Location",
+        "Description": "Located in Lovran, just a short walk from the beach and within easy reach of restaurants, shops, and the old town."
+    },
+    "Pricing": {
+        "Title": "Pricing",
+        "Description": "Prices vary depending on the season",
+        "LowSeason": "Low season",
+        "MidSeason": "Mid season",
+        "HighSeason": "High season",
+        "ByNight": "night",
+        "Button": "Request dates"
+    },
+    "Booking": {
+        "Title": "Ready to book your stay at Laurus Nobilis?",
+        "Button": "Reserve"
+    },
+    "Footer": {
+        "Address": "Address:",
+        "Contact": "Contact:",
+        "PrivacyPolicy": "Privacy Policy",
+        "TermsOfService": "Terms of Service",
+        "CancelationPolicy": "Cancellation Policy",
+        "CookiePreferences": "Cookie preferences"
+    }
+}

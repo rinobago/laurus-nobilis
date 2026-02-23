@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import LanguageButton from "./LanguageButton";
+import { isSupportedLocale } from "@/i18n/locales";
 
 export default function LanguageMenu({
     locale,
@@ -14,6 +16,7 @@ export default function LanguageMenu({
 }) {
     const [open, setOpen] = useState(false);
     const rootRef = useRef<HTMLDivElement | null>(null);
+    const router = useRouter();
 
     // click outside to close
     useEffect(() => {
@@ -27,7 +30,10 @@ export default function LanguageMenu({
     }, [open]);
 
     const selectLanguage = (newLocale: string) => {
-        // TODO: switch locale here (router, i18n, etc.)
+        if (!isSupportedLocale(newLocale)) return;
+
+        document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; samesite=lax`;
+        router.refresh();
         setOpen(false);
     };
 

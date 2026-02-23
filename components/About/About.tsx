@@ -1,20 +1,28 @@
+import { useTranslations } from "next-intl";
+
 export default function About() {
+    const t = useTranslations("About");
+
     return (
-        <section id="about" className="flex flex-col items-center relative bg-brown-080">
-            <div className="absolute inset-0 bg-center bg-cover opacity-[0.03] pointer-events-none" style={{ backgroundImage: "url('/texture/stone-texture.png')" }}></div>
+        <section
+            id="about"
+            className="flex flex-col items-center relative bg-brown-080">
+            <div
+                className="absolute inset-0 bg-center bg-cover opacity-[0.03] pointer-events-none"
+                style={{ backgroundImage: "url('/texture/stone-texture.png')" }}></div>
             <div className="container flex flex-col lg:flex-row gap-[80px] justify-start items-start">
-                <h2 className="shrink-[0.8] text-left w-full text-beige-dark font-bold text-[clamp(36px,3.33vw,48px)] leading-120">Your modern escape in Lovran</h2>
+                <h2 className="shrink-[0.8] text-left w-full text-beige-dark font-bold text-[clamp(36px,3.33vw,48px)] leading-120">
+                    {t("Title")}
+                </h2>
                 <article className="flex flex-col gap-24">
                     <p className="text-beige-dark w-full text-18 leading-150 text-left">
-                        Laurus Nobilis is a modern, fully equipped holiday apartment in Lovran, ideal for families and groups. With two queen beds and a separate single bed, the apartment comfortably
-                        accommodates up to 7 guests (5 in beds + 2 on the sofa).
+                        {t("Description1")}
                     </p>
                     <p className="text-beige-dark w-full text-18 leading-150 text-left">
-                        The interior is modern and comfortable, with a fully equipped kitchen, air conditioning in all rooms, fast WiFi, and a TV in every bedroom. Outside, the private pool, terrace,
-                        and BBQ area offer a relaxing space to enjoy the sun and spend time together.
+                        {t("Description2")}
                     </p>
                     <p className="text-beige-dark w-full text-18 leading-150 text-left">
-                        The apartment is located in a peaceful area, just a few minutes' walk from the beach, shops, and restaurants.
+                        {t("Description3")}
                     </p>
                 </article>
             </div>

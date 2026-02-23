@@ -1,9 +1,12 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useRouter, useSearchParams } from "next/navigation";
 import BookingCalendar from "./BookingCalendar";
 
 export default function ReserveButtonWithCalendar() {
+    const t = useTranslations("Booking");
+
     const router = useRouter();
     const searchParams = useSearchParams();
 
@@ -17,11 +20,16 @@ export default function ReserveButtonWithCalendar() {
 
     return (
         <>
-            <div className="flex bg-beige rounded-lg p-12" aria-label="Booking calendar">
+            <div
+                className="flex bg-beige rounded-lg p-12"
+                aria-label="Booking calendar">
                 <BookingCalendar />
             </div>
-            <button onClick={onReserve} disabled={!checkIn || !checkOut} className="btn-beige">
-                Reserve
+            <button
+                onClick={onReserve}
+                disabled={!checkIn || !checkOut}
+                className="btn-beige">
+                {t("Button")}
             </button>
         </>
     );
