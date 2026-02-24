@@ -1,11 +1,86 @@
 {
-    "Navbar": {
-        "Amenities": "Ausstattung",
-        "Gallery": "Galerie",
-        "About": "Über uns",
-        "Map": "Karte",
-        "Pricing": "Preise",
-        "Booking": "Buchung",
-        "Button": "Jetzt buchen"
-    }
+  "Navbar": {
+    "Amenities": "Ausstattung",
+    "Gallery": "Galerie",
+    "About": "Über uns",
+    "Map": "Karte",
+    "Pricing": "Preise",
+    "Booking": "Buchung",
+    "Button": "Jetzt buchen"
+  },
+  "Hero": {
+    "Title": "Modernes Ferienapartment in Lovran",
+    "Subtitle": "Genießen Sie einen privaten Pool, eine BBQ-Terrasse und Platz für sieben Personen, nur wenige Minuten vom Strand entfernt.",
+    "Button": "Verfügbarkeit prüfen"
+  },
+  "Amenities": {
+    "Title": "Ausstattung",
+    "List": {
+      "queenbed": "2 Queensize-Betten",
+      "singlebed": "1 Einzelbett",
+      "sofa": "Großes Sofa",
+      "pool": "Privater Pool",
+      "bbq": "Terrasse mit BBQ",
+      "parking": "Privatparkplatz",
+      "ac": "Klimaanlage",
+      "wifi": "WLAN",
+      "beach": "Strand in der Nähe",
+      "tv": "TV in jedem Schlafzimmer",
+      "campfire": "Außen-Loungebereich",
+      "lounge": "Sonnenliegen",
+      "dishes": "Geschirrspüler",
+      "hairdryer": "Haartrockner",
+      "heating": "Heizung",
+      "towel": "Bettwäsche und Handtücher"
+    },
+    "Button": "Jetzt buchen"
+  },
+  "About": {
+    "Title": "Ihr moderner Rückzugsort in Lovran",
+    "Description1": "Laurus Nobilis ist ein modernes, voll ausgestattetes Ferienapartment in Lovran, ideal für Familien und Gruppen. Mit zwei Queensize-Betten und einem separaten Einzelbett bietet das Apartment bequem Platz für bis zu 7 Gäste (5 in Betten + 2 auf dem Sofa).",
+    "Description2": "Die Einrichtung ist modern und komfortabel, mit voll ausgestatteter Küche, Klimaanlage in allen Räumen, schnellem WLAN und TV in jedem Schlafzimmer. Draußen bieten der private Pool, die Terrasse und der BBQ-Bereich einen entspannten Ort, um die Sonne zu genießen und Zeit miteinander zu verbringen.",
+    "Description3": "Das Apartment liegt in einer ruhigen Gegend, nur wenige Gehminuten von Strand, Geschäften und Restaurants entfernt."
+  },
+  "Map": {
+    "Title": "Lage",
+    "Description": "In Lovran gelegen, nur einen kurzen Spaziergang vom Strand entfernt und in der Nähe von Restaurants, Geschäften und Altstadt."
+  },
+  "Pricing": {
+    "Title": "Preise",
+    "Description": "Die Preise variieren je nach Saison",
+    "LowSeason": "Nebensaison",
+    "MidSeason": "Zwischensaison",
+    "HighSeason": "Hochsaison",
+    "ByNight": "Nacht",
+    "Button": "Termine anfragen"
+  },
+  "Booking": {
+    "Title": "Bereit, Ihren Aufenthalt im Laurus Nobilis zu buchen?",
+    "Button": "Reservieren"
+  },
+  "Footer": {
+    "Address": "Adresse:",
+    "Contact": "Kontakt:",
+    "PrivacyPolicy": "Datenschutz",
+    "TermsOfService": "Nutzungsbedingungen",
+    "CancelationPolicy": "Stornobedingungen",
+    "CookiePreferences": "Cookie-Einstellungen"
+  },
+  "CookieBanner": {
+    "Title": "Wir verwenden Cookies",
+    "Description": "Wir verwenden Cookies, damit die Website korrekt funktioniert und Ihr Surferlebnis verbessert wird. Sie können alle Cookies akzeptieren, nicht notwendige Cookies ablehnen oder Ihre Einstellungen verwalten. Mehr dazu in unserer ",
+    "Accept": "Alle akzeptieren",
+    "Preferences": "Einstellungen"
+  },
+  "CookiePreferences": {
+    "Title": "Cookie-Einstellungen",
+    "Description": "Sie können auswählen, welche Arten von Cookies Sie erlauben. Notwendige Cookies sind immer aktiviert, da sie für die Funktion der Website erforderlich sind.",
+    "Essential": "Notwendig (immer aktiv)",
+    "EssentialDesc": "Erforderlich für Kernfunktionen der Website, Buchungsschritte und Sicherheit.",
+    "Analytics": "Analyse",
+    "AnalyticsDesc": "Helfen uns zu verstehen, wie Besucher die Website nutzen, damit wir Leistung und Bedienbarkeit verbessern können.",
+    "Functional": "Funktional",
+    "FunctionalDesc": "Speichern Präferenzen wie die Sprachauswahl.",
+    "Save": "Einstellungen speichern"
+  }
 }

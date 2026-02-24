@@ -1,11 +1,86 @@
 {
-    "Navbar": {
-        "Amenities": "Vybavení",
-        "Gallery": "Galerie",
-        "About": "O nás",
-        "Map": "Mapa",
-        "Pricing": "Ceny",
-        "Booking": "Rezervace",
-        "Button": "Rezervovat nyní"
-    }
+  "Navbar": {
+    "Amenities": "Vybavení",
+    "Gallery": "Galerie",
+    "About": "O nás",
+    "Map": "Mapa",
+    "Pricing": "Ceník",
+    "Booking": "Rezervace",
+    "Button": "Rezervovat"
+  },
+  "Hero": {
+    "Title": "Moderní prázdninový apartmán v Lovranu",
+    "Subtitle": "Užijte si soukromý bazén, terasu s grilem a prostor pro sedm osob, jen pár minut od pláže.",
+    "Button": "Zkontrolovat dostupnost"
+  },
+  "Amenities": {
+    "Title": "Vybavení",
+    "List": {
+      "queenbed": "2 manželské postele",
+      "singlebed": "1 jednolůžko",
+      "sofa": "Velká pohovka",
+      "pool": "Soukromý bazén",
+      "bbq": "Terasa s grilem",
+      "parking": "Soukromé parkování",
+      "ac": "Klimatizace",
+      "wifi": "WiFi",
+      "beach": "Pláž poblíž",
+      "tv": "TV v každé ložnici",
+      "campfire": "Venkovní odpočinková zóna",
+      "lounge": "Lehátka",
+      "dishes": "Myčka nádobí",
+      "hairdryer": "Fén",
+      "heating": "Topení",
+      "towel": "Ložní prádlo a ručníky"
+    },
+    "Button": "Rezervovat"
+  },
+  "About": {
+    "Title": "Váš moderní únik v Lovranu",
+    "Description1": "Laurus Nobilis je moderní, plně vybavený prázdninový apartmán v Lovranu, ideální pro rodiny i skupiny. Se dvěma manželskými postelemi a odděleným jednolůžkem pohodlně ubytuje až 7 hostů (5 na postelích + 2 na pohovce).",
+    "Description2": "Interiér je moderní a pohodlný, s plně vybavenou kuchyní, klimatizací ve všech místnostech, rychlou WiFi a TV v každé ložnici. Venku nabízí soukromý bazén, terasa a grilovací zóna příjemné místo pro odpočinek na slunci i společné chvíle.",
+    "Description3": "Apartmán se nachází v klidné oblasti, jen pár minut chůze od pláže, obchodů a restaurací."
+  },
+  "Map": {
+    "Title": "Poloha",
+    "Description": "Nachází se v Lovranu, kousek pěšky od pláže a v blízkosti restaurací, obchodů i historického centra."
+  },
+  "Pricing": {
+    "Title": "Ceník",
+    "Description": "Ceny se liší podle sezóny",
+    "LowSeason": "Nízká sezóna",
+    "MidSeason": "Střední sezóna",
+    "HighSeason": "Vysoká sezóna",
+    "ByNight": "noc",
+    "Button": "Vyžádat termíny"
+  },
+  "Booking": {
+    "Title": "Připraveni rezervovat pobyt v Laurus Nobilis?",
+    "Button": "Rezervovat"
+  },
+  "Footer": {
+    "Address": "Adresa:",
+    "Contact": "Kontakt:",
+    "PrivacyPolicy": "Ochrana osobních údajů",
+    "TermsOfService": "Podmínky služby",
+    "CancelationPolicy": "Storno podmínky",
+    "CookiePreferences": "Nastavení cookies"
+  },
+  "CookieBanner": {
+    "Title": "Používáme cookies",
+    "Description": "Používáme cookies, aby web fungoval správně a zlepšili jsme vaše prohlížení. Můžete přijmout všechny cookies, odmítnout nepodstatné cookies nebo upravit své volby. Více informací v našich ",
+    "Accept": "Přijmout vše",
+    "Preferences": "Spravovat volby"
+  },
+  "CookiePreferences": {
+    "Title": "Nastavení cookies",
+    "Description": "Můžete si vybrat, které typy cookies povolíte. Nezbytné cookies jsou vždy zapnuté, protože jsou nutné pro fungování webu.",
+    "Essential": "Nezbytné (vždy zapnuto)",
+    "EssentialDesc": "Nutné pro základní funkce webu, kroky rezervace a bezpečnost.",
+    "Analytics": "Analytické",
+    "AnalyticsDesc": "Pomáhají nám pochopit, jak návštěvníci používají web, abychom zlepšili výkon a použitelnost.",
+    "Functional": "Funkční",
+    "FunctionalDesc": "Pamatují si nastavení, například výběr jazyka.",
+    "Save": "Uložit volby"
+  }
 }

@@ -65,5 +65,22 @@
         "TermsOfService": "Terms of Service",
         "CancelationPolicy": "Cancellation Policy",
         "CookiePreferences": "Cookie preferences"
+    },
+    "CookieBanner": {
+        "Title": "We use cookies",
+        "Description": "We use cookies to ensure the website functions properly and to improve your browsing experience. You can accept all cookies, reject non-essential cookies, or manage your preferences. Learn more in our ",
+        "Accept": "Accept all",
+        "Preferences": "Manage preferences"
+    },
+    "CookiePreferences": {
+        "Title": "Cookie Preferences",
+        "Description": "You can choose which types of cookies you allow. Essential cookies are always enabled as they are necessary for the website to function.",
+        "Essential": "Essential (always on)",
+        "EssentialDesc": "Required for core website functionality, booking steps, and security.",
+        "Analytics": "Analytics",
+        "AnalyticsDesc": "Help us understand how visitors use the website so we can improve performance and usability.",
+        "Functional": "Functional",
+        "FunctionalDesc": "Remember preferences such as language selection.",
+        "Save": "Save preferences"
     }
 }

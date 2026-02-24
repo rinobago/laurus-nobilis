@@ -1,11 +1,86 @@
 {
-    "Navbar": {
-        "Amenities": "Pogodnosti",
-        "Gallery": "Galerija",
-        "About": "O nama",
-        "Map": "Karta",
-        "Pricing": "Cijene",
-        "Booking": "Rezervacija",
-        "Button": "Rezerviraj sada"
-    }
+  "Navbar": {
+    "Amenities": "Pogodnosti",
+    "Gallery": "Galerija",
+    "About": "O nama",
+    "Map": "Karta",
+    "Pricing": "Cijene",
+    "Booking": "Rezervacija",
+    "Button": "Rezerviraj odmah"
+  },
+  "Hero": {
+    "Title": "Moderan apartman za odmor u Lovranu",
+    "Subtitle": "Uživajte u privatnom bazenu, terasi s roštiljem i prostoru za sedam osoba, samo nekoliko minuta od plaže.",
+    "Button": "Provjeri dostupnost"
+  },
+  "Amenities": {
+    "Title": "Pogodnosti",
+    "List": {
+      "queenbed": "2 bračna kreveta",
+      "singlebed": "1 jednostruki krevet",
+      "sofa": "Veliki kauč",
+      "pool": "Privatni bazen",
+      "bbq": "Terasa s roštiljem",
+      "parking": "Privatni parking",
+      "ac": "Klima uređaj",
+      "wifi": "WiFi",
+      "beach": "Plaža u blizini",
+      "tv": "TV u svakoj spavaćoj sobi",
+      "campfire": "Vanjski prostor za odmor",
+      "lounge": "Ležaljke",
+      "dishes": "Perilica posuđa",
+      "hairdryer": "Sušilo za kosu",
+      "heating": "Grijanje",
+      "towel": "Posteljina i ručnici"
+    },
+    "Button": "Rezerviraj odmah"
+  },
+  "About": {
+    "Title": "Vaše moderno utočište u Lovranu",
+    "Description1": "Laurus Nobilis je moderan, potpuno opremljen apartman za odmor u Lovranu, idealan za obitelji i grupe. S dva bračna kreveta i odvojenim jednostrukim krevetom, apartman udobno prima do 7 gostiju (5 u krevetima + 2 na kauču).",
+    "Description2": "Interijer je moderan i udoban, s potpuno opremljenom kuhinjom, klima uređajem u svim prostorijama, brzim WiFi-jem i TV-om u svakoj spavaćoj sobi. Vani privatni bazen, terasa i prostor za roštilj nude opuštajuće mjesto za uživanje na suncu i druženje.",
+    "Description3": "Apartman se nalazi u mirnom području, samo nekoliko minuta hoda od plaže, trgovina i restorana."
+  },
+  "Map": {
+    "Title": "Lokacija",
+    "Description": "Smješten u Lovranu, na kratkoj udaljenosti od plaže te blizu restorana, trgovina i stare jezgre."
+  },
+  "Pricing": {
+    "Title": "Cijene",
+    "Description": "Cijene ovise o sezoni",
+    "LowSeason": "Niska sezona",
+    "MidSeason": "Srednja sezona",
+    "HighSeason": "Visoka sezona",
+    "ByNight": "noć",
+    "Button": "Zatraži datume"
+  },
+  "Booking": {
+    "Title": "Spremni za rezervaciju boravka u Laurus Nobilisu?",
+    "Button": "Rezerviraj"
+  },
+  "Footer": {
+    "Address": "Adresa:",
+    "Contact": "Kontakt:",
+    "PrivacyPolicy": "Pravila privatnosti",
+    "TermsOfService": "Uvjeti korištenja",
+    "CancelationPolicy": "Pravila otkazivanja",
+    "CookiePreferences": "Postavke kolačića"
+  },
+  "CookieBanner": {
+    "Title": "Koristimo kolačiće",
+    "Description": "Koristimo kolačiće kako bi web stranica ispravno radila i kako bismo poboljšali vaše iskustvo pregledavanja. Možete prihvatiti sve kolačiće, odbiti neobavezne kolačiće ili upravljati postavkama. Više u našim ",
+    "Accept": "Prihvati sve",
+    "Preferences": "Upravljaj postavkama"
+  },
+  "CookiePreferences": {
+    "Title": "Postavke kolačića",
+    "Description": "Možete odabrati koje vrste kolačića dopuštate. Nužni kolačići su uvijek uključeni jer su potrebni za rad web stranice.",
+    "Essential": "Nužni (uvijek uključeni)",
+    "EssentialDesc": "Potrebni za osnovne funkcije web stranice, korake rezervacije i sigurnost.",
+    "Analytics": "Analitički",
+    "AnalyticsDesc": "Pomažu nam razumjeti kako posjetitelji koriste web stranicu kako bismo poboljšali performanse i upotrebljivost.",
+    "Functional": "Funkcionalni",
+    "FunctionalDesc": "Pamte postavke kao što je odabir jezika.",
+    "Save": "Spremi postavke"
+  }
 }

@@ -1,11 +1,86 @@
 {
-    "Navbar": {
-        "Amenities": "Udogodnienia",
-        "Gallery": "Galeria",
-        "About": "O nas",
-        "Map": "Mapa",
-        "Pricing": "Cennik",
-        "Booking": "Rezerwacja",
-        "Button": "Zarezerwuj teraz"
-    }
+  "Navbar": {
+    "Amenities": "Udogodnienia",
+    "Gallery": "Galeria",
+    "About": "O nas",
+    "Map": "Mapa",
+    "Pricing": "Cennik",
+    "Booking": "Rezerwacja",
+    "Button": "Rezerwuj teraz"
+  },
+  "Hero": {
+    "Title": "Nowoczesny apartament wakacyjny w Lovranie",
+    "Subtitle": "Prywatny basen, taras z grillem i miejsce dla siedmiu osób, kilka minut od plaży.",
+    "Button": "Sprawdź dostępność"
+  },
+  "Amenities": {
+    "Title": "Udogodnienia",
+    "List": {
+      "queenbed": "2 łóżka queen size",
+      "singlebed": "1 łóżko pojedyncze",
+      "sofa": "Duża sofa",
+      "pool": "Prywatny basen",
+      "bbq": "Taras z grillem",
+      "parking": "Prywatny parking",
+      "ac": "Klimatyzacja",
+      "wifi": "WiFi",
+      "beach": "Plaża w pobliżu",
+      "tv": "TV w każdej sypialni",
+      "campfire": "Zewnętrzna strefa wypoczynku",
+      "lounge": "Leżaki",
+      "dishes": "Zmywarka",
+      "hairdryer": "Suszarka do włosów",
+      "heating": "Ogrzewanie",
+      "towel": "Pościel i ręczniki"
+    },
+    "Button": "Rezerwuj teraz"
+  },
+  "About": {
+    "Title": "Nowoczesny wypoczynek w Lovranie",
+    "Description1": "Laurus Nobilis to nowoczesny, w pełni wyposażony apartament wakacyjny w Lovranie, idealny dla rodzin i grup. Dzięki dwóm łóżkom queen size i oddzielnemu łóżku pojedynczemu wygodnie pomieści do 7 gości (5 w łóżkach + 2 na sofie).",
+    "Description2": "Wnętrze jest nowoczesne i komfortowe, z w pełni wyposażoną kuchnią, klimatyzacją we wszystkich pomieszczeniach, szybkim WiFi i TV w każdej sypialni. Na zewnątrz prywatny basen, taras i strefa grilla zapewniają relaks i wspólny czas na słońcu.",
+    "Description3": "Apartament znajduje się w spokojnej okolicy, kilka minut spacerem od plaży, sklepów i restauracji."
+  },
+  "Map": {
+    "Title": "Lokalizacja",
+    "Description": "Położony w Lovranie, w krótkim spacerze od plaży i blisko restauracji, sklepów oraz starego miasta."
+  },
+  "Pricing": {
+    "Title": "Cennik",
+    "Description": "Ceny zależą od sezonu",
+    "LowSeason": "Niski sezon",
+    "MidSeason": "Średni sezon",
+    "HighSeason": "Wysoki sezon",
+    "ByNight": "noc",
+    "Button": "Zapytaj o termin"
+  },
+  "Booking": {
+    "Title": "Gotowi zarezerwować pobyt w Laurus Nobilis?",
+    "Button": "Rezerwuj"
+  },
+  "Footer": {
+    "Address": "Adres:",
+    "Contact": "Kontakt:",
+    "PrivacyPolicy": "Polityka prywatności",
+    "TermsOfService": "Warunki korzystania",
+    "CancelationPolicy": "Polityka anulowania",
+    "CookiePreferences": "Ustawienia cookies"
+  },
+  "CookieBanner": {
+    "Title": "Używamy plików cookie",
+    "Description": "Używamy plików cookie, aby strona działała poprawnie i aby poprawić Twoje wrażenia z przeglądania. Możesz zaakceptować wszystkie cookie, odrzucić nieistotne cookie lub zarządzać preferencjami. Więcej informacji w naszej ",
+    "Accept": "Akceptuj wszystkie",
+    "Preferences": "Zarządzaj preferencjami"
+  },
+  "CookiePreferences": {
+    "Title": "Preferencje cookie",
+    "Description": "Możesz wybrać, na które rodzaje plików cookie się zgadzasz. Niezbędne cookie są zawsze włączone, ponieważ są konieczne do działania strony.",
+    "Essential": "Niezbędne (zawsze włączone)",
+    "EssentialDesc": "Wymagane do podstawowego działania strony, etapów rezerwacji i bezpieczeństwa.",
+    "Analytics": "Analityczne",
+    "AnalyticsDesc": "Pomagają nam zrozumieć, jak odwiedzający korzystają ze strony, aby poprawiać wydajność i użyteczność.",
+    "Functional": "Funkcjonalne",
+    "FunctionalDesc": "Zapamiętują ustawienia, np. wybór języka.",
+    "Save": "Zapisz preferencje"
+  }
 }

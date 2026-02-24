@@ -1,10 +1,14 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import Toggle from "../Interactive/Toggle";
 import { useCookiePrefs } from "./CookiePreferencesContext";
 
 export default function CookieBannerPreferences() {
+    const t = useTranslations("CookiePreferences");
+    const s = useTranslations("CookieBanner");
+
     const { closePrefs } = useCookiePrefs();
 
     const [analytics, setAnalytics] = useState(false);
@@ -40,26 +44,25 @@ export default function CookieBannerPreferences() {
             <div className="text-black flex flex-col gap-10 max-[375px]:gap-24 w-full flex-1 min-h-0 overflow-y-auto">
                 <div className="flex flex-col gap-[clamp(12px,1.66vw,24px)] justify-center items-center w-full">
                     <p className="font-bold leading-120 text-center w-full text-[clamp(2rem,3.33vw,3rem)] max-[375px]:text-[1.5rem]">
-                        Cookie preferences
+                        {t("Title")}
                     </p>
                     <p className="leading-150 text-center w-full text-[clamp(0.875rem,1.11vw,1rem)] max-[375px]:text-12">
-                        You can choose which types of cookies you allow. Essential cookies are
-                        always enabled as they are necessary for the website to function.
+                        {t("Description")}
                     </p>
                 </div>
                 <div className="flex flex-col gap-24 w-full">
                     <div className="flex flex-col justify-center items-start gap-[clamp(12px,1.11vw,16px)]">
                         <p className="font-semibold w-full text-left leading-150 text-[clamp(1rem,1.25vw,1.125rem)] max-[375px]:text-12">
-                            Essential (always on)
+                            {t("Essential")}
                         </p>
                         <p className="leading-150 text-left w-full text-[clamp(0.875rem,1.11vw,1rem)] max-[375px]:text-12">
-                            Required for core website functionality, booking steps, and security.
+                            {t("EssentialDesc")}
                         </p>
                     </div>
                     <div className="flex flex-col justify-center items-start gap-[clamp(12px,1.11vw,16px)]">
                         <div className="flex justify-between items-center w-full">
                             <p className="font-semibold text-left leading-150 text-[clamp(1rem,1.25vw,1.125rem)] max-[375px]:text-12">
-                                Analytics
+                                {t("Analytics")}
                             </p>
                             <div className="w-17.5 max-[375px]:w-12.5">
                                 <Toggle
@@ -72,14 +75,13 @@ export default function CookieBannerPreferences() {
                             </div>
                         </div>
                         <p className="leading-150 text-left w-full text-[clamp(0.875rem,1.11vw,1rem)] max-[375px]:text-12">
-                            Help us understand how visitors use the website so we can improve
-                            performance and usability.
+                            {t("AnalyticsDesc")}
                         </p>
                     </div>
                     <div className="flex flex-col justify-center items-start gap-[clamp(12px,1.11vw,16px)]">
                         <div className="flex justify-between items-center w-full">
                             <p className="font-semibold text-left leading-150 text-[clamp(1rem,1.25vw,1.125rem)] max-[375px]:text-12">
-                                Functional
+                                {t("Functional")}
                             </p>
                             <div className="w-17.5 max-[375px]:w-12.5">
                                 <Toggle
@@ -92,7 +94,7 @@ export default function CookieBannerPreferences() {
                             </div>
                         </div>
                         <p className="leading-150 text-left w-full text-[clamp(0.875rem,1.11vw,1rem)] max-[375px]:text-12">
-                            Remember preferences such as language selection.
+                            {t("FunctionalDesc")}
                         </p>
                     </div>
                 </div>
@@ -101,12 +103,12 @@ export default function CookieBannerPreferences() {
                 <button
                     onClick={() => save({ analytics: true, functional: true })}
                     className="btn-brown max-[375px]:text-14 max-[375px]:px-20 max-[375px]:py-8">
-                    Accept all
+                    {s("Accept")}
                 </button>
                 <button
                     onClick={() => save({ analytics, functional })}
                     className="btn-brown-outline max-[375px]:text-14 max-[375px]:px-20 max-[375px]:py-8">
-                    Save preferences
+                    {t("Save")}
                 </button>
             </div>
         </div>

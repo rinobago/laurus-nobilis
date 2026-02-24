@@ -7,5 +7,80 @@
         "Pricing": "Tarifs",
         "Booking": "Réservation",
         "Button": "Réserver"
+    },
+    "Hero": {
+        "Title": "Appartement de vacances moderne à Lovran",
+        "Subtitle": "Profitez d'une piscine privée, d'une terrasse barbecue et d'un espace pour sept, à quelques minutes de la plage.",
+        "Button": "Voir les disponibilités"
+    },
+    "Amenities": {
+        "Title": "Équipements",
+        "List": {
+            "queenbed": "2 lits queen size",
+            "singlebed": "1 lit simple",
+            "sofa": "Grand canapé",
+            "pool": "Piscine privée",
+            "bbq": "Terrasse avec barbecue",
+            "parking": "Parking privé",
+            "ac": "Climatisation",
+            "wifi": "WiFi",
+            "beach": "Plage à proximité",
+            "tv": "TV dans chaque chambre",
+            "campfire": "Coin salon extérieur",
+            "lounge": "Chaises longues",
+            "dishes": "Lave-vaisselle",
+            "hairdryer": "Sèche-cheveux",
+            "heating": "Chauffage",
+            "towel": "Linge de lit et serviettes"
+        },
+        "Button": "Réserver"
+    },
+    "About": {
+        "Title": "Votre escapade moderne à Lovran",
+        "Description1": "Laurus Nobilis est un appartement de vacances moderne et entièrement équipé à Lovran, idéal pour les familles et les groupes. Avec deux lits queen size et un lit simple séparé, l'appartement accueille confortablement jusqu'à 7 personnes (5 en lits + 2 sur le canapé).",
+        "Description2": "L'intérieur est moderne et confortable, avec une cuisine entièrement équipée, la climatisation dans toutes les pièces, un WiFi rapide et une TV dans chaque chambre. À l'extérieur, la piscine privée, la terrasse et l'espace barbecue offrent un cadre relaxant pour profiter du soleil et passer du temps ensemble.",
+        "Description3": "L'appartement est situé dans un quartier calme, à quelques minutes à pied de la plage, des commerces et des restaurants."
+    },
+    "Map": {
+        "Title": "Emplacement",
+        "Description": "Situé à Lovran, à quelques pas de la plage et proche des restaurants, des commerces et de la vieille ville."
+    },
+    "Pricing": {
+        "Title": "Tarifs",
+        "Description": "Les prix varient selon la saison",
+        "LowSeason": "Basse saison",
+        "MidSeason": "Moyenne saison",
+        "HighSeason": "Haute saison",
+        "ByNight": "nuit",
+        "Button": "Demander des dates"
+    },
+    "Booking": {
+        "Title": "Prêt à réserver votre séjour à Laurus Nobilis ?",
+        "Button": "Réserver"
+    },
+    "Footer": {
+        "Address": "Adresse :",
+        "Contact": "Contact :",
+        "PrivacyPolicy": "Politique de confidentialité",
+        "TermsOfService": "Conditions d'utilisation",
+        "CancelationPolicy": "Politique d'annulation",
+        "CookiePreferences": "Préférences cookies"
+    },
+    "CookieBanner": {
+        "Title": "Nous utilisons des cookies",
+        "Description": "Nous utilisons des cookies pour assurer le bon fonctionnement du site et améliorer votre navigation. Vous pouvez accepter tous les cookies, refuser les cookies non essentiels ou gérer vos préférences. En savoir plus dans notre ",
+        "Accept": "Tout accepter",
+        "Preferences": "Gérer les préférences"
+    },
+    "CookiePreferences": {
+        "Title": "Préférences cookies",
+        "Description": "Vous pouvez choisir les types de cookies autorisés. Les cookies essentiels sont toujours activés car ils sont nécessaires au fonctionnement du site.",
+        "Essential": "Essentiels (toujours actifs)",
+        "EssentialDesc": "Nécessaires aux fonctions de base du site, aux étapes de réservation et à la sécurité.",
+        "Analytics": "Analyse",
+        "AnalyticsDesc": "Nous aident à comprendre comment les visiteurs utilisent le site afin d'améliorer les performances et la convivialité.",
+        "Functional": "Fonctionnels",
+        "FunctionalDesc": "Mémorisent des préférences comme le choix de la langue.",
+        "Save": "Enregistrer les préférences"
     }
 }

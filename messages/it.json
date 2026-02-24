@@ -1,11 +1,86 @@
 {
-    "Navbar": {
-        "Amenities": "Servizi",
-        "Gallery": "Galleria",
-        "About": "Chi siamo",
-        "Map": "Mappa",
-        "Pricing": "Prezzi",
-        "Booking": "Prenotazione",
-        "Button": "Prenota ora"
-    }
+  "Navbar": {
+    "Amenities": "Servizi",
+    "Gallery": "Galleria",
+    "About": "Chi siamo",
+    "Map": "Mappa",
+    "Pricing": "Prezzi",
+    "Booking": "Prenotazione",
+    "Button": "Prenota ora"
+  },
+  "Hero": {
+    "Title": "Moderno appartamento vacanze a Lovran",
+    "Subtitle": "Goditi una piscina privata, una terrazza con barbecue e spazio per sette persone, a pochi minuti dalla spiaggia.",
+    "Button": "Verifica disponibilità"
+  },
+  "Amenities": {
+    "Title": "Servizi",
+    "List": {
+      "queenbed": "2 letti queen",
+      "singlebed": "1 letto singolo",
+      "sofa": "Divano grande",
+      "pool": "Piscina privata",
+      "bbq": "Terrazza con barbecue",
+      "parking": "Parcheggio privato",
+      "ac": "Aria condizionata",
+      "wifi": "WiFi",
+      "beach": "Spiaggia vicina",
+      "tv": "TV in ogni camera",
+      "campfire": "Area relax esterna",
+      "lounge": "Lettini prendisole",
+      "dishes": "Lavastoviglie",
+      "hairdryer": "Asciugacapelli",
+      "heating": "Riscaldamento",
+      "towel": "Biancheria da letto e asciugamani"
+    },
+    "Button": "Prenota ora"
+  },
+  "About": {
+    "Title": "La tua fuga moderna a Lovran",
+    "Description1": "Laurus Nobilis è un appartamento vacanze moderno e completamente attrezzato a Lovran, ideale per famiglie e gruppi. Con due letti queen e un letto singolo separato, ospita comodamente fino a 7 persone (5 nei letti + 2 sul divano).",
+    "Description2": "Gli interni sono moderni e confortevoli, con cucina completamente attrezzata, aria condizionata in tutte le stanze, WiFi veloce e TV in ogni camera. All'esterno, la piscina privata, la terrazza e l'area barbecue offrono uno spazio rilassante per godersi il sole e stare insieme.",
+    "Description3": "L'appartamento si trova in una zona tranquilla, a pochi minuti a piedi dalla spiaggia, dai negozi e dai ristoranti."
+  },
+  "Map": {
+    "Title": "Posizione",
+    "Description": "Situato a Lovran, a pochi passi dalla spiaggia e vicino a ristoranti, negozi e centro storico."
+  },
+  "Pricing": {
+    "Title": "Prezzi",
+    "Description": "I prezzi variano in base alla stagione",
+    "LowSeason": "Bassa stagione",
+    "MidSeason": "Media stagione",
+    "HighSeason": "Alta stagione",
+    "ByNight": "notte",
+    "Button": "Richiedi date"
+  },
+  "Booking": {
+    "Title": "Pronto a prenotare il tuo soggiorno a Laurus Nobilis?",
+    "Button": "Prenota"
+  },
+  "Footer": {
+    "Address": "Indirizzo:",
+    "Contact": "Contatto:",
+    "PrivacyPolicy": "Informativa sulla privacy",
+    "TermsOfService": "Termini di servizio",
+    "CancelationPolicy": "Politica di cancellazione",
+    "CookiePreferences": "Preferenze cookie"
+  },
+  "CookieBanner": {
+    "Title": "Usiamo i cookie",
+    "Description": "Usiamo i cookie per garantire il corretto funzionamento del sito e migliorare la tua esperienza di navigazione. Puoi accettare tutti i cookie, rifiutare quelli non essenziali o gestire le preferenze. Scopri di più nella nostra ",
+    "Accept": "Accetta tutti",
+    "Preferences": "Gestisci preferenze"
+  },
+  "CookiePreferences": {
+    "Title": "Preferenze cookie",
+    "Description": "Puoi scegliere quali tipi di cookie consentire. I cookie essenziali sono sempre attivi perché necessari al funzionamento del sito.",
+    "Essential": "Essenziali (sempre attivi)",
+    "EssentialDesc": "Necessari per le funzioni principali del sito, i passaggi di prenotazione e la sicurezza.",
+    "Analytics": "Analitici",
+    "AnalyticsDesc": "Ci aiutano a capire come i visitatori usano il sito per migliorare prestazioni e usabilità.",
+    "Functional": "Funzionali",
+    "FunctionalDesc": "Memorizzano preferenze come la lingua selezionata.",
+    "Save": "Salva preferenze"
+  }
 }

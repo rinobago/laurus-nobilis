@@ -1,11 +1,86 @@
 {
-    "Navbar": {
-        "Amenities": "Felszereltség",
-        "Gallery": "Galéria",
-        "About": "Rólunk",
-        "Map": "Térkép",
-        "Pricing": "Árak",
-        "Booking": "Foglalás",
-        "Button": "Foglalás most"
-    }
+  "Navbar": {
+    "Amenities": "Felszereltség",
+    "Gallery": "Galéria",
+    "About": "Rólunk",
+    "Map": "Térkép",
+    "Pricing": "Árak",
+    "Booking": "Foglalás",
+    "Button": "Foglalás"
+  },
+  "Hero": {
+    "Title": "Modern nyaralóapartman Lovranban",
+    "Subtitle": "Élvezze a privát medencét, a grillezős teraszt és a hétfős elhelyezést, pár percre a strandtól.",
+    "Button": "Elérhetőség"
+  },
+  "Amenities": {
+    "Title": "Felszereltség",
+    "List": {
+      "queenbed": "2 franciaágy",
+      "singlebed": "1 egyszemélyes ágy",
+      "sofa": "Nagy kanapé",
+      "pool": "Privát medence",
+      "bbq": "Terasz grillezővel",
+      "parking": "Privát parkoló",
+      "ac": "Légkondicionáló",
+      "wifi": "WiFi",
+      "beach": "Közeli strand",
+      "tv": "TV minden hálószobában",
+      "campfire": "Kültéri pihenőrész",
+      "lounge": "Napozóágyak",
+      "dishes": "Mosogatógép",
+      "hairdryer": "Hajszárító",
+      "heating": "Fűtés",
+      "towel": "Ágynemű és törölközők"
+    },
+    "Button": "Foglalás"
+  },
+  "About": {
+    "Title": "Modern kikapcsolódás Lovranban",
+    "Description1": "A Laurus Nobilis egy modern, teljesen felszerelt nyaralóapartman Lovranban, ideális családoknak és csoportoknak. Két franciaággyal és egy külön egyszemélyes ággyal kényelmesen akár 7 vendéget fogad (5 ágyban + 2 a kanapén).",
+    "Description2": "A belső tér modern és kényelmes, teljesen felszerelt konyhával, minden szobában légkondicionálóval, gyors WiFi-vel és TV-vel minden hálószobában. Kint a privát medence, a terasz és a grillezőrész pihentető helyet kínál a napozáshoz és a közös időtöltéshez.",
+    "Description3": "Az apartman nyugodt környéken található, pár perc sétára a strandtól, üzletektől és éttermektől."
+  },
+  "Map": {
+    "Title": "Elhelyezkedés",
+    "Description": "Lovranban található, rövid sétára a strandtól, közel éttermekhez, üzletekhez és az óvároshoz."
+  },
+  "Pricing": {
+    "Title": "Árak",
+    "Description": "Az árak évszaktól függnek",
+    "LowSeason": "Alacsony szezon",
+    "MidSeason": "Középszezon",
+    "HighSeason": "Főszezon",
+    "ByNight": "éj",
+    "Button": "Dátumkérés"
+  },
+  "Booking": {
+    "Title": "Készen áll a Laurus Nobilis foglalására?",
+    "Button": "Lefoglalom"
+  },
+  "Footer": {
+    "Address": "Cím:",
+    "Contact": "Kapcsolat:",
+    "PrivacyPolicy": "Adatvédelmi szabályzat",
+    "TermsOfService": "Szolgáltatási feltételek",
+    "CancelationPolicy": "Lemondási feltételek",
+    "CookiePreferences": "Cookie-beállítások"
+  },
+  "CookieBanner": {
+    "Title": "Sütiket használunk",
+    "Description": "Sütiket használunk a weboldal megfelelő működéséhez és a böngészési élmény javításához. Elfogadhatja az összes sütit, elutasíthatja a nem szükséges sütiket, vagy kezelheti a beállításokat. További információ az ",
+    "Accept": "Összes elfogadása",
+    "Preferences": "Beállítások kezelése"
+  },
+  "CookiePreferences": {
+    "Title": "Süti beállítások",
+    "Description": "Kiválaszthatja, mely sütitípusokat engedélyezi. A szükséges sütik mindig be vannak kapcsolva, mert nélkülözhetetlenek a weboldal működéséhez.",
+    "Essential": "Szükséges (mindig aktív)",
+    "EssentialDesc": "A weboldal alapfunkcióihoz, a foglalási lépésekhez és a biztonsághoz szükséges.",
+    "Analytics": "Analitikai",
+    "AnalyticsDesc": "Segítenek megérteni, hogyan használják a látogatók a weboldalt, hogy javítsuk a teljesítményt és a használhatóságot.",
+    "Functional": "Funkcionális",
+    "FunctionalDesc": "Megjegyzik a beállításokat, például a nyelvválasztást.",
+    "Save": "Beállítások mentése"
+  }
 }
