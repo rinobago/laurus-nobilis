@@ -82,5 +82,303 @@
     "Functional": "Funkcionális",
     "FunctionalDesc": "Megjegyzik a beállításokat, például a nyelvválasztást.",
     "Save": "Beállítások mentése"
+  },
+  "Details": {
+    "Back": "Vissza az elérhetőséghez",
+    "Title": "Az Ön adatai",
+    "Description": "Kérjük, adja meg adatait a foglalás folytatásához.",
+    "FirstName": "Keresztnév",
+    "LastName": "Vezetéknév",
+    "PhoneNumber": "Telefonszám",
+    "Guests": "Vendégek száma",
+    "CheckIn": "Bejelentkezés",
+    "CheckOut": "Kijelentkezés",
+    "Edit": "Dátumok szerkesztése",
+    "Clear": "Dátumok törlése",
+    "Close": "Bezárás",
+    "PriceDetails": "Ár részletei",
+    "Nights": "éjszaka",
+    "CleaningFee": "Takarítási díj",
+    "Total": "Összesen",
+    "Continue": "Tovább a fizetéshez",
+    "ReviewPayment": "A fizetési adatokat a következő lépésben ellenőrizheti"
+  },
+  "Payment": {
+    "Back": "Vissza a foglalási adatokhoz",
+    "Title": "Fizetési adatok",
+    "Description": "A foglalás befejezéséhez adja meg a kártyaadatait.",
+    "NameCard": "Név a kártyán",
+    "Agree": "Elfogadom a ",
+    "And": " és a ",
+    "PayConfirm": "Fizetés és foglalás megerősítése",
+    "Stripe": "Biztonságos fizetés a Stripe-on keresztül"
+  },
+  "Complete": {
+    "SuccessTitle": "Fizetés befejezve",
+    "SuccessBody": "A foglalása megerősítve. Hamarosan felvesszük Önnel a kapcsolatot.",
+    "CanceledTitle": "Fizetés megszakítva",
+    "CanceledBody": "Megpróbálhatja újra. Hamarosan visszairányítjuk a fizetéshez.",
+    "FailedTitle": "Sikertelen fizetés",
+    "FailedBody": "Kérjük, használjon másik fizetési módot. Hamarosan átirányítjuk.",
+    "ErrorTitle": "Hiba történt",
+    "ErrorBody": "Kérjük, próbálja újra. Hamarosan átirányítjuk.",
+    "ProcessingTitle": "Fizetés véglegesítése…",
+    "ProcessingBody": "Kérjük, várjon."
+  },
+  "PrivacyPolicy": {
+    "Title": "Adatvédelmi szabályzat",
+    "LastUpdatedLabel": "Utoljára frissítve:",
+    "LastUpdatedDate": "2026. január 5.",
+    "IntroParagraph1": "Ez az Adatvédelmi szabályzat ismerteti, hogy ",
+    "IntroParagraph2": " hogyan gyűjti, használja és védi személyes adatait, amikor meglátogatja és használja weboldalunkat",
+    "WebsiteURL": " [laurusnobilisrent.com] ",
+    "IntroParagraph3": "hogy érdeklődjön vagy lefoglalja lovrani, horvátországi nyaralóapartmanunkat.",
+    "IntroParagraph4": "Elkötelezettek vagyunk az Ön adatainak védelme mellett, és a személyes adatokat a GDPR, valamint a vonatkozó horvát és EU adatvédelmi jogszabályok szerint kezeljük.",
+    "Section1": {
+      "Title": "1. Milyen információkat gyűjtünk",
+      "Section1_1Title": "1.1 Ön által megadott személyes adatok",
+      "Section1_1Intro": "Amikor használja weboldalunkat vagy foglalást végez, az alábbi személyes adatokat gyűjthetjük:",
+      "Section1_1List": [
+        "Vezeték- és keresztnév",
+        "E-mail-cím",
+        "Telefonszám",
+        "Lakóhely szerinti ország",
+        "Foglalási adatok (érkezési dátum, távozási dátum, vendégek száma)",
+        "Fizetéssel kapcsolatos információk (biztonságosan, fizetési szolgáltatónk által feldolgozva)",
+        "Bármely üzenet vagy különleges kérés, amelyet foglalás közben küld"
+      ],
+      "Section1_1Outro1": "A szervereinken ",
+      "Not": "nem tárolunk",
+      "Section1_1Outro2": " teljes bankkártyaadatokat.",
+      "Section1_2Title": "1.2 Automatikusan gyűjtött adatok",
+      "Section1_2Intro": "Amikor böngészi weboldalunkat, automatikusan gyűjthetjük a következőket:",
+      "Section1_2List": [
+        "IP-cím",
+        "Böngésző típusa és verziója",
+        "Eszköz típusa",
+        "Meglátogatott oldalak és az oldalon töltött idő",
+        "Hivatkozó weboldal vagy forrás"
+      ],
+      "Section1_2Outro": "Ezeket az adatokat kizárólag biztonsági, elemzési és weboldal-fejlesztési célokra használjuk.",
+      "Section1_3Title": "1.3 Sütik",
+      "Section1_3Prefix": "Sütiket és hasonló technológiákat használunk a weboldal megfelelő működésének biztosítására és a forgalom elemzésére. A részletek a ",
+      "Section1_3CookieLink": "Cookie-beállítások",
+      "Section1_3Suffix": " bannerben találhatók."
+    },
+    "Section2": {
+      "Title": "2. Hogyan használjuk adatait",
+      "Intro": "Személyes adatait az alábbi célokra használjuk:",
+      "List": [
+        "Apartmanfoglalások feldolgozása és kezelése",
+        "Kommunikáció Önnel a foglalásával kapcsolatban",
+        "Foglalási visszaigazolások és lényeges információk küldése",
+        "Biztonságos fizetésfeldolgozás",
+        "Jogi és adózási kötelezettségek teljesítése",
+        "Weboldalunk és felhasználói élmény javítása"
+      ]
+    },
+    "Section3": {
+      "Title": "3. Az adatkezelés jogalapja",
+      "Intro": "Személyes adatait az alábbi jogalapok alapján kezeljük:",
+      "List": [
+        "Szerződés teljesítése (foglalási és szállás-szolgáltatások)",
+        "Az Ön hozzájárulása (ahol alkalmazható)",
+        "Jogi kötelezettségek teljesítése",
+        "Jogos érdekek (weboldal biztonsága és fejlesztése)"
+      ]
+    },
+    "Section4": {
+      "Title": "4. Adatmegosztás",
+      "Intro": "Adatait kizárólag az alábbiakkal oszthatjuk meg:",
+      "List": [
+        "Fizetési szolgáltatók ",
+        "(pl. Stripe) a biztonságos fizetéskezeléshez",
+        "Tárhely- és technikai szolgáltatók ",
+        "amelyek a weboldal működéséhez szükségesek",
+        "Jogi vagy adóhatóságok",
+        ", amikor azt jogszabály előírja"
+      ],
+      "Outro": "Személyes adatait soha nem értékesítjük."
+    },
+    "Section5": {
+      "Title": "5. Adatmegőrzés",
+      "Intro": "Személyes adatokat csak addig őrzünk meg, ameddig az szükséges az alábbiakhoz:",
+      "List": [
+        "Foglalási és jogi kötelezettségek teljesítése",
+        "Számviteli és adózási előírásoknak való megfelelés"
+      ],
+      "Outro": "Ezt követően az adatokat biztonságosan töröljük."
+    },
+    "Section6": {
+      "Title": "6. Az Ön jogai",
+      "Intro": "Ön jogosult:",
+      "List": [
+        "Személyes adataihoz hozzáférni",
+        "Pontatlan adatok helyesbítését kérni",
+        "Törlést kérni (jogilag lehetséges esetben)",
+        "Az adatkezelés korlátozását vagy az ellene való tiltakozást kérni",
+        "Adathordozhatóságra",
+        "A hozzájárulás bármikori visszavonására"
+      ],
+      "Outro": "A kérelmek az alábbi címre küldhetők: ",
+      "ContactEmail": "[hello@laurusnobilisrent.com]."
+    },
+    "Section7": {
+      "Title": "7. Adatbiztonság",
+      "Body": "Megfelelő technikai és szervezési intézkedéseket alkalmazunk személyes adatainak védelmére a jogosulatlan hozzáférés, elvesztés vagy visszaélés ellen."
+    },
+    "Section8": {
+      "Title": "8. Nemzetközi adattovábbítás",
+      "Body": "Egyes adatokat az Ön országán kívül is feldolgozhatnak (pl. fizetési szolgáltatók). Ilyen esetekben megfelelő garanciákat alkalmazunk."
+    },
+    "Section9": {
+      "Title": "9. A szabályzat módosításai",
+      "Body": "Ezt az Adatvédelmi szabályzatot időről időre frissíthetjük. A változtatásokat ezen az oldalon tesszük közzé."
+    },
+    "Section10": {
+      "Title": "10. Kapcsolat",
+      "Intro": "Adatvédelemmel kapcsolatos kérdések esetén lépjen velünk kapcsolatba itt:",
+      "Email": "[hello@laurusnobilisrent.com]"
+    }
+  },
+  "TermsOfService": {
+    "Title": "Szolgáltatási feltételek",
+    "LastUpdatedLabel": "Utoljára frissítve:",
+    "LastUpdatedDate": "2026. január 5.",
+    "IntroParagraph": {
+      "Text": "Ezek a Szolgáltatási feltételek szabályozzák a ",
+      "WebsiteURL": "[laurusnobilisrent.com]",
+      "AndText": " használatát és a ",
+      "ApartmentName": "Laurus Nobilis nyaralóapartman foglalását."
+    },
+    "Section1": {
+      "Title": "1. A szolgáltatás köre",
+      "Intro": "Weboldalunk lehetővé teszi a felhasználók számára, hogy:",
+      "List": [
+        "Információt kapjanak az apartmanról",
+        "Ellenőrizzék az elérhetőséget",
+        "Foglalási igényeket küldjenek",
+        "Foglalást és fizetést véglegesítsenek"
+      ]
+    },
+    "Section2": {
+      "Title": "2. Jogosultság",
+      "Body": "Foglalás végrehajtásával Ön megerősíti, hogy legalább 18 éves, és jogilag képes kötelező érvényű megállapodást kötni."
+    },
+    "Section3": {
+      "Title": "3. Foglalások",
+      "List": [
+        "A foglalás csak sikeres fizetés és visszaigazolás után tekinthető megerősítettnek",
+        "Minden megadott foglalási adatnak pontosnak kell lennie",
+        "Fenntartjuk a jogot a foglalás visszautasítására vagy törlésére, ha hibás vagy félrevezető adatokat adtak meg"
+      ]
+    },
+    "Section4": {
+      "Title": "4. Fizetések",
+      "List": [
+        "Az árak EUR-ban jelennek meg",
+        "A fizetések biztonságosan, harmadik fél fizetési szolgáltatóin keresztül történnek (pl. Stripe)",
+        "Kártyaadatokat nem tárolunk"
+      ]
+    },
+    "Section5": {
+      "Title": "5. A weboldal használata",
+      "Intro": "Ön vállalja, hogy nem:",
+      "List": [
+        "Használja a weboldalt jogellenes célokra",
+        "Próbálja meg zavarni a weboldal működését",
+        "Él vissza vagy próbál jogosulatlan hozzáférést szerezni rendszereinkhez"
+      ]
+    },
+    "Section6": {
+      "Title": "6. Szellemi tulajdon",
+      "Body": {
+        "Text1": "A weboldal minden tartalma (szöveg, képek, design) a ",
+        "ApartmentName": "Laurus Nobilis",
+        "Text2": " tulajdona vagy licencelt tartalma, és engedély nélkül nem használható fel."
+      }
+    },
+    "Section7": {
+      "Title": "7. Felelősség",
+      "Intro": "Nem vállalunk felelősséget az alábbiakért:",
+      "List": [
+        "A weboldal ideiglenes elérhetetlensége",
+        "Közvetett vagy következményes károk",
+        "Vis maior események által okozott problémák"
+      ]
+    },
+    "Section8": {
+      "Title": "8. Irányadó jog",
+      "Body": {
+        "Text": "Ezekre a feltételekre ",
+        "Country": "Horvátország jogszabályai az irányadók."
+      }
+    },
+    "Section9": {
+      "Title": "9. Kapcsolat",
+      "Intro": "A feltételekkel kapcsolatos kérdések esetén írjon ide:",
+      "Email": "[hello@laurusnobilisrent.com]"
+    }
+  },
+  "CancellationPolicy": {
+    "Title": "Lemondási szabályzat",
+    "LastUpdatedLabel": "Utoljára frissítve:",
+    "LastUpdatedDate": "2026. január 5.",
+    "IntroParagraph": "Ez a Lemondási szabályzat a ",
+    "ApartmentName": "Laurus Nobilis",
+    "Via": " nyaralóapartmanra a ",
+    "WebsiteURL": "[laurusnobilisrent.com]",
+    "Section1": {
+      "Title": "1. Lemondás a vendég részéről",
+      "Paragraph1": "A vendégek a foglalásukat e-mailben mondhatják le ezen a címen: ",
+      "ContactEmail": "[hello@laurusnobilisrent.com].",
+      "Paragraph2": "A visszatérítések a következő szabályok szerint történnek:",
+      "List": [
+        "A tervezett érkezési dátum előtt több mint 14 nappal történt lemondások ",
+        "jogosultak ",
+        "90%-os visszatérítésre ",
+        "a teljes foglalási összegből.",
+        "A tervezett érkezési dátum előtti 14 napon belüli lemondások ",
+        "jogosultak ",
+        "50%-os visszatérítésre ",
+        "a teljes foglalási összegből."
+      ]
+    },
+    "Section2": {
+      "Title": "2. Visszatérítés feldolgozása",
+      "List": [
+        "A visszatérítés az eredeti, fizetéskor használt fizetési módra történik.",
+        "A feldolgozási idő a fizetési szolgáltatótól függően változhat.",
+        "A harmadik fél fizetésfeldolgozók által felszámított tranzakciós díjak nem visszatéríthetők."
+      ]
+    },
+    "Section3": {
+      "Title": "3. Meg nem jelenés és korai távozás",
+      "List": [
+        "Azok a vendégek, akik előzetes értesítés nélkül nem érkeznek meg a tervezett bejelentkezési napon, ",
+        "(no-show) ",
+        "nem jogosultak visszatérítésre.",
+        "A bejelentkezés utáni korai távozás esetén a fel nem használt éjszakák után nem jár visszatérítés."
+      ]
+    },
+    "Section4": {
+      "Title": "4. Foglalások módosítása",
+      "Body": "A foglalási dátumok vagy vendégadatok módosítására vonatkozó kérelmek elérhetőségtől függenek, és árváltozást eredményezhetnek. A bejelentkezési dátumhoz közeli módosítások a jelen szabályzat szerint lemondásként kezelhetők."
+    },
+    "Section5": {
+      "Title": "5. Lemondás a házigazda részéről",
+      "Body1": "Abban a valószínűtlen esetben, ha előre nem látható körülmények miatt nekünk kell törölnünk a foglalást, a vendégek teljes visszatérítést kapnak ",
+      "FullRefund": "(100%) ",
+      "Body2": "az összes befizetett összegből."
+    },
+    "Section6": {
+      "Title": "6. A szabályzat elfogadása",
+      "Body": "A foglalás véglegesítésével Ön elismeri, hogy elolvasta, megértette és elfogadta ezt a Lemondási szabályzatot."
+    },
+    "Section7": {
+      "Title": "7. Kapcsolat",
+      "Intro": "Lemondási kérelemmel vagy a szabályzattal kapcsolatos kérdéssel kérjük, lépjen kapcsolatba velünk itt:",
+      "Email": "[hello@laurusnobilisrent.com]"
+    }
   }
 }

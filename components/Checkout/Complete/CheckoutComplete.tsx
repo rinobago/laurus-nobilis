@@ -3,6 +3,7 @@
 import { CompleteCheck } from "@/components/svg_icons/Check";
 import Spinner from "@/components/svg_icons/Spinner";
 import Xicon from "@/components/svg_icons/Xicon";
+import { useTranslations } from "next-intl";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 
@@ -18,6 +19,8 @@ function pickViewFromStatus(s?: string | null): View | null {
 }
 
 export default function CheckoutComplete() {
+    const t = useTranslations("Complete");
+
     const sp = useSearchParams();
     const router = useRouter();
 
@@ -141,41 +144,41 @@ export default function CheckoutComplete() {
                     Icon: (
                         <CompleteCheck className="w-[clamp(120px,18.23vw,140px)] aspect-square stroke-green-confirm stroke-6" />
                     ),
-                    title: "Payment complete",
-                    body: "Your booking is confirmed. We will be in touch shortly.",
+                    title: t("SuccessTitle"),
+                    body: t("SuccessBody"),
                 };
             case "canceled":
                 return {
                     Icon: (
                         <Xicon className="w-[clamp(120px,18.23vw,140px)] aspect-square fill-badge-red-fg" />
                     ),
-                    title: "Payment canceled",
-                    body: "You can try again. You'll be redirected back to payment shortly.",
+                    title: t("CanceledTitle"),
+                    body: t("CanceledBody"),
                 };
             case "requires_payment_method":
                 return {
                     Icon: (
                         <Xicon className="w-[clamp(120px,18.23vw,140px)] aspect-square fill-badge-red-fg" />
                     ),
-                    title: "Payment failed",
-                    body: "Please use a different payment method. You'll be redirected shortly.",
+                    title: t("FailedTitle"),
+                    body: t("FailedBody"),
                 };
             case "error":
                 return {
                     Icon: (
                         <Xicon className="w-[clamp(120px,18.23vw,140px)] aspect-square fill-badge-red-fg" />
                     ),
-                    title: "Something went wrong",
-                    body: "Please try again. You'll be redirected shortly.",
+                    title: t("ErrorTitle"),
+                    body: t("ErrorBody"),
                 };
             default:
                 return {
                     Icon: <Spinner />,
-                    title: "Finalizing payment…",
-                    body: "Please wait.",
+                    title: t("ProcessingTitle"),
+                    body: t("ProcessingBody"),
                 };
         }
-    }, [view]);
+    }, [t, view]);
 
     return (
         <section className="flex flex-col items-center bg-beige h-[80vh]">

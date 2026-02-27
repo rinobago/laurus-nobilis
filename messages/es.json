@@ -82,5 +82,303 @@
     "Functional": "Funcionales",
     "FunctionalDesc": "Recuerdan preferencias como la selección de idioma.",
     "Save": "Guardar preferencias"
+  },
+  "Details": {
+    "Back": "Volver a disponibilidad",
+    "Title": "Tus datos",
+    "Description": "Introduce tus datos para continuar con tu reserva.",
+    "FirstName": "Nombre",
+    "LastName": "Apellido",
+    "PhoneNumber": "Número de teléfono",
+    "Guests": "Número de huéspedes",
+    "CheckIn": "Llegada",
+    "CheckOut": "Salida",
+    "Edit": "Editar fechas",
+    "Clear": "Borrar fechas",
+    "Close": "Cerrar",
+    "PriceDetails": "Detalles del precio",
+    "Nights": "noches",
+    "CleaningFee": "Tarifa de limpieza",
+    "Total": "Total",
+    "Continue": "Continuar al pago",
+    "ReviewPayment": "Revisarás los detalles del pago en el siguiente paso"
+  },
+  "Payment": {
+    "Back": "Volver a los detalles de la reserva",
+    "Title": "Detalles de pago",
+    "Description": "Introduce la información de tu tarjeta para completar tu reserva.",
+    "NameCard": "Nombre en la tarjeta",
+    "Agree": "Acepto la ",
+    "And": " y ",
+    "PayConfirm": "Pagar y confirmar reserva",
+    "Stripe": "Pago seguro con Stripe"
+  },
+  "Complete": {
+    "SuccessTitle": "Pago completado",
+    "SuccessBody": "Tu reserva está confirmada. Nos pondremos en contacto contigo en breve.",
+    "CanceledTitle": "Pago cancelado",
+    "CanceledBody": "Puedes intentarlo de nuevo. Serás redirigido al pago en breve.",
+    "FailedTitle": "Pago fallido",
+    "FailedBody": "Usa un método de pago diferente. Serás redirigido en breve.",
+    "ErrorTitle": "Algo salió mal",
+    "ErrorBody": "Inténtalo de nuevo. Serás redirigido en breve.",
+    "ProcessingTitle": "Finalizando el pago…",
+    "ProcessingBody": "Espera por favor."
+  },
+  "PrivacyPolicy": {
+    "Title": "Política de privacidad",
+    "LastUpdatedLabel": "Última actualización:",
+    "LastUpdatedDate": "5 de enero de 2026",
+    "IntroParagraph1": "Esta Política de privacidad explica cómo ",
+    "IntroParagraph2": " recopila, usa y protege tus datos personales cuando visitas y usas nuestro sitio web",
+    "WebsiteURL": " [laurusnobilisrent.com] ",
+    "IntroParagraph3": "para consultar o reservar nuestro apartamento vacacional ubicado en Lovran, Croacia.",
+    "IntroParagraph4": "Estamos comprometidos con la protección de tu privacidad y el tratamiento de los datos personales de acuerdo con el Reglamento General de Protección de Datos (RGPD) y las leyes croatas y de la UE aplicables en materia de protección de datos.",
+    "Section1": {
+      "Title": "1. Información que recopilamos",
+      "Section1_1Title": "1.1 Datos personales que proporcionas",
+      "Section1_1Intro": "Cuando usas nuestro sitio web o haces una reserva, podemos recopilar los siguientes datos personales:",
+      "Section1_1List": [
+        "Nombre y apellidos",
+        "Dirección de correo electrónico",
+        "Número de teléfono",
+        "País de residencia",
+        "Detalles de la reserva (fecha de llegada, fecha de salida, número de huéspedes)",
+        "Información relacionada con el pago (procesada de forma segura por nuestro proveedor de pagos)",
+        "Cualquier mensaje o solicitud especial que envíes durante la reserva"
+      ],
+      "Section1_1Outro1": "No ",
+      "Not": "almacenamos",
+      "Section1_1Outro2": " los datos completos de la tarjeta de pago en nuestros servidores.",
+      "Section1_2Title": "1.2 Datos recopilados automáticamente",
+      "Section1_2Intro": "Cuando navegas por nuestro sitio web, podemos recopilar automáticamente:",
+      "Section1_2List": [
+        "Dirección IP",
+        "Tipo y versión del navegador",
+        "Tipo de dispositivo",
+        "Páginas visitadas y tiempo de permanencia en el sitio web",
+        "Sitio web o fuente de referencia"
+      ],
+      "Section1_2Outro": "Estos datos se utilizan únicamente para seguridad, análisis y mejora del sitio web.",
+      "Section1_3Title": "1.3 Cookies",
+      "Section1_3Prefix": "Utilizamos cookies y tecnologías similares para garantizar el correcto funcionamiento del sitio web y analizar el tráfico web. Los detalles se proporcionan en nuestro banner de ",
+      "Section1_3CookieLink": "Preferencias de cookies",
+      "Section1_3Suffix": "."
+    },
+    "Section2": {
+      "Title": "2. Cómo usamos tus datos",
+      "Intro": "Usamos tus datos personales para:",
+      "List": [
+        "Procesar y gestionar reservas del apartamento",
+        "Comunicarnos contigo sobre tu reserva",
+        "Enviar confirmaciones de reserva e información esencial",
+        "Procesar pagos de forma segura",
+        "Cumplir con obligaciones legales y fiscales",
+        "Mejorar nuestro sitio web y la experiencia de usuario"
+      ]
+    },
+    "Section3": {
+      "Title": "3. Base legal del tratamiento",
+      "Intro": "Tratamos tus datos personales en base a:",
+      "List": [
+        "Ejecución de un contrato (servicios de reserva y alojamiento)",
+        "Tu consentimiento (cuando corresponda)",
+        "Cumplimiento de obligaciones legales",
+        "Intereses legítimos (seguridad y mejora del sitio web)"
+      ]
+    },
+    "Section4": {
+      "Title": "4. Compartición de datos",
+      "Intro": "Podemos compartir tus datos solo con:",
+      "List": [
+        "Procesadores de pago ",
+        "(p. ej., Stripe) para la gestión segura de pagos",
+        "Proveedores de alojamiento y servicios técnicos ",
+        "necesarios para el funcionamiento del sitio web",
+        "Autoridades legales o fiscales",
+        ", cuando lo exija la ley"
+      ],
+      "Outro": "Nunca vendemos tus datos personales."
+    },
+    "Section5": {
+      "Title": "5. Conservación de datos",
+      "Intro": "Conservamos los datos personales solo durante el tiempo necesario para:",
+      "List": [
+        "Cumplir con las obligaciones de reserva y legales",
+        "Cumplir con las normativas contables y fiscales"
+      ],
+      "Outro": "Después de este período, los datos se eliminan de forma segura."
+    },
+    "Section6": {
+      "Title": "6. Tus derechos",
+      "Intro": "Tienes derecho a:",
+      "List": [
+        "Acceder a tus datos personales",
+        "Solicitar la corrección de datos inexactos",
+        "Solicitar la eliminación (cuando sea legalmente posible)",
+        "Restringir u oponerte al tratamiento",
+        "Portabilidad de los datos",
+        "Retirar el consentimiento en cualquier momento"
+      ],
+      "Outro": "Las solicitudes pueden enviarse a ",
+      "ContactEmail": "[hello@laurusnobilisrent.com]."
+    },
+    "Section7": {
+      "Title": "7. Seguridad de los datos",
+      "Body": "Usamos medidas técnicas y organizativas apropiadas para proteger tus datos personales contra el acceso no autorizado, la pérdida o el uso indebido."
+    },
+    "Section8": {
+      "Title": "8. Transferencias internacionales",
+      "Body": "Algunos datos pueden procesarse fuera de tu país (por ejemplo, por proveedores de pago). En esos casos, se aplican las garantías adecuadas."
+    },
+    "Section9": {
+      "Title": "9. Cambios en esta política",
+      "Body": "Podemos actualizar esta Política de privacidad ocasionalmente. Cualquier cambio se publicará en esta página."
+    },
+    "Section10": {
+      "Title": "10. Contacto",
+      "Intro": "Para preguntas relacionadas con la privacidad, contáctanos en:",
+      "Email": "[hello@laurusnobilisrent.com]"
+    }
+  },
+  "TermsOfService": {
+    "Title": "Términos de servicio",
+    "LastUpdatedLabel": "Última actualización:",
+    "LastUpdatedDate": "5 de enero de 2026",
+    "IntroParagraph": {
+      "Text": "Estos Términos de servicio regulan el uso de ",
+      "WebsiteURL": "[laurusnobilisrent.com]",
+      "AndText": " y la reserva del apartamento vacacional ",
+      "ApartmentName": "Laurus Nobilis."
+    },
+    "Section1": {
+      "Title": "1. Alcance del servicio",
+      "Intro": "Nuestro sitio web permite a los usuarios:",
+      "List": [
+        "Ver información sobre el apartamento",
+        "Consultar disponibilidad",
+        "Enviar solicitudes de reserva",
+        "Completar reservas y pagos"
+      ]
+    },
+    "Section2": {
+      "Title": "2. Elegibilidad",
+      "Body": "Al realizar una reserva, confirmas que tienes al menos 18 años y capacidad legal para celebrar un acuerdo vinculante."
+    },
+    "Section3": {
+      "Title": "3. Reservas",
+      "List": [
+        "Una reserva se considera confirmada solo después del pago y la confirmación exitosos",
+        "Todos los datos de reserva proporcionados deben ser exactos",
+        "Nos reservamos el derecho de rechazar o cancelar una reserva si se proporciona información incorrecta o engañosa"
+      ]
+    },
+    "Section4": {
+      "Title": "4. Pagos",
+      "List": [
+        "Los precios se muestran en EUR",
+        "Los pagos se procesan de forma segura a través de proveedores de pago de terceros (p. ej., Stripe)",
+        "No almacenamos datos de tarjetas"
+      ]
+    },
+    "Section5": {
+      "Title": "5. Uso del sitio web",
+      "Intro": "Aceptas no:",
+      "List": [
+        "Usar el sitio web con fines ilícitos",
+        "Intentar interferir con la funcionalidad del sitio web",
+        "Hacer un uso indebido o intentar acceder sin autorización a nuestros sistemas"
+      ]
+    },
+    "Section6": {
+      "Title": "6. Propiedad intelectual",
+      "Body": {
+        "Text1": "Todo el contenido de este sitio web (texto, imágenes, diseño) es propiedad de o está licenciado a ",
+        "ApartmentName": "Laurus Nobilis",
+        "Text2": " y no puede utilizarse sin permiso."
+      }
+    },
+    "Section7": {
+      "Title": "7. Responsabilidad",
+      "Intro": "No somos responsables de:",
+      "List": [
+        "Indisponibilidad temporal del sitio web",
+        "Daños indirectos o consecuentes",
+        "Problemas causados por eventos de fuerza mayor"
+      ]
+    },
+    "Section8": {
+      "Title": "8. Ley aplicable",
+      "Body": {
+        "Text": "Estos Términos se rigen por las leyes de ",
+        "Country": "Croacia."
+      }
+    },
+    "Section9": {
+      "Title": "9. Contacto",
+      "Intro": "Para preguntas sobre estos Términos, contacta:",
+      "Email": "[hello@laurusnobilisrent.com]"
+    }
+  },
+  "CancellationPolicy": {
+    "Title": "Política de cancelación",
+    "LastUpdatedLabel": "Última actualización:",
+    "LastUpdatedDate": "5 de enero de 2026",
+    "IntroParagraph": "Esta Política de cancelación se aplica a todas las reservas realizadas para el apartamento vacacional ",
+    "ApartmentName": "Laurus Nobilis",
+    "Via": " a través de ",
+    "WebsiteURL": "[laurusnobilisrent.com]",
+    "Section1": {
+      "Title": "1. Cancelación por parte del huésped",
+      "Paragraph1": "Los huéspedes pueden cancelar su reserva contactándonos por correo electrónico en ",
+      "ContactEmail": "[hello@laurusnobilisrent.com].",
+      "Paragraph2": "Los reembolsos se emiten según las siguientes reglas:",
+      "List": [
+        "Las cancelaciones realizadas con más de 14 días de antelación a la fecha programada de llegada ",
+        "tienen derecho a un ",
+        "reembolso del 90% ",
+        "del importe total de la reserva.",
+        "Las cancelaciones realizadas dentro de los 14 días previos a la fecha programada de llegada ",
+        "tienen derecho a un ",
+        "reembolso del 50% ",
+        "del importe total de la reserva."
+      ]
+    },
+    "Section2": {
+      "Title": "2. Proceso de reembolso",
+      "List": [
+        "Los reembolsos se emiten al método de pago original utilizado al finalizar la compra.",
+        "Los tiempos de procesamiento pueden variar según el proveedor de pago.",
+        "Las comisiones de transacción aplicables cobradas por procesadores de pago de terceros no son reembolsables."
+      ]
+    },
+    "Section3": {
+      "Title": "3. No presentación y salida anticipada",
+      "List": [
+        "Los huéspedes que no lleguen en la fecha de check-in programada sin aviso previo ",
+        "(no presentación) ",
+        "no tienen derecho a reembolso.",
+        "La salida anticipada después del check-in no da derecho al huésped a reembolso por las noches no utilizadas."
+      ]
+    },
+    "Section4": {
+      "Title": "4. Cambios en las reservas",
+      "Body": "Las solicitudes para cambiar fechas de reserva o datos de huéspedes están sujetas a disponibilidad y pueden implicar un ajuste de precio. Los cambios realizados cerca de la fecha de llegada pueden tratarse como una cancelación según esta política."
+    },
+    "Section5": {
+      "Title": "5. Cancelación por parte del anfitrión",
+      "Body1": "En el improbable caso de que debamos cancelar una reserva debido a circunstancias imprevistas, los huéspedes recibirán un reembolso completo ",
+      "FullRefund": "(100%) ",
+      "Body2": "de todos los pagos realizados."
+    },
+    "Section6": {
+      "Title": "6. Aceptación de la política",
+      "Body": "Al completar una reserva, reconoces que has leído, entendido y aceptado esta Política de cancelación."
+    },
+    "Section7": {
+      "Title": "7. Contacto",
+      "Intro": "Para solicitudes de cancelación o preguntas sobre esta política, contáctanos en:",
+      "Email": "[hello@laurusnobilisrent.com]"
+    }
   }
 }

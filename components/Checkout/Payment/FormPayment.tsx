@@ -1,6 +1,7 @@
 "use client";
 
 import { PaymentElement, useElements, useStripe } from "@stripe/react-stripe-js";
+import { useTranslations } from "next-intl";
 import { useRouter, useSearchParams } from "next/navigation";
 import React, { useMemo } from "react";
 import { usePaymentUi } from "./PaymentUiContext";
@@ -16,6 +17,8 @@ async function sleep(ms: number) {
 }
 
 export default function FormPayment() {
+    const t = useTranslations("Payment");
+
     const stripe = useStripe();
     const elements = useElements();
     const searchParams = useSearchParams();
@@ -142,7 +145,7 @@ export default function FormPayment() {
                 <label
                     htmlFor="cardName"
                     className="formLabel">
-                    Name on card
+                    {t("NameCard")}
                 </label>
                 <input
                     type="text"

@@ -1,214 +1,188 @@
 import CookiePreferencesText from "./CookiePreferencesText";
+import { useTranslations } from "next-intl";
 
 export default function PrivacyPolicy() {
+    const t = useTranslations("PrivacyPolicy");
+    const tRoot = useTranslations();
+    const section1_1List = t.raw("Section1.Section1_1List") as string[];
+    const section1_2List = t.raw("Section1.Section1_2List") as string[];
+    const section2List = t.raw("Section2.List") as string[];
+    const section3List = t.raw("Section3.List") as string[];
+    const section4List = t.raw("Section4.List") as string[];
+    const section5List = t.raw("Section5.List") as string[];
+    const section6List = t.raw("Section6.List") as string[];
+
     return (
         <section className="flex flex-col items-center bg-beige">
             <div className="flex flex-col container items-center text-black text-left">
                 <div className="w-full flex flex-col gap-32">
                     <h1 className="w-full text-[clamp(40px,5.56vw,80px)] leading-120 font-bold">
-                        Privacy Policy
+                        {t("Title")}
                     </h1>
                     <div className="w-full flex flex-col gap-32">
                         <p className="paragraph-h3">
-                            Last updated: <time dateTime="2026-01-05">January 5, 2026</time>
+                            {t("LastUpdatedLabel")} <time dateTime="2026-01-05">{t("LastUpdatedDate")}</time>
                         </p>
                         <div className="paragraph-text flex flex-col gap-16">
                             <p>
-                                This Privacy Policy explains how{" "}
-                                <span className="font-bold">Laurus Nobilis</span> collects, uses,
-                                and protects your personal data when you visit and use our website
-                                <span className="font-bold">[Website URL]</span> to inquire about or
-                                book our holiday apartment located in Lovran, Croatia.
+                                {t("IntroParagraph1")}
+                                <span className="font-bold">{tRoot("CancellationPolicy.ApartmentName")}</span>
+                                {t("IntroParagraph2")}
+                                <span className="font-bold">{t("WebsiteURL")}</span>
+                                {t("IntroParagraph3")}
                             </p>
                             <p>
-                                We are committed to protecting your privacy and processing personal
-                                data in accordance with the General Data Protection Regulation
-                                (GDPR) and applicable Croatian and EU data protection laws.
+                                {t("IntroParagraph4")}
                             </p>
                         </div>
                     </div>
                 </div>
                 <hr className="w-full my-[48px] h-px border-0 bg-beige-darkest" />
                 <div className="w-full flex flex-col gap-32">
-                    <h2 className="paragraph-h2">1. Information We Collect</h2>
+                    <h2 className="paragraph-h2">{t("Section1.Title")}</h2>
                     <div className="w-full flex flex-col gap-32">
-                        <h3 className="paragraph-h3">1.1 Personal Data You Provide</h3>
+                        <h3 className="paragraph-h3">{t("Section1.Section1_1Title")}</h3>
                         <div className="paragraph-text flex flex-col gap-16">
-                            <p>
-                                When you use our website or make a reservation, we may collect the
-                                following personal data:
-                            </p>
+                            <p>{t("Section1.Section1_1Intro")}</p>
                             <ul className="list-disc pl-3.5 marker:text-10 marker:text-black">
-                                <li>First and last name</li>
-                                <li>Email address</li>
-                                <li>Phone number</li>
-                                <li>Country of residence</li>
-                                <li>
-                                    Booking details (check-in date, check-out date, number of
-                                    guests)
-                                </li>
-                                <li>
-                                    Payment-related information (processed securely by our payment
-                                    provider)
-                                </li>
-                                <li>Any message or special request you submit during booking</li>
+                                {section1_1List.map((item) => (
+                                    <li key={item}>{item}</li>
+                                ))}
                             </ul>
                             <p>
-                                We do <span className="font-bold">not</span> store full payment card
-                                details on our servers.
+                                {t("Section1.Section1_1Outro1")}
+                                <span className="font-bold">{t("Section1.Not")}</span>
+                                {t("Section1.Section1_1Outro2")}
                             </p>
                         </div>
                     </div>
                 </div>
                 <hr className="w-full my-[48px] h-px border-0 bg-beige-darkest" />
                 <div className="w-full flex flex-col gap-32">
-                    <h3 className="paragraph-h3">1.2 Automatically Collected Data</h3>
+                    <h3 className="paragraph-h3">{t("Section1.Section1_2Title")}</h3>
                     <div className="paragraph-text flex flex-col gap-16">
-                        <p>When you browse our website, we may automatically collect:</p>
+                        <p>{t("Section1.Section1_2Intro")}</p>
                         <ul className="list-disc pl-3.5 marker:text-10 marker:text-black">
-                            <li>IP address</li>
-                            <li>Browser type and version</li>
-                            <li>Device type</li>
-                            <li>Pages visited and time spent on the website</li>
-                            <li>Referring website or source</li>
+                            {section1_2List.map((item) => (
+                                <li key={item}>{item}</li>
+                            ))}
                         </ul>
-                        <p>
-                            This data is used only for security, analytics, and website improvement.
-                        </p>
+                        <p>{t("Section1.Section1_2Outro")}</p>
                     </div>
                 </div>
                 <hr className="w-full my-[48px] h-px border-0 bg-beige-darkest" />
                 <div className="w-full flex flex-col gap-32">
-                    <h3 className="paragraph-h3">1.3 Cookies</h3>
+                    <h3 className="paragraph-h3">{t("Section1.Section1_3Title")}</h3>
                     <div className="paragraph-text flex flex-col gap-16">
                         <p>
-                            We use cookies and similar technologies to ensure proper website
-                            functionality and to analyze website traffic. Details are provided in
-                            our{" "}
+                            {t("Section1.Section1_3Prefix")}
                             <CookiePreferencesText className="font-bold underline cursor-pointer" />{" "}
-                            banner.
+                            {t("Section1.Section1_3Suffix")}
                         </p>
                     </div>
                 </div>
                 <hr className="w-full my-[48px] h-px border-0 bg-beige-darkest" />
                 <div className="w-full flex flex-col gap-32">
-                    <h2 className="paragraph-h2">2. How We Use Your Data</h2>
+                    <h2 className="paragraph-h2">{t("Section2.Title")}</h2>
                     <div className="paragraph-text flex flex-col gap-16">
-                        <p>We use your personal data to:</p>
+                        <p>{t("Section2.Intro")}</p>
                         <ul className="list-disc pl-3.5 marker:text-10 marker:text-black">
-                            <li>Process and manage apartment reservations</li>
-                            <li>Communicate with you regarding your booking</li>
-                            <li>Send booking confirmations and essential information</li>
-                            <li>Process payments securely</li>
-                            <li>Comply with legal and tax obligations</li>
-                            <li>Improve our website and user experience</li>
+                            {section2List.map((item) => (
+                                <li key={item}>{item}</li>
+                            ))}
                         </ul>
                     </div>
                 </div>
                 <hr className="w-full my-[48px] h-px border-0 bg-beige-darkest" />
                 <div className="w-full flex flex-col gap-32">
-                    <h2 className="paragraph-h2">3. Legal Basis for Processing</h2>
+                    <h2 className="paragraph-h2">{t("Section3.Title")}</h2>
                     <div className="paragraph-text flex flex-col gap-16">
-                        <p>We process your personal data based on:</p>
+                        <p>{t("Section3.Intro")}</p>
                         <ul className="list-disc pl-3.5 marker:text-10 marker:text-black">
-                            <li>Performance of a contract (booking and accommodation services)</li>
-                            <li>Your consent (where applicable)</li>
-                            <li>Compliance with legal obligations</li>
-                            <li>Legitimate interests (website security and improvement)</li>
+                            {section3List.map((item) => (
+                                <li key={item}>{item}</li>
+                            ))}
                         </ul>
                     </div>
                 </div>
                 <hr className="w-full my-[48px] h-px border-0 bg-beige-darkest" />
                 <div className="w-full flex flex-col gap-32">
-                    <h2 className="paragraph-h2">4. Data Sharing</h2>
+                    <h2 className="paragraph-h2">{t("Section4.Title")}</h2>
                     <div className="paragraph-text flex flex-col gap-16">
-                        <p>We may share your data only with:</p>
+                        <p>{t("Section4.Intro")}</p>
                         <ul className="list-disc pl-3.5 marker:text-10 marker:text-black">
                             <li>
-                                <span className="font-bold">Payment processors</span> (e.g. Stripe)
-                                for secure payment handling
+                                <span className="font-bold">{section4List[0]}</span>
+                                {section4List[1]}
                             </li>
                             <li>
-                                <span className="font-bold">
-                                    Hosting and technical service providers
-                                </span>{" "}
-                                necessary for website operation
+                                <span className="font-bold">{section4List[2]}</span>
+                                {section4List[3]}
                             </li>
                             <li>
-                                <span className="font-bold">Legal or tax authorities</span>, when
-                                required by law
+                                <span className="font-bold">{section4List[4]}</span>
+                                {section4List[5]}
                             </li>
                         </ul>
-                        <p>We never sell your personal data.</p>
+                        <p>{t("Section4.Outro")}</p>
                     </div>
                 </div>
                 <hr className="w-full my-[48px] h-px border-0 bg-beige-darkest" />
                 <div className="w-full flex flex-col gap-32">
-                    <h2 className="paragraph-h2">5. Data Retention</h2>
+                    <h2 className="paragraph-h2">{t("Section5.Title")}</h2>
                     <div className="paragraph-text flex flex-col gap-16">
-                        <p>We retain personal data only for as long as necessary to:</p>
+                        <p>{t("Section5.Intro")}</p>
                         <ul className="list-disc pl-3.5 marker:text-10 marker:text-black">
-                            <li>Fulfill booking and legal obligations</li>
-                            <li>Comply with accounting and tax regulations</li>
+                            {section5List.map((item) => (
+                                <li key={item}>{item}</li>
+                            ))}
                         </ul>
-                        <p>After this period, data is securely deleted.</p>
+                        <p>{t("Section5.Outro")}</p>
                     </div>
                 </div>
                 <hr className="w-full my-[48px] h-px border-0 bg-beige-darkest" />
                 <div className="w-full flex flex-col gap-32">
-                    <h2 className="paragraph-h2">6. Your Rights</h2>
+                    <h2 className="paragraph-h2">{t("Section6.Title")}</h2>
                     <div className="paragraph-text flex flex-col gap-16">
-                        <p>You have the right to:</p>
+                        <p>{t("Section6.Intro")}</p>
                         <ul className="list-disc pl-3.5 marker:text-10 marker:text-black">
-                            <li>Access your personal data</li>
-                            <li>Request correction of inaccurate data</li>
-                            <li>Request deletion (where legally possible)</li>
-                            <li>Restrict or object to processing</li>
-                            <li>Data portability</li>
-                            <li>Withdraw consent at any time</li>
+                            {section6List.map((item) => (
+                                <li key={item}>{item}</li>
+                            ))}
                         </ul>
                         <p>
-                            Requests can be sent to{" "}
-                            <span className="font-bold">[Contact Email]</span>.
+                            {t("Section6.Outro")}
+                            <span className="font-bold">{t("Section6.ContactEmail")}</span>
                         </p>
                     </div>
                 </div>
                 <hr className="w-full my-[48px] h-px border-0 bg-beige-darkest" />
                 <div className="w-full flex flex-col gap-32">
-                    <h2 className="paragraph-h2">7. Data Security</h2>
+                    <h2 className="paragraph-h2">{t("Section7.Title")}</h2>
                     <div className="paragraph-text flex flex-col gap-16">
-                        <p>
-                            We use appropriate technical and organizational measures to protect your
-                            personal data against unauthorized access, loss, or misuse.
-                        </p>
+                        <p>{t("Section7.Body")}</p>
                     </div>
                 </div>
                 <hr className="w-full my-[48px] h-px border-0 bg-beige-darkest" />
                 <div className="w-full flex flex-col gap-32">
-                    <h2 className="paragraph-h2">8. International Transfers</h2>
+                    <h2 className="paragraph-h2">{t("Section8.Title")}</h2>
                     <div className="paragraph-text flex flex-col gap-16">
-                        <p>
-                            Some data may be processed outside your country (e.g. by payment
-                            providers). In such cases, appropriate safeguards are applied.
-                        </p>
+                        <p>{t("Section8.Body")}</p>
                     </div>
                 </div>
                 <hr className="w-full my-[48px] h-px border-0 bg-beige-darkest" />
                 <div className="w-full flex flex-col gap-32">
-                    <h2 className="paragraph-h2">9. Changes to This Policy</h2>
+                    <h2 className="paragraph-h2">{t("Section9.Title")}</h2>
                     <div className="paragraph-text flex flex-col gap-16">
-                        <p>
-                            We may update this Privacy Policy from time to time. Any changes will be
-                            posted on this page.
-                        </p>
+                        <p>{t("Section9.Body")}</p>
                     </div>
                 </div>
                 <hr className="w-full my-[48px] h-px border-0 bg-beige-darkest" />
                 <div className="w-full flex flex-col gap-32">
-                    <h2 className="paragraph-h2">10. Contact</h2>
+                    <h2 className="paragraph-h2">{t("Section10.Title")}</h2>
                     <div className="paragraph-text flex flex-col">
-                        <p>For privacy-related questions, contact us at:</p>
-                        <p className="font-bold">[Contact Email]</p>
+                        <p>{t("Section10.Intro")}</p>
+                        <p className="font-bold">{t("Section10.Email")}</p>
                     </div>
                 </div>
             </div>

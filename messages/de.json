@@ -82,5 +82,303 @@
     "Functional": "Funktional",
     "FunctionalDesc": "Speichern Präferenzen wie die Sprachauswahl.",
     "Save": "Einstellungen speichern"
+  },
+  "Details": {
+    "Back": "Zurück zur Verfügbarkeit",
+    "Title": "Ihre Angaben",
+    "Description": "Bitte geben Sie Ihre Angaben ein, um mit Ihrer Reservierung fortzufahren.",
+    "FirstName": "Vorname",
+    "LastName": "Nachname",
+    "PhoneNumber": "Telefonnummer",
+    "Guests": "Anzahl der Gäste",
+    "CheckIn": "Anreise",
+    "CheckOut": "Abreise",
+    "Edit": "Termine bearbeiten",
+    "Clear": "Termine löschen",
+    "Close": "Schließen",
+    "PriceDetails": "Preisdetails",
+    "Nights": "Nächte",
+    "CleaningFee": "Reinigungsgebühr",
+    "Total": "Gesamt",
+    "Continue": "Weiter zur Zahlung",
+    "ReviewPayment": "Sie überprüfen die Zahlungsdetails im nächsten Schritt"
+  },
+  "Payment": {
+    "Back": "Zurück zu den Buchungsdetails",
+    "Title": "Zahlungsdetails",
+    "Description": "Geben Sie Ihre Kartendaten ein, um Ihre Reservierung abzuschließen.",
+    "NameCard": "Name auf der Karte",
+    "Agree": "Ich stimme den ",
+    "And": " und den ",
+    "PayConfirm": "Zahlen und Reservierung bestätigen",
+    "Stripe": "Sichere Zahlung mit Stripe"
+  },
+  "Complete": {
+    "SuccessTitle": "Zahlung abgeschlossen",
+    "SuccessBody": "Ihre Buchung ist bestätigt. Wir melden uns in Kürze bei Ihnen.",
+    "CanceledTitle": "Zahlung abgebrochen",
+    "CanceledBody": "Sie können es erneut versuchen. Sie werden in Kürze zur Zahlung zurückgeleitet.",
+    "FailedTitle": "Zahlung fehlgeschlagen",
+    "FailedBody": "Bitte verwenden Sie eine andere Zahlungsmethode. Sie werden in Kürze weitergeleitet.",
+    "ErrorTitle": "Etwas ist schiefgelaufen",
+    "ErrorBody": "Bitte versuchen Sie es erneut. Sie werden in Kürze weitergeleitet.",
+    "ProcessingTitle": "Zahlung wird abgeschlossen…",
+    "ProcessingBody": "Bitte warten."
+  },
+  "PrivacyPolicy": {
+    "Title": "Datenschutzerklärung",
+    "LastUpdatedLabel": "Zuletzt aktualisiert:",
+    "LastUpdatedDate": "5. Januar 2026",
+    "IntroParagraph1": "Diese Datenschutzerklärung erläutert, wie ",
+    "IntroParagraph2": " Ihre personenbezogenen Daten erhebt, verwendet und schützt, wenn Sie unsere Website besuchen und nutzen",
+    "WebsiteURL": " [laurusnobilisrent.com] ",
+    "IntroParagraph3": "um Informationen anzufragen oder unser Ferienapartment in Lovran, Kroatien, zu buchen.",
+    "IntroParagraph4": "Wir verpflichten uns, Ihre Privatsphäre zu schützen und personenbezogene Daten gemäß der Datenschutz-Grundverordnung (DSGVO) sowie den geltenden kroatischen und EU-Datenschutzgesetzen zu verarbeiten.",
+    "Section1": {
+      "Title": "1. Welche Informationen wir erheben",
+      "Section1_1Title": "1.1 Von Ihnen bereitgestellte personenbezogene Daten",
+      "Section1_1Intro": "Wenn Sie unsere Website nutzen oder eine Reservierung vornehmen, können wir folgende personenbezogene Daten erheben:",
+      "Section1_1List": [
+        "Vor- und Nachname",
+        "E-Mail-Adresse",
+        "Telefonnummer",
+        "Wohnsitzland",
+        "Buchungsdaten (Anreisedatum, Abreisedatum, Anzahl der Gäste)",
+        "Zahlungsbezogene Informationen (werden sicher von unserem Zahlungsanbieter verarbeitet)",
+        "Jede Nachricht oder Sonderanfrage, die Sie während der Buchung übermitteln"
+      ],
+      "Section1_1Outro1": "Wir speichern ",
+      "Not": "keine",
+      "Section1_1Outro2": " vollständigen Zahlungskartendaten auf unseren Servern.",
+      "Section1_2Title": "1.2 Automatisch erhobene Daten",
+      "Section1_2Intro": "Beim Surfen auf unserer Website können wir automatisch Folgendes erfassen:",
+      "Section1_2List": [
+        "IP-Adresse",
+        "Browsertyp und -version",
+        "Gerätetyp",
+        "Besuchte Seiten und Verweildauer auf der Website",
+        "Verweisende Website oder Quelle"
+      ],
+      "Section1_2Outro": "Diese Daten werden ausschließlich für Sicherheit, Analyse und Verbesserungen der Website verwendet.",
+      "Section1_3Title": "1.3 Cookies",
+      "Section1_3Prefix": "Wir verwenden Cookies und ähnliche Technologien, um die ordnungsgemäße Funktion der Website sicherzustellen und den Website-Verkehr zu analysieren. Details finden Sie in unserem ",
+      "Section1_3CookieLink": "Cookie-Einstellungen",
+      "Section1_3Suffix": "-Banner."
+    },
+    "Section2": {
+      "Title": "2. Wie wir Ihre Daten verwenden",
+      "Intro": "Wir verwenden Ihre personenbezogenen Daten, um:",
+      "List": [
+        "Apartment-Reservierungen zu bearbeiten und zu verwalten",
+        "Mit Ihnen bezüglich Ihrer Buchung zu kommunizieren",
+        "Buchungsbestätigungen und wichtige Informationen zu senden",
+        "Zahlungen sicher zu verarbeiten",
+        "Rechtliche und steuerliche Verpflichtungen zu erfüllen",
+        "Unsere Website und Benutzererfahrung zu verbessern"
+      ]
+    },
+    "Section3": {
+      "Title": "3. Rechtsgrundlage der Verarbeitung",
+      "Intro": "Wir verarbeiten Ihre personenbezogenen Daten auf Grundlage von:",
+      "List": [
+        "Vertragserfüllung (Buchungs- und Unterkunftsleistungen)",
+        "Ihrer Einwilligung (falls zutreffend)",
+        "Einhaltung gesetzlicher Verpflichtungen",
+        "Berechtigten Interessen (Website-Sicherheit und -Verbesserung)"
+      ]
+    },
+    "Section4": {
+      "Title": "4. Datenweitergabe",
+      "Intro": "Wir können Ihre Daten nur weitergeben an:",
+      "List": [
+        "Zahlungsdienstleister ",
+        "(z. B. Stripe) zur sicheren Zahlungsabwicklung",
+        "Hosting- und technische Dienstleister ",
+        "die für den Betrieb der Website erforderlich sind",
+        "Rechts- oder Steuerbehörden",
+        ", wenn gesetzlich vorgeschrieben"
+      ],
+      "Outro": "Wir verkaufen Ihre personenbezogenen Daten niemals."
+    },
+    "Section5": {
+      "Title": "5. Datenspeicherung",
+      "Intro": "Wir speichern personenbezogene Daten nur so lange, wie es erforderlich ist, um:",
+      "List": [
+        "Buchungs- und rechtliche Verpflichtungen zu erfüllen",
+        "Buchhaltungs- und Steuervorschriften einzuhalten"
+      ],
+      "Outro": "Nach diesem Zeitraum werden Daten sicher gelöscht."
+    },
+    "Section6": {
+      "Title": "6. Ihre Rechte",
+      "Intro": "Sie haben das Recht auf:",
+      "List": [
+        "Auskunft über Ihre personenbezogenen Daten",
+        "Berichtigung unrichtiger Daten",
+        "Löschung (soweit rechtlich möglich)",
+        "Einschränkung oder Widerspruch gegen die Verarbeitung",
+        "Datenübertragbarkeit",
+        "Widerruf der Einwilligung jederzeit"
+      ],
+      "Outro": "Anfragen können gesendet werden an ",
+      "ContactEmail": "[hello@laurusnobilisrent.com]."
+    },
+    "Section7": {
+      "Title": "7. Datensicherheit",
+      "Body": "Wir verwenden geeignete technische und organisatorische Maßnahmen, um Ihre personenbezogenen Daten vor unbefugtem Zugriff, Verlust oder Missbrauch zu schützen."
+    },
+    "Section8": {
+      "Title": "8. Internationale Übermittlungen",
+      "Body": "Einige Daten können außerhalb Ihres Landes verarbeitet werden (z. B. durch Zahlungsanbieter). In solchen Fällen werden geeignete Schutzmaßnahmen angewendet."
+    },
+    "Section9": {
+      "Title": "9. Änderungen dieser Richtlinie",
+      "Body": "Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Änderungen werden auf dieser Seite veröffentlicht."
+    },
+    "Section10": {
+      "Title": "10. Kontakt",
+      "Intro": "Bei datenschutzbezogenen Fragen kontaktieren Sie uns unter:",
+      "Email": "[hello@laurusnobilisrent.com]"
+    }
+  },
+  "TermsOfService": {
+    "Title": "Nutzungsbedingungen",
+    "LastUpdatedLabel": "Zuletzt aktualisiert:",
+    "LastUpdatedDate": "5. Januar 2026",
+    "IntroParagraph": {
+      "Text": "Diese Nutzungsbedingungen regeln Ihre Nutzung von ",
+      "WebsiteURL": "[laurusnobilisrent.com]",
+      "AndText": " und die Buchung des Ferienapartments ",
+      "ApartmentName": "Laurus Nobilis."
+    },
+    "Section1": {
+      "Title": "1. Leistungsumfang",
+      "Intro": "Unsere Website ermöglicht Nutzern:",
+      "List": [
+        "Informationen über das Apartment anzusehen",
+        "Verfügbarkeiten zu prüfen",
+        "Buchungsanfragen zu senden",
+        "Reservierungen und Zahlungen abzuschließen"
+      ]
+    },
+    "Section2": {
+      "Title": "2. Berechtigung",
+      "Body": "Mit einer Reservierung bestätigen Sie, dass Sie mindestens 18 Jahre alt und rechtlich in der Lage sind, einen verbindlichen Vertrag abzuschließen."
+    },
+    "Section3": {
+      "Title": "3. Reservierungen",
+      "List": [
+        "Eine Reservierung gilt erst nach erfolgreicher Zahlung und Bestätigung als bestätigt",
+        "Alle angegebenen Buchungsdaten müssen korrekt sein",
+        "Wir behalten uns das Recht vor, eine Buchung abzulehnen oder zu stornieren, wenn falsche oder irreführende Informationen angegeben werden"
+      ]
+    },
+    "Section4": {
+      "Title": "4. Zahlungen",
+      "List": [
+        "Preise werden in EUR angezeigt",
+        "Zahlungen werden sicher über Drittanbieter (z. B. Stripe) verarbeitet",
+        "Wir speichern keine Kartendaten"
+      ]
+    },
+    "Section5": {
+      "Title": "5. Nutzung der Website",
+      "Intro": "Sie stimmen zu, Folgendes nicht zu tun:",
+      "List": [
+        "Die Website für rechtswidrige Zwecke zu nutzen",
+        "Zu versuchen, die Funktionalität der Website zu beeinträchtigen",
+        "Unsere Systeme missbräuchlich zu verwenden oder unbefugt darauf zuzugreifen"
+      ]
+    },
+    "Section6": {
+      "Title": "6. Geistiges Eigentum",
+      "Body": {
+        "Text1": "Alle Inhalte dieser Website (Text, Bilder, Design) sind Eigentum von oder lizenziert an ",
+        "ApartmentName": "Laurus Nobilis",
+        "Text2": " und dürfen ohne Erlaubnis nicht verwendet werden."
+      }
+    },
+    "Section7": {
+      "Title": "7. Haftung",
+      "Intro": "Wir haften nicht für:",
+      "List": [
+        "Vorübergehende Nichtverfügbarkeit der Website",
+        "Indirekte oder Folgeschäden",
+        "Probleme aufgrund von Ereignissen höherer Gewalt"
+      ]
+    },
+    "Section8": {
+      "Title": "8. Anwendbares Recht",
+      "Body": {
+        "Text": "Diese Bedingungen unterliegen dem Recht von ",
+        "Country": "Kroatien."
+      }
+    },
+    "Section9": {
+      "Title": "9. Kontakt",
+      "Intro": "Bei Fragen zu diesen Bedingungen kontaktieren Sie:",
+      "Email": "[hello@laurusnobilisrent.com]"
+    }
+  },
+  "CancellationPolicy": {
+    "Title": "Stornierungsrichtlinie",
+    "LastUpdatedLabel": "Zuletzt aktualisiert:",
+    "LastUpdatedDate": "5. Januar 2026",
+    "IntroParagraph": "Diese Stornierungsrichtlinie gilt für alle Reservierungen des Ferienapartments ",
+    "ApartmentName": "Laurus Nobilis",
+    "Via": " über ",
+    "WebsiteURL": "[laurusnobilisrent.com]",
+    "Section1": {
+      "Title": "1. Stornierung durch den Gast",
+      "Paragraph1": "Gäste können ihre Reservierung stornieren, indem sie uns per E-Mail kontaktieren unter ",
+      "ContactEmail": "[hello@laurusnobilisrent.com].",
+      "Paragraph2": "Rückerstattungen erfolgen nach folgenden Regeln:",
+      "List": [
+        "Stornierungen, die mehr als 14 Tage vor dem geplanten Anreisedatum erfolgen, ",
+        "haben Anspruch auf eine ",
+        "90%-Rückerstattung ",
+        "des gesamten Buchungsbetrags.",
+        "Stornierungen innerhalb von 14 Tagen vor dem geplanten Anreisedatum ",
+        "haben Anspruch auf eine ",
+        "50%-Rückerstattung ",
+        "des gesamten Buchungsbetrags."
+      ]
+    },
+    "Section2": {
+      "Title": "2. Rückerstattungsabwicklung",
+      "List": [
+        "Rückerstattungen erfolgen auf die ursprünglich beim Checkout verwendete Zahlungsmethode.",
+        "Die Bearbeitungszeiten können je nach Zahlungsanbieter variieren.",
+        "Anfallende Transaktionsgebühren von Drittanbieter-Zahlungsabwicklern sind nicht erstattungsfähig."
+      ]
+    },
+    "Section3": {
+      "Title": "3. Nichterscheinen und vorzeitige Abreise",
+      "List": [
+        "Gäste, die ohne vorherige Mitteilung am geplanten Anreisedatum nicht erscheinen, ",
+        "(No-Show) ",
+        "haben keinen Anspruch auf Rückerstattung.",
+        "Eine vorzeitige Abreise nach dem Check-in berechtigt den Gast nicht zu einer Rückerstattung für ungenutzte Nächte."
+      ]
+    },
+    "Section4": {
+      "Title": "4. Änderungen an Reservierungen",
+      "Body": "Anfragen zur Änderung von Buchungsdaten oder Gästedaten unterliegen der Verfügbarkeit und können zu einer Preisänderung führen. Änderungen kurz vor dem Anreisedatum können gemäß dieser Richtlinie als Stornierung behandelt werden."
+    },
+    "Section5": {
+      "Title": "5. Stornierung durch den Gastgeber",
+      "Body1": "Im unwahrscheinlichen Fall, dass wir eine Reservierung aufgrund unvorhersehbarer Umstände stornieren müssen, erhalten Gäste eine vollständige Rückerstattung ",
+      "FullRefund": "(100%) ",
+      "Body2": "aller geleisteten Zahlungen."
+    },
+    "Section6": {
+      "Title": "6. Annahme der Richtlinie",
+      "Body": "Mit Abschluss einer Reservierung bestätigen Sie, dass Sie diese Stornierungsrichtlinie gelesen, verstanden und akzeptiert haben."
+    },
+    "Section7": {
+      "Title": "7. Kontakt",
+      "Intro": "Für Stornierungsanfragen oder Fragen zu dieser Richtlinie kontaktieren Sie uns bitte unter:",
+      "Email": "[hello@laurusnobilisrent.com]"
+    }
   }
 }

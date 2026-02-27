@@ -1,86 +1,384 @@
 {
-    "Navbar": {
-        "Amenities": "Équipements",
-        "Gallery": "Galerie",
-        "About": "À propos",
-        "Map": "Carte",
-        "Pricing": "Tarifs",
-        "Booking": "Réservation",
-        "Button": "Réserver"
+  "Navbar": {
+    "Amenities": "Équipements",
+    "Gallery": "Galerie",
+    "About": "À propos",
+    "Map": "Carte",
+    "Pricing": "Tarifs",
+    "Booking": "Réservation",
+    "Button": "Réserver"
+  },
+  "Hero": {
+    "Title": "Appartement de vacances moderne à Lovran",
+    "Subtitle": "Profitez d'une piscine privée, d'une terrasse barbecue et d'un espace pour sept, à quelques minutes de la plage.",
+    "Button": "Voir les disponibilités"
+  },
+  "Amenities": {
+    "Title": "Équipements",
+    "List": {
+      "queenbed": "2 lits queen size",
+      "singlebed": "1 lit simple",
+      "sofa": "Grand canapé",
+      "pool": "Piscine privée",
+      "bbq": "Terrasse avec barbecue",
+      "parking": "Parking privé",
+      "ac": "Climatisation",
+      "wifi": "WiFi",
+      "beach": "Plage à proximité",
+      "tv": "TV dans chaque chambre",
+      "campfire": "Coin salon extérieur",
+      "lounge": "Chaises longues",
+      "dishes": "Lave-vaisselle",
+      "hairdryer": "Sèche-cheveux",
+      "heating": "Chauffage",
+      "towel": "Linge de lit et serviettes"
     },
-    "Hero": {
-        "Title": "Appartement de vacances moderne à Lovran",
-        "Subtitle": "Profitez d'une piscine privée, d'une terrasse barbecue et d'un espace pour sept, à quelques minutes de la plage.",
-        "Button": "Voir les disponibilités"
+    "Button": "Réserver"
+  },
+  "About": {
+    "Title": "Votre escapade moderne à Lovran",
+    "Description1": "Laurus Nobilis est un appartement de vacances moderne et entièrement équipé à Lovran, idéal pour les familles et les groupes. Avec deux lits queen size et un lit simple séparé, l'appartement accueille confortablement jusqu'à 7 personnes (5 en lits + 2 sur le canapé).",
+    "Description2": "L'intérieur est moderne et confortable, avec une cuisine entièrement équipée, la climatisation dans toutes les pièces, un WiFi rapide et une TV dans chaque chambre. À l'extérieur, la piscine privée, la terrasse et l'espace barbecue offrent un cadre relaxant pour profiter du soleil et passer du temps ensemble.",
+    "Description3": "L'appartement est situé dans un quartier calme, à quelques minutes à pied de la plage, des commerces et des restaurants."
+  },
+  "Map": {
+    "Title": "Emplacement",
+    "Description": "Situé à Lovran, à quelques pas de la plage et proche des restaurants, des commerces et de la vieille ville."
+  },
+  "Pricing": {
+    "Title": "Tarifs",
+    "Description": "Les prix varient selon la saison",
+    "LowSeason": "Basse saison",
+    "MidSeason": "Moyenne saison",
+    "HighSeason": "Haute saison",
+    "ByNight": "nuit",
+    "Button": "Demander des dates"
+  },
+  "Booking": {
+    "Title": "Prêt à réserver votre séjour à Laurus Nobilis ?",
+    "Button": "Réserver"
+  },
+  "Footer": {
+    "Address": "Adresse :",
+    "Contact": "Contact :",
+    "PrivacyPolicy": "Politique de confidentialité",
+    "TermsOfService": "Conditions d'utilisation",
+    "CancelationPolicy": "Politique d'annulation",
+    "CookiePreferences": "Préférences cookies"
+  },
+  "CookieBanner": {
+    "Title": "Nous utilisons des cookies",
+    "Description": "Nous utilisons des cookies pour assurer le bon fonctionnement du site et améliorer votre navigation. Vous pouvez accepter tous les cookies, refuser les cookies non essentiels ou gérer vos préférences. En savoir plus dans notre ",
+    "Accept": "Tout accepter",
+    "Preferences": "Gérer les préférences"
+  },
+  "CookiePreferences": {
+    "Title": "Préférences cookies",
+    "Description": "Vous pouvez choisir les types de cookies autorisés. Les cookies essentiels sont toujours activés car ils sont nécessaires au fonctionnement du site.",
+    "Essential": "Essentiels (toujours actifs)",
+    "EssentialDesc": "Nécessaires aux fonctions de base du site, aux étapes de réservation et à la sécurité.",
+    "Analytics": "Analyse",
+    "AnalyticsDesc": "Nous aident à comprendre comment les visiteurs utilisent le site afin d'améliorer les performances et la convivialité.",
+    "Functional": "Fonctionnels",
+    "FunctionalDesc": "Mémorisent des préférences comme le choix de la langue.",
+    "Save": "Enregistrer les préférences"
+  },
+  "Details": {
+    "Back": "Retour aux disponibilités",
+    "Title": "Vos informations",
+    "Description": "Veuillez saisir vos informations pour poursuivre votre réservation.",
+    "FirstName": "Prénom",
+    "LastName": "Nom",
+    "PhoneNumber": "Numéro de téléphone",
+    "Guests": "Nombre de voyageurs",
+    "CheckIn": "Arrivée",
+    "CheckOut": "Départ",
+    "Edit": "Modifier les dates",
+    "Clear": "Effacer les dates",
+    "Close": "Fermer",
+    "PriceDetails": "Détails du prix",
+    "Nights": "nuits",
+    "CleaningFee": "Frais de ménage",
+    "Total": "Total",
+    "Continue": "Continuer vers le paiement",
+    "ReviewPayment": "Vous vérifierez les détails du paiement à l'étape suivante"
+  },
+  "Payment": {
+    "Back": "Retour aux détails de la réservation",
+    "Title": "Détails du paiement",
+    "Description": "Saisissez les informations de votre carte pour finaliser votre réservation.",
+    "NameCard": "Nom sur la carte",
+    "Agree": "J'accepte la ",
+    "And": " et les ",
+    "PayConfirm": "Payer et confirmer la réservation",
+    "Stripe": "Paiement sécurisé avec Stripe"
+  },
+  "Complete": {
+    "SuccessTitle": "Paiement terminé",
+    "SuccessBody": "Votre réservation est confirmée. Nous vous contacterons sous peu.",
+    "CanceledTitle": "Paiement annulé",
+    "CanceledBody": "Vous pouvez réessayer. Vous serez bientôt redirigé vers le paiement.",
+    "FailedTitle": "Échec du paiement",
+    "FailedBody": "Veuillez utiliser un autre moyen de paiement. Vous serez redirigé sous peu.",
+    "ErrorTitle": "Une erreur est survenue",
+    "ErrorBody": "Veuillez réessayer. Vous serez redirigé sous peu.",
+    "ProcessingTitle": "Finalisation du paiement…",
+    "ProcessingBody": "Veuillez patienter."
+  },
+  "PrivacyPolicy": {
+    "Title": "Politique de confidentialité",
+    "LastUpdatedLabel": "Dernière mise à jour :",
+    "LastUpdatedDate": "5 janvier 2026",
+    "IntroParagraph1": "Cette politique de confidentialité explique comment ",
+    "IntroParagraph2": " collecte, utilise et protège vos données personnelles lorsque vous visitez et utilisez notre site web",
+    "WebsiteURL": " [laurusnobilisrent.com] ",
+    "IntroParagraph3": "pour demander des informations ou réserver notre appartement de vacances situé à Lovran, Croatie.",
+    "IntroParagraph4": "Nous nous engageons à protéger votre vie privée et à traiter les données personnelles conformément au Règlement général sur la protection des données (RGPD) et aux lois croates et européennes applicables en matière de protection des données.",
+    "Section1": {
+      "Title": "1. Informations que nous collectons",
+      "Section1_1Title": "1.1 Données personnelles que vous fournissez",
+      "Section1_1Intro": "Lorsque vous utilisez notre site web ou effectuez une réservation, nous pouvons collecter les données personnelles suivantes :",
+      "Section1_1List": [
+        "Prénom et nom",
+        "Adresse e-mail",
+        "Numéro de téléphone",
+        "Pays de résidence",
+        "Détails de réservation (date d'arrivée, date de départ, nombre de voyageurs)",
+        "Informations relatives au paiement (traitées de manière sécurisée par notre prestataire de paiement)",
+        "Tout message ou demande spéciale envoyé lors de la réservation"
+      ],
+      "Section1_1Outro1": "Nous ne ",
+      "Not": "stockons pas",
+      "Section1_1Outro2": " les données complètes de carte de paiement sur nos serveurs.",
+      "Section1_2Title": "1.2 Données collectées automatiquement",
+      "Section1_2Intro": "Lorsque vous naviguez sur notre site web, nous pouvons automatiquement collecter :",
+      "Section1_2List": [
+        "Adresse IP",
+        "Type et version du navigateur",
+        "Type d'appareil",
+        "Pages visitées et temps passé sur le site web",
+        "Site web ou source de provenance"
+      ],
+      "Section1_2Outro": "Ces données sont utilisées uniquement pour la sécurité, l'analyse et l'amélioration du site web.",
+      "Section1_3Title": "1.3 Cookies",
+      "Section1_3Prefix": "Nous utilisons des cookies et des technologies similaires pour assurer le bon fonctionnement du site web et analyser le trafic. Les détails sont fournis dans notre bannière ",
+      "Section1_3CookieLink": "Préférences cookies",
+      "Section1_3Suffix": "."
     },
-    "Amenities": {
-        "Title": "Équipements",
-        "List": {
-            "queenbed": "2 lits queen size",
-            "singlebed": "1 lit simple",
-            "sofa": "Grand canapé",
-            "pool": "Piscine privée",
-            "bbq": "Terrasse avec barbecue",
-            "parking": "Parking privé",
-            "ac": "Climatisation",
-            "wifi": "WiFi",
-            "beach": "Plage à proximité",
-            "tv": "TV dans chaque chambre",
-            "campfire": "Coin salon extérieur",
-            "lounge": "Chaises longues",
-            "dishes": "Lave-vaisselle",
-            "hairdryer": "Sèche-cheveux",
-            "heating": "Chauffage",
-            "towel": "Linge de lit et serviettes"
-        },
-        "Button": "Réserver"
+    "Section2": {
+      "Title": "2. Comment nous utilisons vos données",
+      "Intro": "Nous utilisons vos données personnelles pour :",
+      "List": [
+        "Traiter et gérer les réservations de l'appartement",
+        "Communiquer avec vous au sujet de votre réservation",
+        "Envoyer les confirmations de réservation et les informations essentielles",
+        "Traiter les paiements de manière sécurisée",
+        "Respecter les obligations légales et fiscales",
+        "Améliorer notre site web et l'expérience utilisateur"
+      ]
     },
-    "About": {
-        "Title": "Votre escapade moderne à Lovran",
-        "Description1": "Laurus Nobilis est un appartement de vacances moderne et entièrement équipé à Lovran, idéal pour les familles et les groupes. Avec deux lits queen size et un lit simple séparé, l'appartement accueille confortablement jusqu'à 7 personnes (5 en lits + 2 sur le canapé).",
-        "Description2": "L'intérieur est moderne et confortable, avec une cuisine entièrement équipée, la climatisation dans toutes les pièces, un WiFi rapide et une TV dans chaque chambre. À l'extérieur, la piscine privée, la terrasse et l'espace barbecue offrent un cadre relaxant pour profiter du soleil et passer du temps ensemble.",
-        "Description3": "L'appartement est situé dans un quartier calme, à quelques minutes à pied de la plage, des commerces et des restaurants."
+    "Section3": {
+      "Title": "3. Base légale du traitement",
+      "Intro": "Nous traitons vos données personnelles sur la base de :",
+      "List": [
+        "L'exécution d'un contrat (services de réservation et d'hébergement)",
+        "Votre consentement (le cas échéant)",
+        "Le respect des obligations légales",
+        "Nos intérêts légitimes (sécurité et amélioration du site web)"
+      ]
     },
-    "Map": {
-        "Title": "Emplacement",
-        "Description": "Situé à Lovran, à quelques pas de la plage et proche des restaurants, des commerces et de la vieille ville."
+    "Section4": {
+      "Title": "4. Partage des données",
+      "Intro": "Nous pouvons partager vos données uniquement avec :",
+      "List": [
+        "Les prestataires de paiement ",
+        "(ex. Stripe) pour le traitement sécurisé des paiements",
+        "Les prestataires d'hébergement et de services techniques ",
+        "nécessaires au fonctionnement du site web",
+        "Les autorités légales ou fiscales",
+        ", lorsque la loi l'exige"
+      ],
+      "Outro": "Nous ne vendons jamais vos données personnelles."
     },
-    "Pricing": {
-        "Title": "Tarifs",
-        "Description": "Les prix varient selon la saison",
-        "LowSeason": "Basse saison",
-        "MidSeason": "Moyenne saison",
-        "HighSeason": "Haute saison",
-        "ByNight": "nuit",
-        "Button": "Demander des dates"
+    "Section5": {
+      "Title": "5. Conservation des données",
+      "Intro": "Nous conservons les données personnelles uniquement aussi longtemps que nécessaire pour :",
+      "List": [
+        "Remplir les obligations de réservation et légales",
+        "Respecter les réglementations comptables et fiscales"
+      ],
+      "Outro": "Après cette période, les données sont supprimées de manière sécurisée."
     },
-    "Booking": {
-        "Title": "Prêt à réserver votre séjour à Laurus Nobilis ?",
-        "Button": "Réserver"
+    "Section6": {
+      "Title": "6. Vos droits",
+      "Intro": "Vous avez le droit de :",
+      "List": [
+        "Accéder à vos données personnelles",
+        "Demander la correction des données inexactes",
+        "Demander la suppression (lorsque cela est légalement possible)",
+        "Limiter ou vous opposer au traitement",
+        "La portabilité des données",
+        "Retirer votre consentement à tout moment"
+      ],
+      "Outro": "Les demandes peuvent être envoyées à ",
+      "ContactEmail": "[hello@laurusnobilisrent.com]."
     },
-    "Footer": {
-        "Address": "Adresse :",
-        "Contact": "Contact :",
-        "PrivacyPolicy": "Politique de confidentialité",
-        "TermsOfService": "Conditions d'utilisation",
-        "CancelationPolicy": "Politique d'annulation",
-        "CookiePreferences": "Préférences cookies"
+    "Section7": {
+      "Title": "7. Sécurité des données",
+      "Body": "Nous utilisons des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles contre tout accès non autorisé, perte ou usage abusif."
     },
-    "CookieBanner": {
-        "Title": "Nous utilisons des cookies",
-        "Description": "Nous utilisons des cookies pour assurer le bon fonctionnement du site et améliorer votre navigation. Vous pouvez accepter tous les cookies, refuser les cookies non essentiels ou gérer vos préférences. En savoir plus dans notre ",
-        "Accept": "Tout accepter",
-        "Preferences": "Gérer les préférences"
+    "Section8": {
+      "Title": "8. Transferts internationaux",
+      "Body": "Certaines données peuvent être traitées en dehors de votre pays (par ex. par des prestataires de paiement). Dans ce cas, des garanties appropriées sont appliquées."
     },
-    "CookiePreferences": {
-        "Title": "Préférences cookies",
-        "Description": "Vous pouvez choisir les types de cookies autorisés. Les cookies essentiels sont toujours activés car ils sont nécessaires au fonctionnement du site.",
-        "Essential": "Essentiels (toujours actifs)",
-        "EssentialDesc": "Nécessaires aux fonctions de base du site, aux étapes de réservation et à la sécurité.",
-        "Analytics": "Analyse",
-        "AnalyticsDesc": "Nous aident à comprendre comment les visiteurs utilisent le site afin d'améliorer les performances et la convivialité.",
-        "Functional": "Fonctionnels",
-        "FunctionalDesc": "Mémorisent des préférences comme le choix de la langue.",
-        "Save": "Enregistrer les préférences"
+    "Section9": {
+      "Title": "9. Modifications de cette politique",
+      "Body": "Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. Toute modification sera publiée sur cette page."
+    },
+    "Section10": {
+      "Title": "10. Contact",
+      "Intro": "Pour toute question liée à la confidentialité, contactez-nous à :",
+      "Email": "[hello@laurusnobilisrent.com]"
     }
+  },
+  "TermsOfService": {
+    "Title": "Conditions d'utilisation",
+    "LastUpdatedLabel": "Dernière mise à jour :",
+    "LastUpdatedDate": "5 janvier 2026",
+    "IntroParagraph": {
+      "Text": "Ces conditions d'utilisation régissent votre utilisation de ",
+      "WebsiteURL": "[laurusnobilisrent.com]",
+      "AndText": " et la réservation de l'appartement de vacances ",
+      "ApartmentName": "Laurus Nobilis."
+    },
+    "Section1": {
+      "Title": "1. Portée du service",
+      "Intro": "Notre site web permet aux utilisateurs de :",
+      "List": [
+        "Consulter les informations sur l'appartement",
+        "Vérifier les disponibilités",
+        "Envoyer des demandes de réservation",
+        "Finaliser les réservations et paiements"
+      ]
+    },
+    "Section2": {
+      "Title": "2. Éligibilité",
+      "Body": "En effectuant une réservation, vous confirmez avoir au moins 18 ans et être légalement capable de conclure un accord contraignant."
+    },
+    "Section3": {
+      "Title": "3. Réservations",
+      "List": [
+        "Une réservation est considérée comme confirmée uniquement après paiement et confirmation réussis",
+        "Tous les détails de réservation fournis doivent être exacts",
+        "Nous nous réservons le droit de refuser ou d'annuler une réservation en cas d'informations incorrectes ou trompeuses"
+      ]
+    },
+    "Section4": {
+      "Title": "4. Paiements",
+      "List": [
+        "Les prix sont affichés en EUR",
+        "Les paiements sont traités de manière sécurisée via des prestataires de paiement tiers (ex. Stripe)",
+        "Nous ne stockons pas les données de carte"
+      ]
+    },
+    "Section5": {
+      "Title": "5. Utilisation du site web",
+      "Intro": "Vous acceptez de ne pas :",
+      "List": [
+        "Utiliser le site web à des fins illégales",
+        "Tenter d'interférer avec le fonctionnement du site web",
+        "Abuser de nos systèmes ou tenter d'y accéder sans autorisation"
+      ]
+    },
+    "Section6": {
+      "Title": "6. Propriété intellectuelle",
+      "Body": {
+        "Text1": "Tout le contenu de ce site web (texte, images, design) est détenu par ou concédé sous licence à ",
+        "ApartmentName": "Laurus Nobilis",
+        "Text2": " et ne peut pas être utilisé sans autorisation."
+      }
+    },
+    "Section7": {
+      "Title": "7. Responsabilité",
+      "Intro": "Nous ne sommes pas responsables de :",
+      "List": [
+        "L'indisponibilité temporaire du site web",
+        "Les dommages indirects ou consécutifs",
+        "Les problèmes causés par des cas de force majeure"
+      ]
+    },
+    "Section8": {
+      "Title": "8. Droit applicable",
+      "Body": {
+        "Text": "Ces conditions sont régies par les lois de ",
+        "Country": "la Croatie."
+      }
+    },
+    "Section9": {
+      "Title": "9. Contact",
+      "Intro": "Pour toute question concernant ces conditions, contactez :",
+      "Email": "[hello@laurusnobilisrent.com]"
+    }
+  },
+  "CancellationPolicy": {
+    "Title": "Politique d'annulation",
+    "LastUpdatedLabel": "Dernière mise à jour :",
+    "LastUpdatedDate": "5 janvier 2026",
+    "IntroParagraph": "Cette politique d'annulation s'applique à toutes les réservations effectuées pour l'appartement de vacances ",
+    "ApartmentName": "Laurus Nobilis",
+    "Via": " via ",
+    "WebsiteURL": "[laurusnobilisrent.com]",
+    "Section1": {
+      "Title": "1. Annulation par le voyageur",
+      "Paragraph1": "Les voyageurs peuvent annuler leur réservation en nous contactant par e-mail à ",
+      "ContactEmail": "[hello@laurusnobilisrent.com].",
+      "Paragraph2": "Les remboursements sont effectués selon les règles suivantes :",
+      "List": [
+        "Les annulations effectuées plus de 14 jours avant la date d'arrivée prévue ",
+        "donnent droit à un ",
+        "remboursement de 90 % ",
+        "du montant total de la réservation.",
+        "Les annulations effectuées dans les 14 jours précédant la date d'arrivée prévue ",
+        "donnent droit à un ",
+        "remboursement de 50 % ",
+        "du montant total de la réservation."
+      ]
+    },
+    "Section2": {
+      "Title": "2. Traitement des remboursements",
+      "List": [
+        "Les remboursements sont effectués sur le mode de paiement d'origine utilisé lors du paiement.",
+        "Les délais de traitement peuvent varier selon le prestataire de paiement.",
+        "Les frais de transaction applicables facturés par des processeurs de paiement tiers ne sont pas remboursables."
+      ]
+    },
+    "Section3": {
+      "Title": "3. Non-présentation et départ anticipé",
+      "List": [
+        "Les voyageurs qui n'arrivent pas à la date d'arrivée prévue sans préavis ",
+        "(non-présentation) ",
+        "ne sont pas éligibles à un remboursement.",
+        "Un départ anticipé après l'arrivée ne donne pas droit à un remboursement des nuits non utilisées."
+      ]
+    },
+    "Section4": {
+      "Title": "4. Modifications des réservations",
+      "Body": "Les demandes de modification des dates de réservation ou des informations des voyageurs sont soumises à disponibilité et peuvent entraîner un ajustement de prix. Les modifications effectuées près de la date d'arrivée peuvent être traitées comme une annulation selon cette politique."
+    },
+    "Section5": {
+      "Title": "5. Annulation par l'hôte",
+      "Body1": "Dans le cas peu probable où nous devrions annuler une réservation en raison de circonstances imprévues, les voyageurs recevront un remboursement intégral ",
+      "FullRefund": "(100 %) ",
+      "Body2": "de tous les paiements effectués."
+    },
+    "Section6": {
+      "Title": "6. Acceptation de la politique",
+      "Body": "En finalisant une réservation, vous reconnaissez avoir lu, compris et accepté cette politique d'annulation."
+    },
+    "Section7": {
+      "Title": "7. Contact",
+      "Intro": "Pour les demandes d'annulation ou les questions concernant cette politique, veuillez nous contacter à :",
+      "Email": "[hello@laurusnobilisrent.com]"
+    }
+  }
 }

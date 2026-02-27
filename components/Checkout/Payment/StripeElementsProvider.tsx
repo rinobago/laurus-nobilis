@@ -1,8 +1,9 @@
 "use client";
 
 import { Elements } from "@stripe/react-stripe-js";
-import type { Appearance } from "@stripe/stripe-js";
+import type { Appearance, StripeElementsOptions } from "@stripe/stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
+import { useLocale } from "next-intl";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -30,7 +31,6 @@ const appearance: Appearance = {
             lineHeight: "1.5",
         },
         ".Input": {
-            width: "100%",
             border: "solid",
             borderWidth: "1px",
             borderColor: "#dcd7c4",
@@ -38,11 +38,27 @@ const appearance: Appearance = {
     },
 };
 
+type StripeLocale = NonNullable<StripeElementsOptions["locale"]>;
+
+const APP_TO_STRIPE_LOCALE: Record<string, StripeLocale> = {
+    en: "en",
+    de: "de",
+    sl: "sl",
+    cs: "cs",
+    es: "es",
+    hr: "hr",
+    it: "it",
+    pl: "pl",
+    hu: "hu",
+    fr: "fr",
+};
+
 export default function StripeElementsProvider({ children }: { children: React.ReactNode }) {
     const sp = useSearchParams();
+    const locale = useLocale();
     const [clientSecret, setClientSecret] = useState<string | null>(null);
 
-    const stripeLocale = "en";
+    const stripeLocale = APP_TO_STRIPE_LOCALE[locale] ?? "en";
 
     useEffect(() => {
         const check_in = sp.get("check_in");
@@ -53,12 +69,21 @@ export default function StripeElementsProvider({ children }: { children: React.R
         const phone = sp.get("phone");
         const guests = sp.get("guests");
 
-        if (!check_in || !check_out || !firstName || !lastName || !email || !phone || !guests) return;
+        if (!check_in || !check_out || !firstName || !lastName || !email || !phone || !guests)
+            return;
 
         fetch("/api/stripe/create-payment-intent", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ check_in, check_out, firstName, lastName, email, phone, guests }),
+            body: JSON.stringify({
+                check_in,
+                check_out,
+                firstName,
+                lastName,
+                email,
+                phone,
+                guests,
+            }),
         })
             .then((r) => r.json())
             .then((d) => setClientSecret(d.clientSecret));
@@ -78,8 +103,7 @@ export default function StripeElementsProvider({ children }: { children: React.R
                         cssSrc: "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap",
                     },
                 ],
-            }}
-        >
+            }}>
             {children}
         </Elements>
     );

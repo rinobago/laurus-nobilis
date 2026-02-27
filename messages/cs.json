@@ -82,5 +82,303 @@
     "Functional": "Funkční",
     "FunctionalDesc": "Pamatují si nastavení, například výběr jazyka.",
     "Save": "Uložit volby"
+  },
+  "Details": {
+    "Back": "Zpět na dostupnost",
+    "Title": "Vaše údaje",
+    "Description": "Pro pokračování rezervace prosím vyplňte své údaje.",
+    "FirstName": "Jméno",
+    "LastName": "Příjmení",
+    "PhoneNumber": "Telefonní číslo",
+    "Guests": "Počet hostů",
+    "CheckIn": "Příjezd",
+    "CheckOut": "Odjezd",
+    "Edit": "Upravit termíny",
+    "Clear": "Smazat termíny",
+    "Close": "Zavřít",
+    "PriceDetails": "Detail ceny",
+    "Nights": "nocí",
+    "CleaningFee": "Poplatek za úklid",
+    "Total": "Celkem",
+    "Continue": "Pokračovat k platbě",
+    "ReviewPayment": "Detaily platby zkontrolujete v dalším kroku"
+  },
+  "Payment": {
+    "Back": "Zpět na detaily rezervace",
+    "Title": "Platební údaje",
+    "Description": "Pro dokončení rezervace zadejte údaje o své kartě.",
+    "NameCard": "Jméno na kartě",
+    "Agree": "Souhlasím s ",
+    "And": " a ",
+    "PayConfirm": "Zaplatit a potvrdit rezervaci",
+    "Stripe": "Bezpečná platba přes Stripe"
+  },
+  "Complete": {
+    "SuccessTitle": "Platba dokončena",
+    "SuccessBody": "Vaše rezervace je potvrzena. Brzy vás budeme kontaktovat.",
+    "CanceledTitle": "Platba zrušena",
+    "CanceledBody": "Můžete to zkusit znovu. Brzy budete přesměrováni zpět na platbu.",
+    "FailedTitle": "Platba selhala",
+    "FailedBody": "Použijte prosím jinou platební metodu. Brzy budete přesměrováni.",
+    "ErrorTitle": "Něco se pokazilo",
+    "ErrorBody": "Zkuste to prosím znovu. Brzy budete přesměrováni.",
+    "ProcessingTitle": "Dokončování platby…",
+    "ProcessingBody": "Prosím čekejte."
+  },
+  "PrivacyPolicy": {
+    "Title": "Zásady ochrany osobních údajů",
+    "LastUpdatedLabel": "Poslední aktualizace:",
+    "LastUpdatedDate": "5. ledna 2026",
+    "IntroParagraph1": "Tyto Zásady ochrany osobních údajů vysvětlují, jak ",
+    "IntroParagraph2": " shromažďuje, používá a chrání vaše osobní údaje, když navštívíte a používáte naše webové stránky",
+    "WebsiteURL": " [laurusnobilisrent.com] ",
+    "IntroParagraph3": "pro zaslání poptávky nebo rezervaci našeho prázdninového apartmánu v Lovranu v Chorvatsku.",
+    "IntroParagraph4": "Zavazujeme se chránit vaše soukromí a zpracovávat osobní údaje v souladu s Obecným nařízením o ochraně osobních údajů (GDPR) a příslušnými chorvatskými a evropskými právními předpisy o ochraně údajů.",
+    "Section1": {
+      "Title": "1. Informace, které shromažďujeme",
+      "Section1_1Title": "1.1 Osobní údaje, které poskytujete",
+      "Section1_1Intro": "Při používání našich webových stránek nebo při rezervaci můžeme shromažďovat tyto osobní údaje:",
+      "Section1_1List": [
+        "Jméno a příjmení",
+        "E-mailová adresa",
+        "Telefonní číslo",
+        "Země pobytu",
+        "Údaje o rezervaci (datum příjezdu, datum odjezdu, počet hostů)",
+        "Informace související s platbou (bezpečně zpracovávané naším poskytovatelem plateb)",
+        "Jakákoli zpráva nebo zvláštní požadavek odeslaný během rezervace"
+      ],
+      "Section1_1Outro1": "Na našich serverech ",
+      "Not": "neukládáme",
+      "Section1_1Outro2": " úplné údaje o platebních kartách.",
+      "Section1_2Title": "1.2 Automaticky shromažďované údaje",
+      "Section1_2Intro": "Při procházení našich webových stránek můžeme automaticky shromažďovat:",
+      "Section1_2List": [
+        "IP adresu",
+        "Typ a verzi prohlížeče",
+        "Typ zařízení",
+        "Navštívené stránky a čas strávený na webu",
+        "Odkazující web nebo zdroj"
+      ],
+      "Section1_2Outro": "Tyto údaje se používají pouze pro bezpečnost, analytiku a zlepšování webu.",
+      "Section1_3Title": "1.3 Cookies",
+      "Section1_3Prefix": "Používáme cookies a podobné technologie, abychom zajistili správné fungování webu a analyzovali návštěvnost. Podrobnosti jsou uvedeny v našem banneru ",
+      "Section1_3CookieLink": "Nastavení cookies",
+      "Section1_3Suffix": "."
+    },
+    "Section2": {
+      "Title": "2. Jak používáme vaše údaje",
+      "Intro": "Vaše osobní údaje používáme k:",
+      "List": [
+        "Zpracování a správě rezervací apartmánu",
+        "Komunikaci s vámi ohledně rezervace",
+        "Zasílání potvrzení rezervace a důležitých informací",
+        "Bezpečnému zpracování plateb",
+        "Plnění právních a daňových povinností",
+        "Zlepšování našich webových stránek a uživatelské zkušenosti"
+      ]
+    },
+    "Section3": {
+      "Title": "3. Právní základ zpracování",
+      "Intro": "Vaše osobní údaje zpracováváme na základě:",
+      "List": [
+        "Plnění smlouvy (rezervační a ubytovací služby)",
+        "Vašeho souhlasu (kde je to relevantní)",
+        "Plnění právních povinností",
+        "Oprávněných zájmů (bezpečnost a zlepšování webu)"
+      ]
+    },
+    "Section4": {
+      "Title": "4. Sdílení údajů",
+      "Intro": "Vaše údaje můžeme sdílet pouze s:",
+      "List": [
+        "Poskytovateli plateb ",
+        "(např. Stripe) pro bezpečné zpracování plateb",
+        "Poskytovateli hostingu a technických služeb ",
+        "nezbytných pro provoz webu",
+        "Právními nebo daňovými orgány",
+        ", je-li to vyžadováno zákonem"
+      ],
+      "Outro": "Vaše osobní údaje nikdy neprodáváme."
+    },
+    "Section5": {
+      "Title": "5. Uchovávání údajů",
+      "Intro": "Osobní údaje uchováváme pouze po dobu nezbytnou k:",
+      "List": [
+        "Plnění rezervačních a právních povinností",
+        "Dodržování účetních a daňových předpisů"
+      ],
+      "Outro": "Po této době jsou údaje bezpečně smazány."
+    },
+    "Section6": {
+      "Title": "6. Vaše práva",
+      "Intro": "Máte právo na:",
+      "List": [
+        "Přístup ke svým osobním údajům",
+        "Opravu nepřesných údajů",
+        "Výmaz (kde je to právně možné)",
+        "Omezení nebo námitku proti zpracování",
+        "Přenositelnost údajů",
+        "Odvolání souhlasu kdykoli"
+      ],
+      "Outro": "Žádosti lze zaslat na ",
+      "ContactEmail": "[hello@laurusnobilisrent.com]."
+    },
+    "Section7": {
+      "Title": "7. Bezpečnost údajů",
+      "Body": "Používáme vhodná technická a organizační opatření k ochraně vašich osobních údajů před neoprávněným přístupem, ztrátou nebo zneužitím."
+    },
+    "Section8": {
+      "Title": "8. Mezinárodní předávání",
+      "Body": "Některé údaje mohou být zpracovávány mimo vaši zemi (např. poskytovateli plateb). V takových případech jsou uplatňovány odpovídající záruky."
+    },
+    "Section9": {
+      "Title": "9. Změny těchto zásad",
+      "Body": "Tyto zásady ochrany osobních údajů můžeme čas od času aktualizovat. Jakékoli změny budou zveřejněny na této stránce."
+    },
+    "Section10": {
+      "Title": "10. Kontakt",
+      "Intro": "Pro otázky týkající se ochrany soukromí nás kontaktujte na:",
+      "Email": "[hello@laurusnobilisrent.com]"
+    }
+  },
+  "TermsOfService": {
+    "Title": "Podmínky služby",
+    "LastUpdatedLabel": "Poslední aktualizace:",
+    "LastUpdatedDate": "5. ledna 2026",
+    "IntroParagraph": {
+      "Text": "Tyto Podmínky služby upravují používání ",
+      "WebsiteURL": "[laurusnobilisrent.com]",
+      "AndText": " a rezervaci prázdninového apartmánu ",
+      "ApartmentName": "Laurus Nobilis."
+    },
+    "Section1": {
+      "Title": "1. Rozsah služby",
+      "Intro": "Naše webové stránky uživatelům umožňují:",
+      "List": [
+        "Zobrazit informace o apartmánu",
+        "Zkontrolovat dostupnost",
+        "Odeslat žádosti o rezervaci",
+        "Dokončit rezervace a platby"
+      ]
+    },
+    "Section2": {
+      "Title": "2. Způsobilost",
+      "Body": "Provedením rezervace potvrzujete, že je vám alespoň 18 let a jste právně způsobilí uzavřít závaznou dohodu."
+    },
+    "Section3": {
+      "Title": "3. Rezervace",
+      "List": [
+        "Rezervace je považována za potvrzenou až po úspěšné platbě a potvrzení",
+        "Všechny poskytnuté údaje o rezervaci musí být přesné",
+        "Vyhrazujeme si právo odmítnout nebo zrušit rezervaci, pokud jsou poskytnuty nesprávné nebo zavádějící informace"
+      ]
+    },
+    "Section4": {
+      "Title": "4. Platby",
+      "List": [
+        "Ceny jsou uvedeny v EUR",
+        "Platby jsou bezpečně zpracovávány prostřednictvím poskytovatelů plateb třetích stran (např. Stripe)",
+        "Neukládáme údaje o kartách"
+      ]
+    },
+    "Section5": {
+      "Title": "5. Používání webu",
+      "Intro": "Souhlasíte, že nebudete:",
+      "List": [
+        "Používat web pro nezákonné účely",
+        "Pokoušet se narušovat funkčnost webu",
+        "Zneužívat nebo se pokoušet o neoprávněný přístup do našich systémů"
+      ]
+    },
+    "Section6": {
+      "Title": "6. Duševní vlastnictví",
+      "Body": {
+        "Text1": "Veškerý obsah na tomto webu (text, obrázky, design) je vlastněn nebo licencován společností ",
+        "ApartmentName": "Laurus Nobilis",
+        "Text2": " a nesmí být používán bez povolení."
+      }
+    },
+    "Section7": {
+      "Title": "7. Odpovědnost",
+      "Intro": "Neodpovídáme za:",
+      "List": [
+        "Dočasnou nedostupnost webu",
+        "Nepřímé nebo následné škody",
+        "Problémy způsobené událostmi vyšší moci"
+      ]
+    },
+    "Section8": {
+      "Title": "8. Rozhodné právo",
+      "Body": {
+        "Text": "Tyto podmínky se řídí právem ",
+        "Country": "Chorvatska."
+      }
+    },
+    "Section9": {
+      "Title": "9. Kontakt",
+      "Intro": "Pro dotazy k těmto podmínkám kontaktujte:",
+      "Email": "[hello@laurusnobilisrent.com]"
+    }
+  },
+  "CancellationPolicy": {
+    "Title": "Storno podmínky",
+    "LastUpdatedLabel": "Poslední aktualizace:",
+    "LastUpdatedDate": "5. ledna 2026",
+    "IntroParagraph": "Tyto storno podmínky se vztahují na všechny rezervace prázdninového apartmánu ",
+    "ApartmentName": "Laurus Nobilis",
+    "Via": " prostřednictvím ",
+    "WebsiteURL": "[laurusnobilisrent.com]",
+    "Section1": {
+      "Title": "1. Zrušení ze strany hosta",
+      "Paragraph1": "Hosté mohou svou rezervaci zrušit kontaktováním e-mailem na ",
+      "ContactEmail": "[hello@laurusnobilisrent.com].",
+      "Paragraph2": "Vrácení peněz se provádí podle následujících pravidel:",
+      "List": [
+        "Zrušení provedená více než 14 dní před plánovaným datem příjezdu ",
+        "mají nárok na ",
+        "vrácení 90 % ",
+        "z celkové částky rezervace.",
+        "Zrušení provedená do 14 dnů před plánovaným datem příjezdu ",
+        "mají nárok na ",
+        "vrácení 50 % ",
+        "z celkové částky rezervace."
+      ]
+    },
+    "Section2": {
+      "Title": "2. Zpracování vrácení peněz",
+      "List": [
+        "Vrácení peněz se provádí na původní platební metodu použitou při platbě.",
+        "Doba zpracování se může lišit podle poskytovatele plateb.",
+        "Případné transakční poplatky účtované třetími stranami nejsou vratné."
+      ]
+    },
+    "Section3": {
+      "Title": "3. Nedostavení se a předčasný odjezd",
+      "List": [
+        "Hosté, kteří bez předchozího upozornění nedorazí v plánovaný den příjezdu, ",
+        "(nedostavení se) ",
+        "nemají nárok na vrácení peněz.",
+        "Předčasný odjezd po check-inu neopravňuje hosta k vrácení peněz za nevyužité noci."
+      ]
+    },
+    "Section4": {
+      "Title": "4. Změny rezervací",
+      "Body": "Požadavky na změnu termínů rezervace nebo údajů o hostech podléhají dostupnosti a mohou vést k úpravě ceny. Změny provedené blízko data příjezdu mohou být podle těchto podmínek považovány za zrušení."
+    },
+    "Section5": {
+      "Title": "5. Zrušení ze strany hostitele",
+      "Body1": "V nepravděpodobném případě, že budeme muset rezervaci zrušit z důvodu nepředvídaných okolností, hosté obdrží plnou náhradu ",
+      "FullRefund": "(100 %) ",
+      "Body2": "všech provedených plateb."
+    },
+    "Section6": {
+      "Title": "6. Přijetí podmínek",
+      "Body": "Dokončením rezervace potvrzujete, že jste si tyto storno podmínky přečetli, porozuměli jim a souhlasíte s nimi."
+    },
+    "Section7": {
+      "Title": "7. Kontakt",
+      "Intro": "Pro žádosti o zrušení nebo dotazy k těmto podmínkám nás kontaktujte na:",
+      "Email": "[hello@laurusnobilisrent.com]"
+    }
   }
 }
