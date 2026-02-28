@@ -3,7 +3,15 @@ import { stripe } from "@/lib/stripe";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
-    const body = (await req.json()) as { check_in?: string; check_out?: string; firstName?: string; lastName?: string; email?: string; phone?: string; guests?: string | number };
+    const body = (await req.json()) as {
+        check_in?: string;
+        check_out?: string;
+        firstName?: string;
+        lastName?: string;
+        email?: string;
+        phone?: string;
+        guests?: string | number;
+    };
 
     const check_in = body?.check_in;
     const check_out = body?.check_out;
@@ -39,7 +47,16 @@ export async function POST(req: Request) {
         amount: total * 100, // convert € -> cents
         currency: "eur",
         payment_method_types: ["card"],
-        metadata: { check_in, check_out, nights: String(nights), guests: String(guestsCount), first_name: firstName, last_name: lastName, email, phone },
+        metadata: {
+            check_in,
+            check_out,
+            nights: String(nights),
+            guests: String(guestsCount),
+            first_name: firstName,
+            last_name: lastName,
+            email,
+            phone,
+        },
     });
 
     return NextResponse.json({ clientSecret: intent.client_secret });

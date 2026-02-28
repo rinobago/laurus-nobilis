@@ -127,6 +127,7 @@ export default function CheckoutComplete() {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 email: sp.get("email"),
+                phoneNumber: sp.get("phone"),
                 firstName: sp.get("firstName"),
                 lastName: sp.get("lastName"),
                 check_in: sp.get("check_in"),
