@@ -1,5 +1,6 @@
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
+import { adminGuard } from "./lib/auth/proxyHelper";
 
 const COOKIE = "checkout_step";
 
@@ -32,10 +33,15 @@ export function proxy(req: NextRequest) {
         return NextResponse.next();
     }
 
+    // Admin page protection
+    if (pathname.startsWith("/admin")) {
+        return adminGuard(req);
+    }
+
     // Any other /checkout pages: allow
     return NextResponse.next();
 }
 
 export const config = {
-    matcher: ["/checkout/:path*"],
+    matcher: ["/checkout/:path*", "/admin/:path*"],
 };
