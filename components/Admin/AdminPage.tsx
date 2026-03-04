@@ -1,4 +1,4 @@
-import BookingList from "./BookingList";
+import BookingList from "./Bookings/BookingList";
 import FilterSection from "./Filters/FilterSection";
 
 export default function AdminPage() {
@@ -10,7 +10,9 @@ export default function AdminPage() {
                     className="font-bold text-h2 text-black leading-120 text-center w-full">
                     Rezervacije
                 </h1>
-                <div id="adminList">
+                <div
+                    id="adminList"
+                    className="flex flex-col gap-32 justify-start items-center">
                     <FilterSection />
                     <BookingList />
                 </div>

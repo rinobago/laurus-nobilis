@@ -2,7 +2,7 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
-import SearchIcon from "../../svg_icons/AdminIcons";
+import { SearchIcon } from "../../svg_icons/AdminIcons";
 import { Booking } from "../adminTypes";
 
 export default function SearchBar({ bookings }: { bookings?: Booking[] }) {
@@ -26,7 +26,7 @@ export default function SearchBar({ bookings }: { bookings?: Booking[] }) {
     };
 
     return (
-        <div className="relative flex justify-start items-center gap-8 max-w-75 w-full h-9 rounded-[5px] bg-beige-dark border border-beige-darker">
+        <div className="relative flex justify-start items-center gap-8 max-w-75 w-full h-full rounded-[5px] bg-beige-dark border border-beige-darker">
             <SearchIcon className="pointer-events-none absolute max-w-16 max-h-16 w-full h-full left-8 top-1/2 transform -translate-y-1/2" />
             <input
                 type="search"
