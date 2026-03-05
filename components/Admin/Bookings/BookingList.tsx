@@ -3,7 +3,7 @@ import PageNumeration from "./PageNumeration";
 
 export default function BookingList() {
     return (
-        <div>
+        <div className="flex flex-col gap-24 justify-center items-center w-full">
             <BookingTableDesktop />
             <PageNumeration />
         </div>

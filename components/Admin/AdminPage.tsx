@@ -3,8 +3,8 @@ import FilterSection from "./Filters/FilterSection";
 
 export default function AdminPage() {
     return (
-        <section className="flex flex-col items-center justify-center relative bg-beige">
-            <div className="container flex flex-col items-center justify-center gap-30">
+        <section className="flex flex-col items-center justify-center relative bg-beige w-full">
+            <div className="container flex flex-col items-center justify-center gap-30 w-full h-full">
                 <h1
                     id="adminTitle"
                     className="font-bold text-h2 text-black leading-120 text-center w-full">
@@ -12,7 +12,7 @@ export default function AdminPage() {
                 </h1>
                 <div
                     id="adminList"
-                    className="flex flex-col gap-32 justify-start items-center">
+                    className="flex flex-col gap-32 justify-start items-center w-full">
                     <FilterSection />
                     <BookingList />
                 </div>
