@@ -6,7 +6,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { DateRange, DayPicker, getDefaultClassNames } from "react-day-picker";
 import { hr } from "react-day-picker/locale";
 
-export default function CalendarFilter() {
+export default function CalendarDateChange() {
     const today = new Date();
     const minMonth = new Date(today.getFullYear(), today.getMonth() + 1, 1);
     const cn = getDefaultClassNames();
@@ -54,6 +54,9 @@ export default function CalendarFilter() {
             mode="range"
             min={2}
             defaultMonth={monthStart}
+            startMonth={minMonth}
+            disabled={{ before: today }}
+            excludeDisabled
             locale={hr}
             timeZone="UTC"
             selected={selected}

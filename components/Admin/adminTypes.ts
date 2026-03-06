@@ -4,5 +4,7 @@ export type Booking = {
     date: string;
     guests: number;
     price: number;
-    status: "confirmed" | "refunded" | "cancelled";
+    status: Status;
 };
+
+export type Status = "active" | "cancelled" | "refunded";
