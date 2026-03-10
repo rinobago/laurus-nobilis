@@ -1,6 +1,19 @@
+import { Booking } from "../adminTypes";
 import BookingRowDesktop from "./BookingRowDesktop";
 
-export default function BookingTable() {
+export default function BookingTable({
+    bookings,
+    page,
+    limit,
+    totalItems,
+    totalPages,
+}: {
+    bookings: Booking[];
+    page: number;
+    limit: number;
+    totalItems: number;
+    totalPages: number;
+}) {
     return (
         <div className="flex justify-center items-center max-w-247.25 w-full">
             <table className="w-full table-auto border border-beige-darkest border-separate border-spacing-0 rounded-[5px]">
@@ -30,19 +43,12 @@ export default function BookingTable() {
                     </tr>
                 </thead>
                 <tbody className="last:[&>tr]:border-b-0 [&>tr:last-child>td:first-child]:rounded-bl-[5px] [&>tr:last-child>td:last-child]:rounded-br-[5px]">
-                    <BookingRowDesktop status="active" />
-                    <BookingRowDesktop status="cancelled" />
-                    <BookingRowDesktop status="refunded" />
-                    <BookingRowDesktop status="active" />
-                    <BookingRowDesktop status="active" />
-                    <BookingRowDesktop status="active" />
-                    <BookingRowDesktop status="active" />
-                    <BookingRowDesktop status="active" />
-                    <BookingRowDesktop status="active" />
-                    <BookingRowDesktop status="active" />
-                    <BookingRowDesktop status="active" />
-                    <BookingRowDesktop status="active" />
-                    <BookingRowDesktop status="active" />
+                    {bookings.map((booking) => (
+                        <BookingRowDesktop
+                            key={booking.booking_id}
+                            booking={booking}
+                        />
+                    ))}
                 </tbody>
             </table>
         </div>

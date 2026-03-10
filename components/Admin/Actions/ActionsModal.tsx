@@ -1,13 +1,26 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { Booking } from "../adminTypes";
+import CancelModal from "./CancelModal";
 import ChangeDatesModal from "./ChangeDates/ChangeDatesModal";
+import RefundModal from "./Refund/RefundModal";
 import ViewModal from "./ViewModal";
 
-export default function ActionsModal({ open, onClose }: { open: boolean; onClose: () => void }) {
+export default function ActionsModal({
+    open,
+    onClose,
+    booking,
+}: {
+    open: boolean;
+    onClose: () => void;
+    booking: Booking;
+}) {
     const modalRef = useRef<HTMLDivElement>(null);
     const [openView, setOpenView] = useState(false);
     const [openDates, setOpenDates] = useState(false);
+    const [openCancel, setOpenCancel] = useState(false);
+    const [openRefund, setOpenRefund] = useState(false);
 
     useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
@@ -33,6 +46,14 @@ export default function ActionsModal({ open, onClose }: { open: boolean; onClose
         onClose();
         setOpenDates(true);
     }
+    function openCancelFunc() {
+        onClose();
+        setOpenCancel(true);
+    }
+    function openRefundFunc() {
+        onClose();
+        setOpenRefund(true);
+    }
 
     return (
         <>
@@ -52,12 +73,12 @@ export default function ActionsModal({ open, onClose }: { open: boolean; onClose
                         Uredi datume
                     </button>
                     <button
-                        onClick={onClose}
+                        onClick={openCancelFunc}
                         className="cursor-pointer flex-1 hover:bg-beige-darker focus:bg-beige-darker text-sm leading-150 text-center text-black">
                         Otkaži
                     </button>
                     <button
-                        onClick={onClose}
+                        onClick={openRefundFunc}
                         className="cursor-pointer flex-1 hover:bg-beige-darker focus:bg-beige-darker text-sm leading-150 text-center text-black">
                         Refundiraj
                     </button>
@@ -67,10 +88,19 @@ export default function ActionsModal({ open, onClose }: { open: boolean; onClose
             <ViewModal
                 open={openView}
                 onClose={() => setOpenView(false)}
+                booking={booking}
             />
             <ChangeDatesModal
                 open={openDates}
                 onClose={() => setOpenDates(false)}
+            />
+            <CancelModal
+                open={openCancel}
+                onClose={() => setOpenCancel(false)}
+            />
+            <RefundModal
+                open={openRefund}
+                onClose={() => setOpenRefund(false)}
             />
         </>
     );

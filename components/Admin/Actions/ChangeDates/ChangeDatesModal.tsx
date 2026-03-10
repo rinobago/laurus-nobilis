@@ -18,7 +18,7 @@ export default function ChangeDatesModal({
         return () => {
             document.body.style.overflow = "";
         };
-    }, [open]);
+    }, [open, onClose]);
 
     return (
         <>

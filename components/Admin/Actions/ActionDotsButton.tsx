@@ -2,9 +2,10 @@
 
 import { ActionDots } from "@/components/svg_icons/AdminIcons";
 import { useState } from "react";
+import { Booking } from "../adminTypes";
 import ActionsModal from "./ActionsModal";
 
-export default function ActionDotsButton() {
+export default function ActionDotsButton({ booking }: { booking: Booking }) {
     const [open, setOpen] = useState(false);
 
     return (
@@ -17,6 +18,7 @@ export default function ActionDotsButton() {
             <ActionsModal
                 open={open}
                 onClose={() => setOpen(false)}
+                booking={booking}
             />
         </div>
     );

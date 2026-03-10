@@ -1,25 +1,27 @@
+import { Booking } from "../adminTypes";
 import BookingRowMobile from "./BookingRowMobile";
 
-export default function BookingTableMobile() {
+export default function BookingTableMobile({
+    bookings,
+    page,
+    limit,
+    totalItems,
+    totalPages,
+}: {
+    bookings: Booking[];
+    page: number;
+    limit: number;
+    totalItems: number;
+    totalPages: number;
+}) {
     return (
         <div className="flex flex-col w-full justify-start items-center gap-6.5">
-            <BookingRowMobile status="active" />
-            <BookingRowMobile status="cancelled" />
-            <BookingRowMobile status="refunded" />
-            <BookingRowMobile status="active" />
-            <BookingRowMobile status="active" />
-            <BookingRowMobile status="active" />
-            <BookingRowMobile status="cancelled" />
-            <BookingRowMobile status="cancelled" />
-            <BookingRowMobile status="cancelled" />
-            <BookingRowMobile status="refunded" />
-            <BookingRowMobile status="refunded" />
-            <BookingRowMobile status="refunded" />
-            <BookingRowMobile status="active" />
-            <BookingRowMobile status="active" />
-            <BookingRowMobile status="active" />
-            <BookingRowMobile status="cancelled" />
-            <BookingRowMobile status="cancelled" />
+            {bookings.map((booking) => (
+                <BookingRowMobile
+                    key={booking.booking_id}
+                    booking={booking}
+                />
+            ))}
         </div>
     );
 }

@@ -1,384 +1,384 @@
 {
-  "Navbar": {
-    "Amenities": "Pogodnosti",
-    "Gallery": "Galerija",
-    "About": "O nama",
-    "Map": "Karta",
-    "Pricing": "Cijene",
-    "Booking": "Rezervacija",
-    "Button": "Rezerviraj odmah"
-  },
-  "Hero": {
-    "Title": "Moderan apartman za odmor u Lovranu",
-    "Subtitle": "Uživajte u privatnom bazenu, terasi s roštiljem i prostoru za sedam osoba, samo nekoliko minuta od plaže.",
-    "Button": "Provjeri dostupnost"
-  },
-  "Amenities": {
-    "Title": "Pogodnosti",
-    "List": {
-      "queenbed": "2 bračna kreveta",
-      "singlebed": "1 jednostruki krevet",
-      "sofa": "Veliki kauč",
-      "pool": "Privatni bazen",
-      "bbq": "Terasa s roštiljem",
-      "parking": "Privatni parking",
-      "ac": "Klima uređaj",
-      "wifi": "WiFi",
-      "beach": "Plaža u blizini",
-      "tv": "TV u svakoj spavaćoj sobi",
-      "campfire": "Vanjski prostor za odmor",
-      "lounge": "Ležaljke",
-      "dishes": "Perilica posuđa",
-      "hairdryer": "Sušilo za kosu",
-      "heating": "Grijanje",
-      "towel": "Posteljina i ručnici"
+    "Navbar": {
+        "Amenities": "Pogodnosti",
+        "Gallery": "Galerija",
+        "About": "O nama",
+        "Map": "Karta",
+        "Pricing": "Cijene",
+        "Booking": "Rezervacija",
+        "Button": "Rezerviraj odmah"
     },
-    "Button": "Prikaži sve"
-  },
-  "About": {
-    "Title": "Vaše moderno utočište u Lovranu",
-    "Description1": "Laurus Nobilis je moderan, potpuno opremljen apartman za odmor u Lovranu, idealan za obitelji i grupe. S dva bračna kreveta i odvojenim jednostrukim krevetom, apartman udobno prima do 7 gostiju (5 u krevetima + 2 na kauču).",
-    "Description2": "Interijer je moderan i udoban, s potpuno opremljenom kuhinjom, klima uređajem u svim prostorijama, brzim WiFi-jem i TV-om u svakoj spavaćoj sobi. Vani privatni bazen, terasa i prostor za roštilj nude opuštajuće mjesto za uživanje na suncu i druženje.",
-    "Description3": "Apartman se nalazi u mirnom području, samo nekoliko minuta hoda od plaže, trgovina i restorana."
-  },
-  "Map": {
-    "Title": "Lokacija",
-    "Description": "Smješten u Lovranu, na kratkoj udaljenosti od plaže te blizu restorana, trgovina i stare jezgre."
-  },
-  "Pricing": {
-    "Title": "Cijene",
-    "Description": "Cijene ovise o sezoni",
-    "LowSeason": "Niska sezona",
-    "MidSeason": "Srednja sezona",
-    "HighSeason": "Visoka sezona",
-    "ByNight": "noć",
-    "Button": "Zatraži datume"
-  },
-  "Booking": {
-    "Title": "Spremni za rezervaciju boravka u Laurus Nobilisu?",
-    "Button": "Rezerviraj"
-  },
-  "Footer": {
-    "Address": "Adresa:",
-    "Contact": "Kontakt:",
-    "PrivacyPolicy": "Pravila privatnosti",
-    "TermsOfService": "Uvjeti korištenja",
-    "CancelationPolicy": "Pravila otkazivanja",
-    "CookiePreferences": "Postavke kolačića"
-  },
-  "CookieBanner": {
-    "Title": "Koristimo kolačiće",
-    "Description": "Koristimo kolačiće kako bi web stranica ispravno radila i kako bismo poboljšali vaše iskustvo pregledavanja. Možete prihvatiti sve kolačiće, odbiti neobavezne kolačiće ili upravljati postavkama. Više u našim ",
-    "Accept": "Prihvati sve",
-    "Preferences": "Upravljaj postavkama"
-  },
-  "CookiePreferences": {
-    "Title": "Postavke kolačića",
-    "Description": "Možete odabrati koje vrste kolačića dopuštate. Nužni kolačići su uvijek uključeni jer su potrebni za rad web stranice.",
-    "Essential": "Nužni (uvijek uključeni)",
-    "EssentialDesc": "Potrebni za osnovne funkcije web stranice, korake rezervacije i sigurnost.",
-    "Analytics": "Analitički",
-    "AnalyticsDesc": "Pomažu nam razumjeti kako posjetitelji koriste web stranicu kako bismo poboljšali performanse i upotrebljivost.",
-    "Functional": "Funkcionalni",
-    "FunctionalDesc": "Pamte postavke kao što je odabir jezika.",
-    "Save": "Spremi postavke"
-  },
-  "Details": {
-    "Back": "Natrag na dostupnost",
-    "Title": "Vaši podaci",
-    "Description": "Unesite svoje podatke za nastavak rezervacije.",
-    "FirstName": "Ime",
-    "LastName": "Prezime",
-    "PhoneNumber": "Broj telefona",
-    "Guests": "Broj gostiju",
-    "CheckIn": "Dolazak",
-    "CheckOut": "Odlazak",
-    "Edit": "Uredi datume",
-    "Clear": "Obriši datume",
-    "Close": "Zatvori",
-    "PriceDetails": "Detalji cijene",
-    "Nights": "noći",
-    "CleaningFee": "Naknada za čišćenje",
-    "Total": "Ukupno",
-    "Continue": "Nastavi na plaćanje",
-    "ReviewPayment": "Detalje plaćanja pregledat ćete u sljedećem koraku"
-  },
-  "Payment": {
-    "Back": "Natrag na detalje rezervacije",
-    "Title": "Podaci o plaćanju",
-    "Description": "Unesite podatke svoje kartice kako biste dovršili rezervaciju.",
-    "NameCard": "Ime na kartici",
-    "Agree": "Slažem se s ",
-    "And": " i ",
-    "PayConfirm": "Plati i potvrdi rezervaciju",
-    "Stripe": "Sigurno plaćanje putem Stripea"
-  },
-  "Complete": {
-    "SuccessTitle": "Plaćanje uspješno",
-    "SuccessBody": "Vaša rezervacija je potvrđena. Uskoro ćemo vas kontaktirati.",
-    "CanceledTitle": "Plaćanje otkazano",
-    "CanceledBody": "Možete pokušati ponovno. Uskoro ćete biti preusmjereni natrag na plaćanje.",
-    "FailedTitle": "Plaćanje nije uspjelo",
-    "FailedBody": "Molimo koristite drugi način plaćanja. Uskoro ćete biti preusmjereni.",
-    "ErrorTitle": "Došlo je do pogreške",
-    "ErrorBody": "Pokušajte ponovno. Uskoro ćete biti preusmjereni.",
-    "ProcessingTitle": "Završavanje plaćanja…",
-    "ProcessingBody": "Molimo pričekajte."
-  },
-  "PrivacyPolicy": {
-    "Title": "Pravila privatnosti",
-    "LastUpdatedLabel": "Zadnje ažuriranje:",
-    "LastUpdatedDate": "5. siječnja 2026.",
-    "IntroParagraph1": "Ova Pravila privatnosti objašnjavaju kako ",
-    "IntroParagraph2": " prikuplja, koristi i štiti vaše osobne podatke kada posjećujete i koristite našu web stranicu",
-    "WebsiteURL": " [laurusnobilisrent.com] ",
-    "IntroParagraph3": "kako biste poslali upit ili rezervirali naš apartman za odmor u Lovranu, Hrvatska.",
-    "IntroParagraph4": "Predani smo zaštiti vaše privatnosti i obradi osobnih podataka u skladu s Općom uredbom o zaštiti podataka (GDPR) i primjenjivim hrvatskim i EU zakonima o zaštiti podataka.",
-    "Section1": {
-      "Title": "1. Informacije koje prikupljamo",
-      "Section1_1Title": "1.1 Osobni podaci koje dostavljate",
-      "Section1_1Intro": "Kada koristite našu web stranicu ili izvršite rezervaciju, možemo prikupiti sljedeće osobne podatke:",
-      "Section1_1List": [
-        "Ime i prezime",
-        "Adresa e-pošte",
-        "Broj telefona",
-        "Država prebivališta",
-        "Podaci o rezervaciji (datum dolaska, datum odlaska, broj gostiju)",
-        "Podaci povezani s plaćanjem (sigurno ih obrađuje naš pružatelj usluga plaćanja)",
-        "Bilo koja poruka ili poseban zahtjev koji pošaljete tijekom rezervacije"
-      ],
-      "Section1_1Outro1": "Mi ",
-      "Not": "ne pohranjujemo",
-      "Section1_1Outro2": " potpune podatke o platnim karticama na našim poslužiteljima.",
-      "Section1_2Title": "1.2 Automatski prikupljeni podaci",
-      "Section1_2Intro": "Kada pregledavate našu web stranicu, možemo automatski prikupiti:",
-      "Section1_2List": [
-        "IP adresu",
-        "Vrstu i verziju preglednika",
-        "Vrstu uređaja",
-        "Posjećene stranice i vrijeme provedeno na web stranici",
-        "Izvornu web stranicu ili izvor"
-      ],
-      "Section1_2Outro": "Ovi se podaci koriste isključivo za sigurnost, analitiku i poboljšanje web stranice.",
-      "Section1_3Title": "1.3 Kolačići",
-      "Section1_3Prefix": "Koristimo kolačiće i slične tehnologije kako bismo osigurali ispravno funkcioniranje web stranice i analizirali promet na web stranici. Detalji su navedeni u našem banneru ",
-      "Section1_3CookieLink": "Postavke kolačića",
-      "Section1_3Suffix": "."
+    "Hero": {
+        "Title": "Moderan apartman za odmor u Lovranu",
+        "Subtitle": "Uživajte u privatnom bazenu, terasi s roštiljem i prostoru za sedam osoba, samo nekoliko minuta od plaže.",
+        "Button": "Provjeri dostupnost"
     },
-    "Section2": {
-      "Title": "2. Kako koristimo vaše podatke",
-      "Intro": "Vaše osobne podatke koristimo za:",
-      "List": [
-        "Obradu i upravljanje rezervacijama apartmana",
-        "Komunikaciju s vama u vezi vaše rezervacije",
-        "Slanje potvrda rezervacije i ključnih informacija",
-        "Sigurnu obradu plaćanja",
-        "Poštivanje zakonskih i poreznih obveza",
-        "Poboljšanje naše web stranice i korisničkog iskustva"
-      ]
+    "Amenities": {
+        "Title": "Pogodnosti",
+        "List": {
+            "queenbed": "2 bračna kreveta",
+            "singlebed": "1 jednostruki krevet",
+            "sofa": "Veliki kauč",
+            "pool": "Privatni bazen",
+            "bbq": "Terasa s roštiljem",
+            "parking": "Privatni parking",
+            "ac": "Klima uređaj",
+            "wifi": "WiFi",
+            "beach": "Plaža u blizini",
+            "tv": "TV u svakoj spavaćoj sobi",
+            "campfire": "Vanjski prostor za odmor",
+            "lounge": "Ležaljke",
+            "dishes": "Perilica posuđa",
+            "hairdryer": "Sušilo za kosu",
+            "heating": "Grijanje",
+            "towel": "Posteljina i ručnici"
+        },
+        "Button": "Prikaži sve"
     },
-    "Section3": {
-      "Title": "3. Pravna osnova obrade",
-      "Intro": "Vaše osobne podatke obrađujemo na temelju:",
-      "List": [
-        "Izvršavanja ugovora (usluge rezervacije i smještaja)",
-        "Vaše privole (gdje je primjenjivo)",
-        "Poštivanja zakonskih obveza",
-        "Legitimnih interesa (sigurnost i poboljšanje web stranice)"
-      ]
+    "About": {
+        "Title": "Vaše moderno utočište u Lovranu",
+        "Description1": "Laurus Nobilis je moderan, potpuno opremljen apartman za odmor u Lovranu, idealan za obitelji i grupe. S dva bračna kreveta i odvojenim jednostrukim krevetom, apartman udobno prima do 7 gostiju (5 u krevetima + 2 na kauču).",
+        "Description2": "Interijer je moderan i udoban, s potpuno opremljenom kuhinjom, klima uređajem u svim prostorijama, brzim WiFi-jem i TV-om u svakoj spavaćoj sobi. Vani privatni bazen, terasa i prostor za roštilj nude opuštajuće mjesto za uživanje na suncu i druženje.",
+        "Description3": "Apartman se nalazi u mirnom području, samo nekoliko minuta hoda od plaže, trgovina i restorana."
     },
-    "Section4": {
-      "Title": "4. Dijeljenje podataka",
-      "Intro": "Vaše podatke možemo dijeliti samo s:",
-      "List": [
-        "Pružateljima usluga plaćanja ",
-        "(npr. Stripe) radi sigurne obrade plaćanja",
-        "Pružateljima hostinga i tehničkih usluga ",
-        "potrebnima za rad web stranice",
-        "Pravnim ili poreznim tijelima",
-        ", kada je to propisano zakonom"
-      ],
-      "Outro": "Nikada ne prodajemo vaše osobne podatke."
+    "Map": {
+        "Title": "Lokacija",
+        "Description": "Smješten u Lovranu, na kratkoj udaljenosti od plaže te blizu restorana, trgovina i stare jezgre."
     },
-    "Section5": {
-      "Title": "5. Zadržavanje podataka",
-      "Intro": "Osobne podatke zadržavamo samo onoliko dugo koliko je potrebno za:",
-      "List": [
-        "Ispunjavanje obveza rezervacije i zakonskih obveza",
-        "Poštivanje računovodstvenih i poreznih propisa"
-      ],
-      "Outro": "Nakon tog razdoblja podaci se sigurno brišu."
+    "Pricing": {
+        "Title": "Cijene",
+        "Description": "Cijene ovise o sezoni",
+        "LowSeason": "Izvan sezone",
+        "MidSeason": "Sredina sezone",
+        "HighSeason": "Unutar sezone",
+        "ByNight": "noć",
+        "Button": "Zatraži datume"
     },
-    "Section6": {
-      "Title": "6. Vaša prava",
-      "Intro": "Imate pravo na:",
-      "List": [
-        "Pristup svojim osobnim podacima",
-        "Ispravak netočnih podataka",
-        "Brisanje (gdje je zakonski moguće)",
-        "Ograničenje ili prigovor na obradu",
-        "Prenosivost podataka",
-        "Povlačenje privole u bilo kojem trenutku"
-      ],
-      "Outro": "Zahtjevi se mogu poslati na ",
-      "ContactEmail": "[hello@laurusnobilisrent.com]."
+    "Booking": {
+        "Title": "Spremni za rezervaciju boravka u Laurus Nobilisu?",
+        "Button": "Rezerviraj"
     },
-    "Section7": {
-      "Title": "7. Sigurnost podataka",
-      "Body": "Koristimo odgovarajuće tehničke i organizacijske mjere za zaštitu vaših osobnih podataka od neovlaštenog pristupa, gubitka ili zlouporabe."
+    "Footer": {
+        "Address": "Adresa:",
+        "Contact": "Kontakt:",
+        "PrivacyPolicy": "Pravila privatnosti",
+        "TermsOfService": "Uvjeti korištenja",
+        "CancelationPolicy": "Pravila otkazivanja",
+        "CookiePreferences": "Postavke kolačića"
     },
-    "Section8": {
-      "Title": "8. Međunarodni prijenosi",
-      "Body": "Neki podaci mogu se obrađivati izvan vaše države (npr. od pružatelja usluga plaćanja). U takvim slučajevima primjenjuju se odgovarajuće zaštitne mjere."
+    "CookieBanner": {
+        "Title": "Koristimo kolačiće",
+        "Description": "Koristimo kolačiće kako bi web stranica ispravno radila i kako bismo poboljšali vaše iskustvo pregledavanja. Možete prihvatiti sve kolačiće, odbiti neobavezne kolačiće ili upravljati postavkama. Više u našim ",
+        "Accept": "Prihvati sve",
+        "Preferences": "Upravljaj postavkama"
     },
-    "Section9": {
-      "Title": "9. Izmjene ovih pravila",
-      "Body": "Povremeno možemo ažurirati ova Pravila privatnosti. Sve promjene bit će objavljene na ovoj stranici."
+    "CookiePreferences": {
+        "Title": "Postavke kolačića",
+        "Description": "Možete odabrati koje vrste kolačića dopuštate. Nužni kolačići su uvijek uključeni jer su potrebni za rad web stranice.",
+        "Essential": "Nužni (uvijek uključeni)",
+        "EssentialDesc": "Potrebni za osnovne funkcije web stranice, korake rezervacije i sigurnost.",
+        "Analytics": "Analitički",
+        "AnalyticsDesc": "Pomažu nam razumjeti kako posjetitelji koriste web stranicu kako bismo poboljšali performanse i upotrebljivost.",
+        "Functional": "Funkcionalni",
+        "FunctionalDesc": "Pamte postavke kao što je odabir jezika.",
+        "Save": "Spremi postavke"
     },
-    "Section10": {
-      "Title": "10. Kontakt",
-      "Intro": "Za pitanja vezana uz privatnost kontaktirajte nas na:",
-      "Email": "[hello@laurusnobilisrent.com]"
-    }
-  },
-  "TermsOfService": {
-    "Title": "Uvjeti korištenja",
-    "LastUpdatedLabel": "Zadnje ažuriranje:",
-    "LastUpdatedDate": "5. siječnja 2026.",
-    "IntroParagraph": {
-      "Text": "Ovi Uvjeti korištenja uređuju vaše korištenje stranice ",
-      "WebsiteURL": "[laurusnobilisrent.com]",
-      "AndText": " i rezervaciju apartmana za odmor ",
-      "ApartmentName": "Laurus Nobilis."
+    "Details": {
+        "Back": "Natrag na dostupnost",
+        "Title": "Vaši podaci",
+        "Description": "Unesite svoje podatke za nastavak rezervacije.",
+        "FirstName": "Ime",
+        "LastName": "Prezime",
+        "PhoneNumber": "Broj telefona",
+        "Guests": "Broj gostiju",
+        "CheckIn": "Dolazak",
+        "CheckOut": "Odlazak",
+        "Edit": "Uredi datume",
+        "Clear": "Obriši datume",
+        "Close": "Zatvori",
+        "PriceDetails": "Detalji cijene",
+        "Nights": "noći",
+        "CleaningFee": "Naknada za čišćenje",
+        "Total": "Ukupno",
+        "Continue": "Nastavi na plaćanje",
+        "ReviewPayment": "Detalje plaćanja pregledat ćete u sljedećem koraku"
     },
-    "Section1": {
-      "Title": "1. Opseg usluge",
-      "Intro": "Naša web stranica korisnicima omogućuje:",
-      "List": [
-        "Pregled informacija o apartmanu",
-        "Provjeru dostupnosti",
-        "Slanje zahtjeva za rezervaciju",
-        "Dovršetak rezervacija i plaćanja"
-      ]
+    "Payment": {
+        "Back": "Natrag na detalje rezervacije",
+        "Title": "Podaci o plaćanju",
+        "Description": "Unesite podatke svoje kartice kako biste dovršili rezervaciju.",
+        "NameCard": "Ime na kartici",
+        "Agree": "Slažem se s ",
+        "And": " i ",
+        "PayConfirm": "Plati i potvrdi rezervaciju",
+        "Stripe": "Sigurno plaćanje putem Stripea"
     },
-    "Section2": {
-      "Title": "2. Uvjeti za korištenje",
-      "Body": "Izradom rezervacije potvrđujete da imate najmanje 18 godina i pravnu sposobnost sklapanja obvezujućeg ugovora."
+    "Complete": {
+        "SuccessTitle": "Plaćanje uspješno",
+        "SuccessBody": "Vaša rezervacija je potvrđena. Uskoro ćemo vas kontaktirati.",
+        "CanceledTitle": "Plaćanje otkazano",
+        "CanceledBody": "Možete pokušati ponovno. Uskoro ćete biti preusmjereni natrag na plaćanje.",
+        "FailedTitle": "Plaćanje nije uspjelo",
+        "FailedBody": "Molimo koristite drugi način plaćanja. Uskoro ćete biti preusmjereni.",
+        "ErrorTitle": "Došlo je do pogreške",
+        "ErrorBody": "Pokušajte ponovno. Uskoro ćete biti preusmjereni.",
+        "ProcessingTitle": "Završavanje plaćanja…",
+        "ProcessingBody": "Molimo pričekajte."
     },
-    "Section3": {
-      "Title": "3. Rezervacije",
-      "List": [
-        "Rezervacija se smatra potvrđenom tek nakon uspješnog plaćanja i potvrde",
-        "Svi navedeni podaci o rezervaciji moraju biti točni",
-        "Zadržavamo pravo odbiti ili otkazati rezervaciju ako su dostavljeni netočni ili obmanjujući podaci"
-      ]
+    "PrivacyPolicy": {
+        "Title": "Pravila privatnosti",
+        "LastUpdatedLabel": "Zadnje ažuriranje:",
+        "LastUpdatedDate": "5. siječnja 2026.",
+        "IntroParagraph1": "Ova Pravila privatnosti objašnjavaju kako ",
+        "IntroParagraph2": " prikuplja, koristi i štiti vaše osobne podatke kada posjećujete i koristite našu web stranicu",
+        "WebsiteURL": " [laurusnobilisrent.com] ",
+        "IntroParagraph3": "kako biste poslali upit ili rezervirali naš apartman za odmor u Lovranu, Hrvatska.",
+        "IntroParagraph4": "Predani smo zaštiti vaše privatnosti i obradi osobnih podataka u skladu s Općom uredbom o zaštiti podataka (GDPR) i primjenjivim hrvatskim i EU zakonima o zaštiti podataka.",
+        "Section1": {
+            "Title": "1. Informacije koje prikupljamo",
+            "Section1_1Title": "1.1 Osobni podaci koje dostavljate",
+            "Section1_1Intro": "Kada koristite našu web stranicu ili izvršite rezervaciju, možemo prikupiti sljedeće osobne podatke:",
+            "Section1_1List": [
+                "Ime i prezime",
+                "Adresa e-pošte",
+                "Broj telefona",
+                "Država prebivališta",
+                "Podaci o rezervaciji (datum dolaska, datum odlaska, broj gostiju)",
+                "Podaci povezani s plaćanjem (sigurno ih obrađuje naš pružatelj usluga plaćanja)",
+                "Bilo koja poruka ili poseban zahtjev koji pošaljete tijekom rezervacije"
+            ],
+            "Section1_1Outro1": "Mi ",
+            "Not": "ne pohranjujemo",
+            "Section1_1Outro2": " potpune podatke o platnim karticama na našim poslužiteljima.",
+            "Section1_2Title": "1.2 Automatski prikupljeni podaci",
+            "Section1_2Intro": "Kada pregledavate našu web stranicu, možemo automatski prikupiti:",
+            "Section1_2List": [
+                "IP adresu",
+                "Vrstu i verziju preglednika",
+                "Vrstu uređaja",
+                "Posjećene stranice i vrijeme provedeno na web stranici",
+                "Izvornu web stranicu ili izvor"
+            ],
+            "Section1_2Outro": "Ovi se podaci koriste isključivo za sigurnost, analitiku i poboljšanje web stranice.",
+            "Section1_3Title": "1.3 Kolačići",
+            "Section1_3Prefix": "Koristimo kolačiće i slične tehnologije kako bismo osigurali ispravno funkcioniranje web stranice i analizirali promet na web stranici. Detalji su navedeni u našem banneru ",
+            "Section1_3CookieLink": "Postavke kolačića",
+            "Section1_3Suffix": "."
+        },
+        "Section2": {
+            "Title": "2. Kako koristimo vaše podatke",
+            "Intro": "Vaše osobne podatke koristimo za:",
+            "List": [
+                "Obradu i upravljanje rezervacijama apartmana",
+                "Komunikaciju s vama u vezi vaše rezervacije",
+                "Slanje potvrda rezervacije i ključnih informacija",
+                "Sigurnu obradu plaćanja",
+                "Poštivanje zakonskih i poreznih obveza",
+                "Poboljšanje naše web stranice i korisničkog iskustva"
+            ]
+        },
+        "Section3": {
+            "Title": "3. Pravna osnova obrade",
+            "Intro": "Vaše osobne podatke obrađujemo na temelju:",
+            "List": [
+                "Izvršavanja ugovora (usluge rezervacije i smještaja)",
+                "Vaše privole (gdje je primjenjivo)",
+                "Poštivanja zakonskih obveza",
+                "Legitimnih interesa (sigurnost i poboljšanje web stranice)"
+            ]
+        },
+        "Section4": {
+            "Title": "4. Dijeljenje podataka",
+            "Intro": "Vaše podatke možemo dijeliti samo s:",
+            "List": [
+                "Pružateljima usluga plaćanja ",
+                "(npr. Stripe) radi sigurne obrade plaćanja",
+                "Pružateljima hostinga i tehničkih usluga ",
+                "potrebnima za rad web stranice",
+                "Pravnim ili poreznim tijelima",
+                ", kada je to propisano zakonom"
+            ],
+            "Outro": "Nikada ne prodajemo vaše osobne podatke."
+        },
+        "Section5": {
+            "Title": "5. Zadržavanje podataka",
+            "Intro": "Osobne podatke zadržavamo samo onoliko dugo koliko je potrebno za:",
+            "List": [
+                "Ispunjavanje obveza rezervacije i zakonskih obveza",
+                "Poštivanje računovodstvenih i poreznih propisa"
+            ],
+            "Outro": "Nakon tog razdoblja podaci se sigurno brišu."
+        },
+        "Section6": {
+            "Title": "6. Vaša prava",
+            "Intro": "Imate pravo na:",
+            "List": [
+                "Pristup svojim osobnim podacima",
+                "Ispravak netočnih podataka",
+                "Brisanje (gdje je zakonski moguće)",
+                "Ograničenje ili prigovor na obradu",
+                "Prenosivost podataka",
+                "Povlačenje privole u bilo kojem trenutku"
+            ],
+            "Outro": "Zahtjevi se mogu poslati na ",
+            "ContactEmail": "[hello@laurusnobilisrent.com]."
+        },
+        "Section7": {
+            "Title": "7. Sigurnost podataka",
+            "Body": "Koristimo odgovarajuće tehničke i organizacijske mjere za zaštitu vaših osobnih podataka od neovlaštenog pristupa, gubitka ili zlouporabe."
+        },
+        "Section8": {
+            "Title": "8. Međunarodni prijenosi",
+            "Body": "Neki podaci mogu se obrađivati izvan vaše države (npr. od pružatelja usluga plaćanja). U takvim slučajevima primjenjuju se odgovarajuće zaštitne mjere."
+        },
+        "Section9": {
+            "Title": "9. Izmjene ovih pravila",
+            "Body": "Povremeno možemo ažurirati ova Pravila privatnosti. Sve promjene bit će objavljene na ovoj stranici."
+        },
+        "Section10": {
+            "Title": "10. Kontakt",
+            "Intro": "Za pitanja vezana uz privatnost kontaktirajte nas na:",
+            "Email": "[hello@laurusnobilisrent.com]"
+        }
     },
-    "Section4": {
-      "Title": "4. Plaćanja",
-      "List": [
-        "Cijene su prikazane u EUR",
-        "Plaćanja se sigurno obrađuju putem pružatelja usluga plaćanja trećih strana (npr. Stripe)",
-        "Ne pohranjujemo podatke o karticama"
-      ]
+    "TermsOfService": {
+        "Title": "Uvjeti korištenja",
+        "LastUpdatedLabel": "Zadnje ažuriranje:",
+        "LastUpdatedDate": "5. siječnja 2026.",
+        "IntroParagraph": {
+            "Text": "Ovi Uvjeti korištenja uređuju vaše korištenje stranice ",
+            "WebsiteURL": "[laurusnobilisrent.com]",
+            "AndText": " i rezervaciju apartmana za odmor ",
+            "ApartmentName": "Laurus Nobilis."
+        },
+        "Section1": {
+            "Title": "1. Opseg usluge",
+            "Intro": "Naša web stranica korisnicima omogućuje:",
+            "List": [
+                "Pregled informacija o apartmanu",
+                "Provjeru dostupnosti",
+                "Slanje zahtjeva za rezervaciju",
+                "Dovršetak rezervacija i plaćanja"
+            ]
+        },
+        "Section2": {
+            "Title": "2. Uvjeti za korištenje",
+            "Body": "Izradom rezervacije potvrđujete da imate najmanje 18 godina i pravnu sposobnost sklapanja obvezujućeg ugovora."
+        },
+        "Section3": {
+            "Title": "3. Rezervacije",
+            "List": [
+                "Rezervacija se smatra potvrđenom tek nakon uspješnog plaćanja i potvrde",
+                "Svi navedeni podaci o rezervaciji moraju biti točni",
+                "Zadržavamo pravo odbiti ili otkazati rezervaciju ako su dostavljeni netočni ili obmanjujući podaci"
+            ]
+        },
+        "Section4": {
+            "Title": "4. Plaćanja",
+            "List": [
+                "Cijene su prikazane u EUR",
+                "Plaćanja se sigurno obrađuju putem pružatelja usluga plaćanja trećih strana (npr. Stripe)",
+                "Ne pohranjujemo podatke o karticama"
+            ]
+        },
+        "Section5": {
+            "Title": "5. Korištenje web stranice",
+            "Intro": "Suglasni ste da nećete:",
+            "List": [
+                "Koristiti web stranicu u nezakonite svrhe",
+                "Pokušavati ometati funkcionalnost web stranice",
+                "Zloupotrebljavati ili pokušavati neovlašteno pristupiti našim sustavima"
+            ]
+        },
+        "Section6": {
+            "Title": "6. Intelektualno vlasništvo",
+            "Body": {
+                "Text1": "Sav sadržaj na ovoj web stranici (tekst, slike, dizajn) u vlasništvu je ili licenciran od strane ",
+                "ApartmentName": "Laurus Nobilis",
+                "Text2": " i ne smije se koristiti bez dopuštenja."
+            }
+        },
+        "Section7": {
+            "Title": "7. Odgovornost",
+            "Intro": "Nismo odgovorni za:",
+            "List": [
+                "Privremenu nedostupnost web stranice",
+                "Neizravnu ili posljedičnu štetu",
+                "Probleme uzrokovane događajima više sile"
+            ]
+        },
+        "Section8": {
+            "Title": "8. Mjerodavno pravo",
+            "Body": {
+                "Text": "Ovi Uvjeti uređeni su zakonima ",
+                "Country": "Hrvatske."
+            }
+        },
+        "Section9": {
+            "Title": "9. Kontakt",
+            "Intro": "Za pitanja o ovim Uvjetima kontaktirajte:",
+            "Email": "[hello@laurusnobilisrent.com]"
+        }
     },
-    "Section5": {
-      "Title": "5. Korištenje web stranice",
-      "Intro": "Suglasni ste da nećete:",
-      "List": [
-        "Koristiti web stranicu u nezakonite svrhe",
-        "Pokušavati ometati funkcionalnost web stranice",
-        "Zloupotrebljavati ili pokušavati neovlašteno pristupiti našim sustavima"
-      ]
-    },
-    "Section6": {
-      "Title": "6. Intelektualno vlasništvo",
-      "Body": {
-        "Text1": "Sav sadržaj na ovoj web stranici (tekst, slike, dizajn) u vlasništvu je ili licenciran od strane ",
+    "CancellationPolicy": {
+        "Title": "Pravila otkazivanja",
+        "LastUpdatedLabel": "Zadnje ažuriranje:",
+        "LastUpdatedDate": "5. siječnja 2026.",
+        "IntroParagraph": "Ova Pravila otkazivanja primjenjuju se na sve rezervacije apartmana za odmor ",
         "ApartmentName": "Laurus Nobilis",
-        "Text2": " i ne smije se koristiti bez dopuštenja."
-      }
-    },
-    "Section7": {
-      "Title": "7. Odgovornost",
-      "Intro": "Nismo odgovorni za:",
-      "List": [
-        "Privremenu nedostupnost web stranice",
-        "Neizravnu ili posljedičnu štetu",
-        "Probleme uzrokovane događajima više sile"
-      ]
-    },
-    "Section8": {
-      "Title": "8. Mjerodavno pravo",
-      "Body": {
-        "Text": "Ovi Uvjeti uređeni su zakonima ",
-        "Country": "Hrvatske."
-      }
-    },
-    "Section9": {
-      "Title": "9. Kontakt",
-      "Intro": "Za pitanja o ovim Uvjetima kontaktirajte:",
-      "Email": "[hello@laurusnobilisrent.com]"
+        "Via": " putem ",
+        "WebsiteURL": "[laurusnobilisrent.com]",
+        "Section1": {
+            "Title": "1. Otkazivanje od strane gosta",
+            "Paragraph1": "Gosti mogu otkazati svoju rezervaciju kontaktiranjem putem e-pošte na ",
+            "ContactEmail": "[hello@laurusnobilisrent.com].",
+            "Paragraph2": "Povrati se izdaju prema sljedećim pravilima:",
+            "List": [
+                "Otkazivanja izvršena više od 14 dana prije planiranog datuma dolaska ",
+                "imaju pravo na ",
+                "povrat od 90% ",
+                "ukupnog iznosa rezervacije.",
+                "Otkazivanja izvršena unutar 14 dana od planiranog datuma dolaska ",
+                "imaju pravo na ",
+                "povrat od 50% ",
+                "ukupnog iznosa rezervacije."
+            ]
+        },
+        "Section2": {
+            "Title": "2. Obrada povrata",
+            "List": [
+                "Povrati se izdaju na izvorni način plaćanja korišten pri naplati.",
+                "Vrijeme obrade može varirati ovisno o pružatelju usluge plaćanja.",
+                "Primjenjive naknade za transakcije koje naplaćuju treće strane za obradu plaćanja nisu povratne."
+            ]
+        },
+        "Section3": {
+            "Title": "3. Nedolazak i raniji odlazak",
+            "List": [
+                "Gosti koji ne dođu na planirani datum dolaska bez prethodne najave ",
+                "(nedolazak) ",
+                "nemaju pravo na povrat.",
+                "Raniji odlazak nakon prijave ne daje pravo na povrat za neiskorištena noćenja."
+            ]
+        },
+        "Section4": {
+            "Title": "4. Promjene rezervacije",
+            "Body": "Zahtjevi za promjenu datuma rezervacije ili podataka o gostima ovise o dostupnosti i mogu rezultirati korekcijom cijene. Promjene napravljene blizu datuma dolaska mogu se tretirati kao otkazivanje prema ovim pravilima."
+        },
+        "Section5": {
+            "Title": "5. Otkazivanje od strane domaćina",
+            "Body1": "U malo vjerojatnom slučaju da moramo otkazati rezervaciju zbog nepredviđenih okolnosti, gosti će dobiti puni povrat ",
+            "FullRefund": "(100%) ",
+            "Body2": "svih izvršenih uplata."
+        },
+        "Section6": {
+            "Title": "6. Prihvaćanje pravila",
+            "Body": "Dovršetkom rezervacije potvrđujete da ste pročitali, razumjeli i prihvatili ova Pravila otkazivanja."
+        },
+        "Section7": {
+            "Title": "7. Kontakt",
+            "Intro": "Za zahtjeve za otkazivanje ili pitanja o ovim pravilima, kontaktirajte nas na:",
+            "Email": "[hello@laurusnobilisrent.com]"
+        }
     }
-  },
-  "CancellationPolicy": {
-    "Title": "Pravila otkazivanja",
-    "LastUpdatedLabel": "Zadnje ažuriranje:",
-    "LastUpdatedDate": "5. siječnja 2026.",
-    "IntroParagraph": "Ova Pravila otkazivanja primjenjuju se na sve rezervacije apartmana za odmor ",
-    "ApartmentName": "Laurus Nobilis",
-    "Via": " putem ",
-    "WebsiteURL": "[laurusnobilisrent.com]",
-    "Section1": {
-      "Title": "1. Otkazivanje od strane gosta",
-      "Paragraph1": "Gosti mogu otkazati svoju rezervaciju kontaktiranjem putem e-pošte na ",
-      "ContactEmail": "[hello@laurusnobilisrent.com].",
-      "Paragraph2": "Povrati se izdaju prema sljedećim pravilima:",
-      "List": [
-        "Otkazivanja izvršena više od 14 dana prije planiranog datuma dolaska ",
-        "imaju pravo na ",
-        "povrat od 90% ",
-        "ukupnog iznosa rezervacije.",
-        "Otkazivanja izvršena unutar 14 dana od planiranog datuma dolaska ",
-        "imaju pravo na ",
-        "povrat od 50% ",
-        "ukupnog iznosa rezervacije."
-      ]
-    },
-    "Section2": {
-      "Title": "2. Obrada povrata",
-      "List": [
-        "Povrati se izdaju na izvorni način plaćanja korišten pri naplati.",
-        "Vrijeme obrade može varirati ovisno o pružatelju usluge plaćanja.",
-        "Primjenjive naknade za transakcije koje naplaćuju treće strane za obradu plaćanja nisu povratne."
-      ]
-    },
-    "Section3": {
-      "Title": "3. Nedolazak i raniji odlazak",
-      "List": [
-        "Gosti koji ne dođu na planirani datum dolaska bez prethodne najave ",
-        "(nedolazak) ",
-        "nemaju pravo na povrat.",
-        "Raniji odlazak nakon prijave ne daje pravo na povrat za neiskorištena noćenja."
-      ]
-    },
-    "Section4": {
-      "Title": "4. Promjene rezervacije",
-      "Body": "Zahtjevi za promjenu datuma rezervacije ili podataka o gostima ovise o dostupnosti i mogu rezultirati korekcijom cijene. Promjene napravljene blizu datuma dolaska mogu se tretirati kao otkazivanje prema ovim pravilima."
-    },
-    "Section5": {
-      "Title": "5. Otkazivanje od strane domaćina",
-      "Body1": "U malo vjerojatnom slučaju da moramo otkazati rezervaciju zbog nepredviđenih okolnosti, gosti će dobiti puni povrat ",
-      "FullRefund": "(100%) ",
-      "Body2": "svih izvršenih uplata."
-    },
-    "Section6": {
-      "Title": "6. Prihvaćanje pravila",
-      "Body": "Dovršetkom rezervacije potvrđujete da ste pročitali, razumjeli i prihvatili ova Pravila otkazivanja."
-    },
-    "Section7": {
-      "Title": "7. Kontakt",
-      "Intro": "Za zahtjeve za otkazivanje ili pitanja o ovim pravilima, kontaktirajte nas na:",
-      "Email": "[hello@laurusnobilisrent.com]"
-    }
-  }
 }

@@ -1,20 +1,22 @@
 import ActionDotsButton from "../Actions/ActionDotsButton";
-import { Status } from "../adminTypes";
+import { Booking } from "../adminTypes";
 import StatusBanner from "./StatusBanner";
 
-export default function BookingRowMobile({ status }: { status: Status }) {
+export default function BookingRowMobile({ booking }: { booking: Booking }) {
     return (
         <div className="w-full h-fit bg-white border border-beige-darkest rounded-[5px]">
             <div className="bg-beige-dark w-full py-2.5 pl-2.5 pr-1.25 flex justify-between items-center rounded-t-[5px]">
-                <div className="text-black font-semibold text-12 leading-150 text-left">1</div>
-                <ActionDotsButton />
+                <div className="text-black font-semibold text-12 leading-150 text-left">
+                    {booking.booking_id}
+                </div>
+                <ActionDotsButton booking={booking} />
             </div>
             <div className="bg-white flex flex-col p-2.5 gap-2.5 justify-center items-start w-full rounded-b-[5px]">
                 <div className="flex justify-between items-center w-full">
                     <div className="text-black font-bold text-12 leading-150 text-left">
-                        Marko Markić
+                        {booking.first_name} {booking.last_name}
                     </div>
-                    <StatusBanner status={status} />
+                    <StatusBanner status={booking.status} />
                 </div>
                 <hr className="w-full h-[0.5px] border-0 bg-beige-darkest" />
                 <div className="flex justify-between items-center w-full">
@@ -22,20 +24,24 @@ export default function BookingRowMobile({ status }: { status: Status }) {
                         Datumi boravka
                     </div>
                     <div className="text-black text-12 leading-150 text-left">
-                        6.7.2026. - 12.7.2026.
+                        {booking.checkin_date} - {booking.checkout_date}
                     </div>
                 </div>
                 <div className="flex justify-between items-center w-full">
                     <div className="text-black font-semibold text-12 leading-150 text-left">
                         Broj gostiju
                     </div>
-                    <div className="text-black text-12 leading-150 text-left">4</div>
+                    <div className="text-black text-12 leading-150 text-left">
+                        {booking.guests_count}
+                    </div>
                 </div>
                 <div className="flex justify-between items-center w-full">
                     <div className="text-black font-semibold text-12 leading-150 text-left">
                         Ukupan iznos
                     </div>
-                    <div className="text-black text-12 leading-150 text-left">€ ___</div>
+                    <div className="text-black text-12 leading-150 text-left">
+                        € {booking.total_amount}
+                    </div>
                 </div>
             </div>
         </div>

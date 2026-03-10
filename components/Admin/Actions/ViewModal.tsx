@@ -1,15 +1,47 @@
-import Xicon from "@/components/svg_icons/Xicon";
-import { useEffect } from "react";
+"use client";
 
-export default function ViewModal({ open, onClose }: { open: boolean; onClose: () => void }) {
+import Xicon from "@/components/svg_icons/Xicon";
+import { formatDMY, fromYMD, nightsBetween, seasonLabel } from "@/lib/dateParams";
+import { useEffect } from "react";
+import { Booking } from "../adminTypes";
+
+export default function ViewModal({
+    open,
+    onClose,
+    booking,
+}: {
+    open: boolean;
+    onClose: () => void;
+    booking?: Booking;
+}) {
     useEffect(() => {
         document.body.style.overflow = open ? "hidden" : "";
         return () => {
             document.body.style.overflow = "";
         };
-    }, [open]);
+    }, [open, onClose]);
 
-    if (!open) return null;
+    if (!open || !booking) return null;
+
+    const checkIn = booking?.checkin_date;
+    const checkOut = booking?.checkout_date;
+
+    const createdAt = formatDMY(new Date(booking.created_at));
+
+    const statusLabel =
+        booking.status === "active"
+            ? "Aktivan"
+            : booking.status === "refunded"
+              ? "Refundiran"
+              : booking.status === "cancelled"
+                ? "Otkazan"
+                : booking.status;
+
+    const from = formatDMY(fromYMD(checkIn));
+    const to = formatDMY(fromYMD(checkOut));
+
+    const nights = nightsBetween(fromYMD(checkIn), fromYMD(checkOut));
+    const season = seasonLabel(fromYMD(checkOut));
 
     return (
         <div
@@ -46,13 +78,13 @@ export default function ViewModal({ open, onClose }: { open: boolean; onClose: (
                             </div>
                             <div className="flex flex-col gap-1.5 w-fit h-fit justify-center items-end">
                                 <div className="text-12 md:text-14 leading-150 text-right">
-                                    1234
+                                    {booking?.booking_id}
                                 </div>
                                 <div className="text-12 md:text-14 leading-150 text-right">
-                                    23/2/2026
+                                    {createdAt}
                                 </div>
                                 <div className="text-12 md:text-14 leading-150 text-right">
-                                    Aktivan
+                                    {statusLabel}
                                 </div>
                             </div>
                         </div>
@@ -76,13 +108,13 @@ export default function ViewModal({ open, onClose }: { open: boolean; onClose: (
                             </div>
                             <div className="flex flex-col gap-1.5 w-fit h-fit justify-center items-end">
                                 <div className="text-12 md:text-14 leading-150 text-right">
-                                    Marko Marković
+                                    {booking?.first_name} {booking?.last_name}
                                 </div>
                                 <div className="text-12 md:text-14 leading-150 text-right">
-                                    marko.markovic@email.com
+                                    {booking?.email}
                                 </div>
                                 <div className="text-12 md:text-14 leading-150 text-right">
-                                    +385 98 3484 354
+                                    {booking?.phone}
                                 </div>
                             </div>
                         </div>
@@ -109,13 +141,17 @@ export default function ViewModal({ open, onClose }: { open: boolean; onClose: (
                             </div>
                             <div className="flex flex-col gap-1.5 w-fit h-fit justify-center items-end">
                                 <div className="text-12 md:text-14 leading-150 text-right">
-                                    6/7/2026
+                                    {from}
                                 </div>
                                 <div className="text-12 md:text-14 leading-150 text-right">
-                                    12/7/2026
+                                    {to}
                                 </div>
-                                <div className="text-12 md:text-14 leading-150 text-right">6</div>
-                                <div className="text-12 md:text-14 leading-150 text-right">4</div>
+                                <div className="text-12 md:text-14 leading-150 text-right">
+                                    {nights}
+                                </div>
+                                <div className="text-12 md:text-14 leading-150 text-right">
+                                    {booking?.guests_count}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -135,10 +171,10 @@ export default function ViewModal({ open, onClose }: { open: boolean; onClose: (
                             </div>
                             <div className="flex flex-col gap-1.5 w-fit h-fit justify-center items-end">
                                 <div className="text-12 md:text-14 leading-150 text-right">
-                                    Unutar sezone
+                                    {season}
                                 </div>
                                 <div className="text-12 md:text-14 leading-150 text-right">
-                                    € ___
+                                    € {booking?.total_amount}
                                 </div>
                             </div>
                         </div>
