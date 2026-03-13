@@ -105,6 +105,8 @@ export default function ActionsModal({
             <RefundModal
                 open={openRefund}
                 onClose={() => setOpenRefund(false)}
+                bookingId={booking.booking_id}
+                paymentIntentId={booking?.paymentIntentId}
             />
         </>
     );

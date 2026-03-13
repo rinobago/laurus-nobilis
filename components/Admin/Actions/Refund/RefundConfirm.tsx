@@ -3,11 +3,13 @@ export default function RefundConfirm({
     onSave,
     onCancel,
     percentage = 50,
+    loading,
 }: {
     open: boolean;
     onSave: () => void;
     onCancel: () => void;
-    percentage: number;
+    percentage: 50 | 90 | 100;
+    loading: boolean;
 }) {
     if (!open) return null;
 
@@ -23,11 +25,13 @@ export default function RefundConfirm({
                 <div className="flex w-fit gap-8 justify-center items-center">
                     <button
                         onClick={onSave}
+                        disabled={loading}
                         className="btn-brown">
                         Jesam
                     </button>
                     <button
                         onClick={onCancel}
+                        disabled={loading}
                         className="btn-brown-outline">
                         Nisam
                     </button>

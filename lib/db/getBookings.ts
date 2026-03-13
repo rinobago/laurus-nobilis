@@ -30,7 +30,8 @@ export async function getBookings({ page = 1, limit = 10 }: GetBookingsParams) {
                 phone
             ),
             payments (
-                total_amount_cents
+                total_amount_cents,
+                stripe_payment_intent_id
             )
         `,
             { count: "exact" },
@@ -63,6 +64,7 @@ export async function getBookings({ page = 1, limit = 10 }: GetBookingsParams) {
                 last_name: customer?.last_name ?? null,
                 email: customer?.email ?? null,
                 phone: customer?.phone ?? null,
+                paymentIntentId: payment?.stripe_payment_intent_id ?? null,
                 total_amount:
                     payment?.total_amount_cents != null ? payment.total_amount_cents / 100 : null,
             };

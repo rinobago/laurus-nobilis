@@ -1,19 +1,70 @@
 "use client";
 
 import { PreviousButton } from "@/components/svg_icons/ChevronButtons";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import RefundConfirm from "./RefundConfirm";
 
-export default function RefundModal({ open, onClose }: { open: boolean; onClose: () => void }) {
+export default function RefundModal({
+    open,
+    onClose,
+    bookingId,
+    paymentIntentId,
+}: {
+    open: boolean;
+    onClose: () => void;
+    bookingId: string;
+    paymentIntentId: string | null;
+}) {
+    const router = useRouter();
+    const [loading, setLoading] = useState(false);
     const [openConfirm, setOpenConfirm] = useState(false);
-    const [percentage, setPercentage] = useState(50);
+    const [percentage, setPercentage] = useState<50 | 90 | 100>(50);
 
     useEffect(() => {
         document.body.style.overflow = open ? "hidden" : "";
         return () => {
             document.body.style.overflow = "";
         };
-    }, [open, onClose]);
+    }, [open]);
+
+    async function refundPayment(percent: 50 | 90 | 100) {
+        if (!paymentIntentId) {
+            alert("Nedostaje payment intent ID.");
+            return;
+        }
+
+        try {
+            setLoading(true);
+
+            const res = await fetch(`/api/admin/bookings/${encodeURIComponent(bookingId)}/refund`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    paymentIntentId,
+                    percent,
+                    bookingId,
+                }),
+            });
+
+            const data = await res.json();
+
+            if (!res.ok) {
+                throw new Error(data?.error || "Refund failed");
+            }
+
+            router.refresh();
+            setOpenConfirm(false);
+            onClose();
+        } catch (err) {
+            console.error("Refund error:", err);
+            alert("Došlo je do greške pri povratu novca.");
+        } finally {
+            setLoading(false);
+        }
+    }
 
     return (
         <>
@@ -33,7 +84,9 @@ export default function RefundModal({ open, onClose }: { open: boolean; onClose:
                                     name="refund"
                                     required
                                     value={percentage}
-                                    onChange={(e) => setPercentage(Number(e.target.value))}
+                                    onChange={(e) =>
+                                        setPercentage(Number(e.target.value) as 50 | 90 | 100)
+                                    }
                                     className="cursor-pointer appearance-none w-22.5 flex bg-beige-dark border border-beige-darker px-3.5 py-2.5 rounded-md text-black text-16 leading-150">
                                     <option value="50">50%</option>
                                     <option value="90">90%</option>
@@ -47,6 +100,7 @@ export default function RefundModal({ open, onClose }: { open: boolean; onClose:
                         <div className="flex w-fit gap-8 justify-center items-center">
                             <button
                                 onClick={() => setOpenConfirm(true)}
+                                disabled={loading || !paymentIntentId}
                                 className="btn-brown">
                                 Potvrdi
                             </button>
@@ -62,12 +116,10 @@ export default function RefundModal({ open, onClose }: { open: boolean; onClose:
 
             <RefundConfirm
                 open={openConfirm}
-                onSave={() => {
-                    setOpenConfirm(false);
-                    onClose();
-                }}
+                onSave={() => refundPayment(percentage)}
                 onCancel={() => setOpenConfirm(false)}
                 percentage={percentage}
+                loading={loading}
             />
         </>
     );

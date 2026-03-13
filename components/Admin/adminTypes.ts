@@ -9,6 +9,7 @@ export type Booking = {
     last_name: string | null;
     email: string | null;
     phone: string | null;
+    paymentIntentId: string | null;
     total_amount: number | null;
 };
 
