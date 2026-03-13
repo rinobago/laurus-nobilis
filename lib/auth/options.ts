@@ -1,7 +1,7 @@
 import type { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 
-export const authSecret = process.env.NEXTAUTH_SECRET ?? process.env.AUTH_SECRET;
+export const authSecret = process.env.NEXTAUTH_SECRET;
 
 if (process.env.NODE_ENV === "production" && !authSecret) {
     throw new Error("Missing auth secret. Set NEXTAUTH_SECRET (or AUTH_SECRET) in production.");
