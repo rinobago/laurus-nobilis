@@ -27,7 +27,7 @@ async function sendEmail(to: string, subject: string, text: string) {
     form.append("subject", subject);
     form.append("text", text);
     // Testing: uncomment to enable sending emails
-    form.append("o:testmode", "yes");
+    // form.append("o:testmode", "yes");
 
     const res = await fetch(`https://api.eu.mailgun.net/v3/${MAILGUN_DOMAIN}/messages`, {
         method: "POST",

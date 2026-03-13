@@ -1,6 +1,7 @@
-// lib/db/getBookings.ts
-
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { getServerSession } from "next-auth";
+import { NextResponse } from "next/server";
+import { authOptions, isAdminEmail } from "../auth/options";
 
 type GetBookingsParams = {
     page?: number;
@@ -8,6 +9,14 @@ type GetBookingsParams = {
 };
 
 export async function getBookings({ page = 1, limit = 10 }: GetBookingsParams) {
+    // 1) Require logged-in admin
+    const session = await getServerSession(authOptions);
+    const email = session?.user?.email ?? null;
+
+    if (!isAdminEmail(email)) {
+        return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
     const supabase = createSupabaseServerClient();
 
     const from = (page - 1) * limit;
