@@ -93,10 +93,14 @@ export default function ActionsModal({
             <ChangeDatesModal
                 open={openDates}
                 onClose={() => setOpenDates(false)}
+                bookingId={booking.booking_id}
+                initialCheckIn={booking.checkin_date}
+                initialCheckOut={booking.checkout_date}
             />
             <CancelModal
                 open={openCancel}
                 onClose={() => setOpenCancel(false)}
+                bookingId={booking.booking_id}
             />
             <RefundModal
                 open={openRefund}

@@ -1,8 +1,12 @@
+import { formatDMY, fromYMD } from "@/lib/dateParams";
 import ActionDotsButton from "../Actions/ActionDotsButton";
 import { Booking } from "../adminTypes";
 import StatusBanner from "./StatusBanner";
 
 export default function BookingRow({ booking }: { booking: Booking }) {
+    const from = booking?.checkin_date ? formatDMY(fromYMD(booking?.checkin_date)) : "/";
+    const to = booking?.checkout_date ? formatDMY(fromYMD(booking?.checkout_date)) : "/";
+
     return (
         <tr className="bg-white border-y-[0.5px] border-beige-darkest">
             <td className="p-2.5 text-black text-12 leading-150 text-left">{booking.booking_id}</td>
@@ -10,7 +14,7 @@ export default function BookingRow({ booking }: { booking: Booking }) {
                 {booking.first_name} {booking.last_name}
             </td>
             <td className="p-2.5 text-black text-12 leading-150 text-left">
-                {booking.checkin_date} - {booking.checkout_date}
+                {from} - {to}
             </td>
             <td className="p-2.5 text-black text-12 leading-150 text-left">
                 {booking.guests_count}

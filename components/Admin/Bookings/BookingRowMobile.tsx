@@ -1,8 +1,12 @@
+import { formatDMY, fromYMD } from "@/lib/dateParams";
 import ActionDotsButton from "../Actions/ActionDotsButton";
 import { Booking } from "../adminTypes";
 import StatusBanner from "./StatusBanner";
 
 export default function BookingRowMobile({ booking }: { booking: Booking }) {
+    const from = booking?.checkin_date ? formatDMY(fromYMD(booking?.checkin_date)) : "/";
+    const to = booking?.checkout_date ? formatDMY(fromYMD(booking?.checkout_date)) : "/";
+
     return (
         <div className="w-full h-fit bg-white border border-beige-darkest rounded-[5px]">
             <div className="bg-beige-dark w-full py-2.5 pl-2.5 pr-1.25 flex justify-between items-center rounded-t-[5px]">
@@ -24,7 +28,7 @@ export default function BookingRowMobile({ booking }: { booking: Booking }) {
                         Datumi boravka
                     </div>
                     <div className="text-black text-12 leading-150 text-left">
-                        {booking.checkin_date} - {booking.checkout_date}
+                        {from} - {to}
                     </div>
                 </div>
                 <div className="flex justify-between items-center w-full">

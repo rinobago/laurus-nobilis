@@ -8,7 +8,8 @@ import { DateRange, DayPicker, getDefaultClassNames } from "react-day-picker";
 import { cs, de, enUS, es, fr, hr, hu, it, pl, sl } from "react-day-picker/locale";
 import { NextButton, PreviousButton } from "../svg_icons/ChevronButtons";
 
-type BlockedRange = { from: Date; to: Date };
+type BookingRange = { checkin_date: string; checkout_date: string };
+
 const DAY_PICKER_LOCALES = {
     en: enUS,
     de,
@@ -27,6 +28,60 @@ function getDayPickerLocale(locale: string) {
     return DAY_PICKER_LOCALES[normalizedLocale as keyof typeof DAY_PICKER_LOCALES] ?? enUS;
 }
 
+function addDaysUTC(date: Date, days: number) {
+    const next = new Date(date);
+    next.setUTCDate(next.getUTCDate() + days);
+    return next;
+}
+
+function dayDiffUTC(from: Date, to: Date) {
+    const msPerDay = 24 * 60 * 60 * 1000;
+    return Math.round((to.getTime() - from.getTime()) / msPerDay);
+}
+
+function buildBlockedDaySet(ranges: BookingRange[]) {
+    const blockedDays = new Set<string>();
+
+    for (const range of ranges) {
+        const checkIn = fromYMD(range.checkin_date);
+        const checkOut = fromYMD(range.checkout_date);
+
+        // Same-day booking blocks that day directly.
+        if (toYMD(checkIn) === toYMD(checkOut)) {
+            blockedDays.add(toYMD(checkIn));
+            continue;
+        }
+
+        let cursor = addDaysUTC(checkIn, 1);
+        const end = addDaysUTC(checkOut, -1);
+
+        while (cursor <= end) {
+            blockedDays.add(toYMD(cursor));
+            cursor = addDaysUTC(cursor, 1);
+        }
+    }
+
+    if (blockedDays.size < 2) return blockedDays;
+
+    const sortedBlocked = [...blockedDays].sort();
+    const result = new Set(blockedDays);
+
+    for (let i = 0; i < sortedBlocked.length - 1; i++) {
+        const left = fromYMD(sortedBlocked[i]);
+        const right = fromYMD(sortedBlocked[i + 1]);
+        const freeGap = dayDiffUTC(left, right) - 1;
+
+        // If 1 or 2 free days are trapped between blocked days, block them too.
+        if (freeGap >= 1 && freeGap <= 2) {
+            for (let offset = 1; offset <= freeGap; offset++) {
+                result.add(toYMD(addDaysUTC(left, offset)));
+            }
+        }
+    }
+
+    return result;
+}
+
 export default function BookingCalendar() {
     const locale = useLocale();
     const dayPickerLocale = useMemo(() => getDayPickerLocale(locale), [locale]);
@@ -35,7 +90,7 @@ export default function BookingCalendar() {
     const cn = getDefaultClassNames();
 
     const [months, setMonths] = useState(2);
-    const [blockedRanges, setBlockedRanges] = useState<BlockedRange[]>([]);
+    const [blockedDays, setBlockedDays] = useState<Set<string>>(new Set());
 
     const router = useRouter();
     const pathname = usePathname();
@@ -68,23 +123,12 @@ export default function BookingCalendar() {
                 const res = await fetch("/api/bookings/blocked");
                 if (!res.ok) return;
                 const payload = (await res.json()) as {
-                    ranges?: { checkin_date: string; checkout_date: string }[];
+                    ranges?: BookingRange[];
                 };
 
                 if (!active) return;
 
-                const ranges: BlockedRange[] = (payload.ranges || [])
-                    .map((range) => {
-                        const from = fromYMD(range.checkin_date);
-                        const to = fromYMD(range.checkout_date);
-                        to.setUTCDate(to.getUTCDate() - 1);
-
-                        if (to < from) return null;
-                        return { from, to };
-                    })
-                    .filter((range): range is BlockedRange => Boolean(range));
-
-                setBlockedRanges(ranges);
+                setBlockedDays(buildBlockedDaySet(payload.ranges || []));
             } catch {
                 // Silent fail; calendar remains usable.
             }
@@ -125,7 +169,10 @@ export default function BookingCalendar() {
             min={2}
             defaultMonth={monthStart}
             startMonth={minMonth}
-            disabled={[{ before: today }, ...blockedRanges]}
+            disabled={[
+                { before: today },
+                (date) => blockedDays.has(toYMD(date)),
+            ]}
             excludeDisabled
             locale={dayPickerLocale}
             timeZone="UTC"

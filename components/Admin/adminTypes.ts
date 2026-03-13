@@ -12,4 +12,4 @@ export type Booking = {
     total_amount: number | null;
 };
 
-export type Status = "active" | "cancelled" | "refunded";
+export type Status = "active" | "canceled" | "refunded";

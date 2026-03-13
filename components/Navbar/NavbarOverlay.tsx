@@ -24,10 +24,7 @@ export default function NavbarOverlay({
 
     return (
         <div
-            className={`
-        fixed inset-0 z-40 bg-brown-100 lg:hidden
-        transition-transform duration-300 ease-out
-        ${open ? "translate-x-0 pointer-events-auto" : "translate-x-full pointer-events-none"}
+            className={`fixed inset-0 z-40 bg-brown-100 lg:hidden transition-transform duration-300 ease-out ${open ? "translate-x-0 pointer-events-auto" : "translate-x-full pointer-events-none"}
       `}>
             {/* scroll container + safe-area padding */}
             <div className="h-full overflow-y-auto pt-26 sm:pt-112 pb-40">

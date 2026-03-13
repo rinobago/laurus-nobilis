@@ -33,14 +33,14 @@ export default function ViewModal({
             ? "Aktivan"
             : booking.status === "refunded"
               ? "Refundiran"
-              : booking.status === "cancelled"
+              : booking.status === "canceled"
                 ? "Otkazan"
                 : booking.status;
 
-    const from = formatDMY(fromYMD(checkIn));
-    const to = formatDMY(fromYMD(checkOut));
+    const from = checkIn ? formatDMY(fromYMD(checkIn)) : "/";
+    const to = checkOut ? formatDMY(fromYMD(checkOut)) : "/";
 
-    const nights = nightsBetween(fromYMD(checkIn), fromYMD(checkOut));
+    const nights = checkIn && checkOut ? nightsBetween(fromYMD(checkIn), fromYMD(checkOut)) : "/";
     const season = seasonLabel(fromYMD(checkOut));
 
     return (

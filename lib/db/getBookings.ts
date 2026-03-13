@@ -52,20 +52,10 @@ export async function getBookings({ page = 1, limit = 10 }: GetBookingsParams) {
                 ? booking.payments[0]
                 : booking.payments;
 
-            console.log({
-                page,
-                limit,
-                from,
-                to,
-                count,
-                data,
-                error,
-            });
-
             return {
                 booking_id: booking.id,
-                checkin_date: booking.checkin_date,
-                checkout_date: booking.checkout_date,
+                checkin_date: booking.checkin_date ?? "",
+                checkout_date: booking.checkout_date ?? "",
                 guests_count: booking.guests_count,
                 status: booking.status,
                 created_at: booking.created_at,

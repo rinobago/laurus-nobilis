@@ -2,10 +2,12 @@ export default function ChangeDatesConfirm({
     open,
     onSave,
     onCancel,
+    loading = false,
 }: {
     open: boolean;
     onSave: () => void;
     onCancel: () => void;
+    loading?: boolean;
 }) {
     if (!open) return null;
 
@@ -17,11 +19,13 @@ export default function ChangeDatesConfirm({
                 </div>
                 <div className="flex w-fit gap-8 justify-center items-center">
                     <button
+                        disabled={loading}
                         onClick={onSave}
                         className="btn-brown">
-                        Jesam
+                        {loading ? "Spremanje..." : "Jesam"}
                     </button>
                     <button
+                        disabled={loading}
                         onClick={onCancel}
                         className="btn-brown-outline">
                         Nisam

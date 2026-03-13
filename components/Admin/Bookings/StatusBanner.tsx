@@ -8,7 +8,7 @@ export default function StatusBanner({ status }: { status: Status }) {
             dotClass: "bg-badge-green-fg",
             textClass: "text-badge-green-fg",
         },
-        cancelled: {
+        canceled: {
             text: "Otkazan",
             containerClass: "bg-badge-blue-bg",
             dotClass: "bg-badge-blue-fg",
