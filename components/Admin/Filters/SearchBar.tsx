@@ -1,29 +1,32 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { SearchIcon } from "../../svg_icons/AdminIcons";
-import { Booking } from "../adminTypes";
 
-export default function SearchBar({ bookings }: { bookings?: Booking[] }) {
+export default function SearchBar() {
     const router = useRouter();
     const searchParams = useSearchParams();
 
     const [search, setSearch] = useState(searchParams.get("q") || "");
 
-    const handleChange = (value: string) => {
-        setSearch(value);
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            const params = new URLSearchParams(searchParams.toString());
 
-        const params = new URLSearchParams(searchParams.toString());
+            if (search) {
+                params.set("q", search);
+            } else {
+                params.delete("q");
+            }
 
-        if (value) {
-            params.set("q", value);
-        } else {
-            params.delete("q");
-        }
+            params.set("page", "1");
 
-        router.replace(`?${params.toString()}`);
-    };
+            router.replace(`?${params.toString()}`);
+        }, 300); // debounce delay
+
+        return () => clearTimeout(timeout);
+    }, [search, router, searchParams]);
 
     return (
         <div className="relative flex justify-start items-center gap-8 max-w-75 w-full h-full rounded-[5px] bg-beige-dark border border-beige-darker">
@@ -32,7 +35,7 @@ export default function SearchBar({ bookings }: { bookings?: Booking[] }) {
                 type="search"
                 placeholder="Pretraži..."
                 value={search}
-                onChange={(e) => handleChange(e.target.value)}
+                onChange={(e) => setSearch(e.target.value)}
                 className="py-8 pl-10 pr-8 w-full h-full bg-transparent text-14 leading-150 text-black placeholder-placeholder-text focus:outline-none"
             />
         </div>

@@ -67,12 +67,12 @@ export function buildPageMetadata({
               }
             : {
                   index: false,
-                  follow: false,
-                  nocache: true,
+                  follow: true,
+                  nocache: false,
                   googleBot: {
-                      index: false,
-                      follow: false,
-                      noimageindex: true,
+                      index: true,
+                      follow: true,
+                      noimageindex: false,
                   },
               },
     };

@@ -6,13 +6,20 @@ import { getBookings } from "@/lib/db/getBookings";
 export default async function Page({
     searchParams,
 }: {
-    searchParams?: Promise<{ page?: string; limit?: string }>;
+    searchParams?: Promise<{ page?: string; limit?: string; filter?: string; q?: string }>;
 }) {
     const params = (await searchParams) ?? {};
     const page = parseInt(params.page ?? "1", 10);
     const limit = parseInt(params.limit ?? "10", 10);
+    const filterOption = params.filter ?? null;
+    const q = params.q ?? null;
 
-    const { bookings, totalItems, totalPages } = await getBookings({ page, limit });
+    const { bookings, totalItems, totalPages } = await getBookings({
+        page,
+        limit,
+        filterOption,
+        q,
+    });
 
     return (
         <div>

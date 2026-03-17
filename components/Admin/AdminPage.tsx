@@ -2,7 +2,7 @@ import BookingList from "./Bookings/BookingList";
 import FilterSection from "./Filters/FilterSection";
 import { Booking } from "./adminTypes";
 
-export default async function AdminPage({
+export default function AdminPage({
     bookings,
     page,
     limit,

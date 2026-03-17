@@ -5,9 +5,11 @@ import { authOptions, isAdminEmail } from "../auth/options";
 type GetBookingsParams = {
     page?: number;
     limit?: number;
+    filterOption?: string | null;
+    q?: string | null;
 };
 
-export async function getBookings({ page = 1, limit = 10 }: GetBookingsParams) {
+export async function getBookings({ page = 1, limit = 10, filterOption, q }: GetBookingsParams) {
     // 1) Require logged-in admin
     const session = await getServerSession(authOptions);
     const email = session?.user?.email ?? null;
@@ -21,31 +23,44 @@ export async function getBookings({ page = 1, limit = 10 }: GetBookingsParams) {
     const from = (page - 1) * limit;
     const to = from + limit - 1;
 
-    const { data, error, count } = await supabase
+    let queryBuilder = supabase
         .from("bookings")
         .select(
             `
-            id,
-            checkin_date,
-            checkout_date,
-            guests_count,
-            status,
-            created_at,
-            customers (
-                first_name,
-                last_name,
-                email,
-                phone
-            ),
-            payments (
-                total_amount_cents,
-                stripe_payment_intent_id
-            )
-        `,
+        id,
+        checkin_date,
+        checkout_date,
+        guests_count,
+        status,
+        created_at,
+        customers!inner (
+            first_name,
+            last_name,
+            email,
+            phone
+        ),
+        payments (
+            total_amount_cents,
+            stripe_payment_intent_id
+        )
+    `,
             { count: "exact" },
         )
         .order("created_at", { ascending: false })
         .range(from, to);
+
+    if (filterOption) {
+        queryBuilder = queryBuilder.eq("status", filterOption);
+    }
+
+    if (q) {
+        queryBuilder = queryBuilder.or(
+            `first_name.ilike.*${q}*,last_name.ilike.*${q}*,email.ilike.*${q}*,phone.ilike.*${q}*`,
+            { referencedTable: "customers" },
+        );
+    }
+
+    const { data, error, count } = await queryBuilder;
 
     if (error) {
         console.error("getBookings query error:", error);
