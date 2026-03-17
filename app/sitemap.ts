@@ -11,23 +11,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: "weekly",
             priority: 1,
         },
-        {
-            url: absoluteUrl("/privacy-policy"),
-            lastModified,
-            changeFrequency: "yearly",
-            priority: 0.3,
-        },
-        {
-            url: absoluteUrl("/terms-of-service"),
-            lastModified,
-            changeFrequency: "yearly",
-            priority: 0.3,
-        },
-        {
-            url: absoluteUrl("/cancellation-policy"),
-            lastModified,
-            changeFrequency: "yearly",
-            priority: 0.4,
-        },
     ];
 }
