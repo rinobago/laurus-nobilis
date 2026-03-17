@@ -11,6 +11,11 @@ export default function SearchBar() {
     const [search, setSearch] = useState(searchParams.get("q") || "");
 
     useEffect(() => {
+        const currentQuery = searchParams.get("q") || "";
+
+        // Prevent replace loops when local input and URL are already in sync.
+        if (search === currentQuery) return;
+
         const timeout = setTimeout(() => {
             const params = new URLSearchParams(searchParams.toString());
 
