@@ -52,7 +52,8 @@
         "MidSeason": "Mid season",
         "HighSeason": "High season",
         "ByNight": "night",
-        "Button": "Request dates"
+        "Button": "Request dates",
+        "Discount": "If you book seven or more days, you receive a 5% discount"
     },
     "Booking": {
         "Title": "Ready to book your stay at Laurus Nobilis?",

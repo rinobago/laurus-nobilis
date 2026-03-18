@@ -1,6 +1,7 @@
 "use client";
 
 import { formatDMY, fromYMD, nightsBetween, pricePerNight } from "@/lib/dateParams";
+import { formatDecimal } from "@/lib/numberFormat";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
@@ -22,7 +23,7 @@ export default function DetailsCard() {
 
     const nights = nightsBetween(checkIn, checkOut);
 
-    const priceNight = pricePerNight(checkOut);
+    const priceNight = nights >= 7 ? pricePerNight(checkOut) * 0.95 : pricePerNight(checkOut);
 
     const rentPrice = nights * priceNight;
     const cleaningFee = 50;
@@ -73,13 +74,13 @@ export default function DetailsCard() {
                     <div className="flex justify-between items-start w-full leading-150 text-14 text-left ">
                         <div className="flex flex-col justify-start items-center">
                             <p className="w-full">
-                                {nights} {t("Nights")} x € {priceNight}
+                                {nights} {t("Nights")} x € {formatDecimal(priceNight)}
                             </p>
                             <p className="w-full">{t("CleaningFee")}</p>
                         </div>
                         <div className="flex flex-col justify-start items-center">
-                            <p className="w-full">€ {rentPrice}</p>
-                            <p className="w-full">€ {cleaningFee}</p>
+                            <p className="w-full">€ {formatDecimal(rentPrice)}</p>
+                            <p className="w-full">€ {formatDecimal(cleaningFee)}</p>
                         </div>
                     </div>
                 </div>
@@ -87,7 +88,7 @@ export default function DetailsCard() {
                 <div className="flex flex-col justify-start items-center gap-8 w-full">
                     <p className="text-14 text-left w-full leading-150 font-medium">{t("Total")}</p>
                     <p className="text-18 font-semibold leading-150 w-full text-left">
-                        € {totalPrice}
+                        € {formatDecimal(totalPrice)}
                     </p>
                 </div>
                 <div className="flex flex-col justify-center items-center gap-4 w-full">

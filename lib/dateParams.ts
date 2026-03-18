@@ -35,17 +35,17 @@ export function pricePerNight(to?: Date) {
 
     // 1.11 - 1.3 (Nov 1 -> Mar 1)
     if ((m === 11 && d >= 1) || m === 12 || m === 1 || m === 2 || (m === 3 && d <= 1)) {
-        return 150;
+        return 245;
     }
 
     // 2.3 - 30.5 (Mar 2 -> May 30)
     if ((m === 3 && d >= 2) || m === 4 || (m === 5 && d <= 30)) {
-        return 200;
+        return 320;
     }
 
     // 1.6 - 31.10 (Jun 1 -> Oct 31)
     if ((m === 6 && d >= 1) || m === 7 || m === 8 || m === 9 || (m === 10 && d <= 31)) {
-        return 300;
+        return 400;
     }
 
     return 0;

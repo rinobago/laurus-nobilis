@@ -38,7 +38,7 @@ export async function POST(req: Request) {
     }
 
     const nights = nightsBetween(checkIn, checkOut);
-    const nightly = pricePerNight(checkOut);
+    const nightly = nights >= 7 ? pricePerNight(checkOut) * 0.95 : pricePerNight(checkOut);
     const cleaningFee = 50;
 
     const total = nights * nightly + cleaningFee;

@@ -1,6 +1,7 @@
 "use client";
 
 import { PreviousButton } from "@/components/svg_icons/ChevronButtons";
+import { formatDecimal } from "@/lib/numberFormat";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import RefundConfirm from "./RefundConfirm";
@@ -10,16 +11,20 @@ export default function RefundModal({
     onClose,
     bookingId,
     paymentIntentId,
+    totalAmount,
 }: {
     open: boolean;
     onClose: () => void;
     bookingId: string;
     paymentIntentId: string | null;
+    totalAmount: number | null;
 }) {
     const router = useRouter();
     const [loading, setLoading] = useState(false);
     const [openConfirm, setOpenConfirm] = useState(false);
     const [percentage, setPercentage] = useState<50 | 90 | 100>(50);
+
+    const refundAmount = totalAmount ? totalAmount * (percentage / 100) : null;
 
     useEffect(() => {
         document.body.style.overflow = open ? "hidden" : "";
@@ -77,7 +82,7 @@ export default function RefundModal({
                         <div className="flex flex-col gap-16 w-full h-fit justify-center items-start">
                             <div className="flex gap-10 w-fit h-fit justify-start items-center text-black text-12 md:text-14 leading-150 font-medium text-left">
                                 <div>Iznos</div>
-                                <div>€ ___</div>
+                                <div>€ {formatDecimal(refundAmount)}</div>
                             </div>
                             <div className="relative flex items-center justify-center">
                                 <select

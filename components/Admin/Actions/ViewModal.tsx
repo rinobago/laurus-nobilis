@@ -2,6 +2,7 @@
 
 import Xicon from "@/components/svg_icons/Xicon";
 import { formatDMY, fromYMD, nightsBetween, seasonLabel } from "@/lib/dateParams";
+import { formatDecimal } from "@/lib/numberFormat";
 import { useEffect } from "react";
 import { Booking } from "../adminTypes";
 
@@ -174,7 +175,7 @@ export default function ViewModal({
                                     {season}
                                 </div>
                                 <div className="text-12 md:text-14 leading-150 text-right">
-                                    € {booking?.total_amount}
+                                    € {formatDecimal(booking?.total_amount)}
                                 </div>
                             </div>
                         </div>

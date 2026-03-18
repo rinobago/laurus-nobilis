@@ -52,7 +52,8 @@
         "MidSeason": "Sredina sezone",
         "HighSeason": "Unutar sezone",
         "ByNight": "noć",
-        "Button": "Zatraži datume"
+        "Button": "Zatraži datume",
+        "Discount": "Ako rezervirate sedam ili više dana, ostvarujete 5% popusta"
     },
     "Booking": {
         "Title": "Spremni za rezervaciju boravka u Laurus Nobilisu?",

@@ -1,4 +1,5 @@
 import { formatDMY, fromYMD } from "@/lib/dateParams";
+import { formatDecimal } from "@/lib/numberFormat";
 import ActionDotsButton from "../Actions/ActionDotsButton";
 import { Booking } from "../adminTypes";
 import StatusBanner from "./StatusBanner";
@@ -44,7 +45,7 @@ export default function BookingRowMobile({ booking }: { booking: Booking }) {
                         Ukupan iznos
                     </div>
                     <div className="text-black text-12 leading-150 text-left">
-                        € {booking.total_amount}
+                        € {formatDecimal(booking.total_amount)}
                     </div>
                 </div>
             </div>

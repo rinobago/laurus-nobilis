@@ -107,6 +107,7 @@ export default function ActionsModal({
                 onClose={() => setOpenRefund(false)}
                 bookingId={booking.booking_id}
                 paymentIntentId={booking?.paymentIntentId}
+                totalAmount={booking?.total_amount}
             />
         </>
     );

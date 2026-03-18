@@ -116,6 +116,8 @@ export default function ChangeDatesModal({
                                     setSelectedRange(range);
                                 }}
                                 disabled={saving}
+                                currentCheckIn={initialCheckIn}
+                                currentCheckOut={initialCheckOut}
                             />
                         </div>
                         {saveError ? (

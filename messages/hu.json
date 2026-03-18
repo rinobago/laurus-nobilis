@@ -52,7 +52,8 @@
     "MidSeason": "Középszezon",
     "HighSeason": "Főszezon",
     "ByNight": "éj",
-    "Button": "Dátumkérés"
+    "Button": "Dátumkérés",
+    "Discount": "Ha hét vagy annál több napot foglal, 5% kedvezményt kap"
   },
   "Booking": {
     "Title": "Készen áll a Laurus Nobilis foglalására?",

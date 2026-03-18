@@ -7,9 +7,18 @@ type GetBookingsParams = {
     limit?: number;
     filterOption?: string | null;
     q?: string | null;
+    check_in?: string | null;
+    check_out?: string | null;
 };
 
-export async function getBookings({ page = 1, limit = 10, filterOption, q }: GetBookingsParams) {
+export async function getBookings({
+    page = 1,
+    limit = 10,
+    filterOption,
+    q,
+    check_in,
+    check_out,
+}: GetBookingsParams) {
     // 1) Require logged-in admin
     const session = await getServerSession(authOptions);
     const email = session?.user?.email ?? null;
@@ -58,6 +67,10 @@ export async function getBookings({ page = 1, limit = 10, filterOption, q }: Get
             `first_name.ilike.*${q}*,last_name.ilike.*${q}*,email.ilike.*${q}*,phone.ilike.*${q}*`,
             { referencedTable: "customers" },
         );
+    }
+
+    if (check_in && check_out) {
+        queryBuilder = queryBuilder.gte("checkin_date", check_in).lte("checkin_date", check_out);
     }
 
     const { data, error, count } = await queryBuilder;

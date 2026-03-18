@@ -1,4 +1,5 @@
 import { formatDMY, fromYMD } from "@/lib/dateParams";
+import { formatDecimal } from "@/lib/numberFormat";
 import ActionDotsButton from "../Actions/ActionDotsButton";
 import { Booking } from "../adminTypes";
 import StatusBanner from "./StatusBanner";
@@ -20,7 +21,7 @@ export default function BookingRow({ booking }: { booking: Booking }) {
                 {booking.guests_count}
             </td>
             <td className="p-2.5 text-black text-12 leading-150 text-left">
-                € {booking.total_amount}
+                € {formatDecimal(booking.total_amount)}
             </td>
             <td className="p-2.5">
                 <StatusBanner status={booking.status} />

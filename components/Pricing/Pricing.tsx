@@ -24,7 +24,12 @@ export default function Pricing() {
                     </h2>
                     <p className="text-center text-16 lg:text-18 text-black">{t("Description")}</p>
                 </div>
-                <PricingTable />
+                <div className="flex flex-col gap-32 items-center justify-center w-full">
+                    <PricingTable />
+                    <div className="w-full text-center font-medium text-badge-red-fg text-[clamp(12px,1.44vw,18px)] leadin-150">
+                        {t("Discount")}
+                    </div>
+                </div>
                 <a
                     href="/#booking"
                     className="btn-brown">
