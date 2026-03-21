@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import Reveal from "../Animation/FadeIn";
 import PricingTable from "./PricingTable";
 
 export default function Pricing() {
@@ -26,15 +27,17 @@ export default function Pricing() {
                 </div>
                 <div className="flex flex-col gap-32 items-center justify-center w-full">
                     <PricingTable />
-                    <div className="w-full text-center font-medium text-badge-red-fg text-[clamp(12px,1.44vw,18px)] leadin-150">
+                    <Reveal className="w-full text-center font-medium text-badge-red-fg text-[clamp(12px,1.44vw,18px)] leadin-150 pulse-soft">
                         {t("Discount")}
-                    </div>
+                    </Reveal>
                 </div>
-                <a
-                    href="/#booking"
-                    className="btn-brown">
-                    {t("Button")}
-                </a>
+                <Reveal>
+                    <a
+                        href="/#booking"
+                        className="btn-brown">
+                        {t("Button")}
+                    </a>
+                </Reveal>
             </div>
         </section>
     );

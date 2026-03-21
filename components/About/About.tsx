@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import Reveal from "../Animation/FadeIn";
 
 export default function About() {
     const t = useTranslations("About");
@@ -15,15 +16,21 @@ export default function About() {
                     {t("Title")}
                 </h2>
                 <article className="flex flex-col gap-24">
-                    <p className="text-beige-dark w-full text-18 leading-150 text-left">
+                    <Reveal
+                        as="p"
+                        className="text-beige-dark w-full text-18 leading-150 text-left">
                         {t("Description1")}
-                    </p>
-                    <p className="text-beige-dark w-full text-18 leading-150 text-left">
+                    </Reveal>
+                    <Reveal
+                        as="p"
+                        className="text-beige-dark w-full text-18 leading-150 text-left">
                         {t("Description2")}
-                    </p>
-                    <p className="text-beige-dark w-full text-18 leading-150 text-left">
+                    </Reveal>
+                    <Reveal
+                        as="p"
+                        className="text-beige-dark w-full text-18 leading-150 text-left">
                         {t("Description3")}
-                    </p>
+                    </Reveal>
                 </article>
             </div>
         </section>

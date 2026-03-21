@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useRouter, useSearchParams } from "next/navigation";
+import Reveal from "../Animation/FadeIn";
 import BookingCalendar from "./BookingCalendar";
 
 export default function ReserveButtonWithCalendar() {
@@ -25,12 +26,14 @@ export default function ReserveButtonWithCalendar() {
                 aria-label="Booking calendar">
                 <BookingCalendar />
             </div>
-            <button
-                onClick={onReserve}
-                disabled={!checkIn || !checkOut}
-                className="btn-beige">
-                {t("Button")}
-            </button>
+            <Reveal>
+                <button
+                    onClick={onReserve}
+                    disabled={!checkIn || !checkOut}
+                    className="btn-beige">
+                    {t("Button")}
+                </button>
+            </Reveal>
         </>
     );
 }

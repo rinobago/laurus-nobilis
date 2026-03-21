@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useState } from "react";
+import Reveal from "../Animation/FadeIn";
 import AmenitiesPopup from "./AmenitiesPopup";
 
 export default function ShowAmenitiesButton() {
@@ -10,12 +11,14 @@ export default function ShowAmenitiesButton() {
 
     return (
         <>
-            <button
-                type="button"
-                className="btn-brown-outline"
-                onClick={() => setOpen(true)}>
-                {t("Button")}
-            </button>
+            <Reveal>
+                <button
+                    type="button"
+                    className="btn-brown-outline"
+                    onClick={() => setOpen(true)}>
+                    {t("Button")}
+                </button>
+            </Reveal>
 
             <AmenitiesPopup
                 open={open}

@@ -392,3 +392,24 @@ body {
 @utility formLabel {
     @apply inline w-full text-black text-left text-16;
 }
+
+/* subtle pulse */
+.pulse-soft {
+    animation: pulseSoft 8s ease-in-out infinite;
+}
+
+@keyframes pulseSoft {
+    0%,
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+    25% {
+        transform: scale(1.02) rotate(2deg);
+    }
+    50% {
+        transform: scale(1) rotate(0deg);
+    }
+    75% {
+        transform: scale(1.02) rotate(-2deg);
+    }
+}
