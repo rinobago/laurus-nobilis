@@ -32,32 +32,36 @@ export default function Reveal({
 }: RevealProps) {
     const ref = useRef(null);
 
-    useGSAP(() => {
-        const el = ref.current;
-        if (!el) return;
+    useGSAP(
+        () => {
+            const el = ref.current;
+            if (!el) return;
 
-        gsap.fromTo(
-            el,
-            {
-                opacity: 0,
-                y,
-            },
-            {
-                opacity: 1,
-                y: 0,
-                duration,
-                stagger,
-                delay,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: el,
-                    start,
-                    toggleActions: once ? "play none none none" : "play reverse play reverse",
-                    once,
+            gsap.fromTo(
+                el,
+                {
+                    opacity: 0,
+                    y,
                 },
-            },
-        );
-    });
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration,
+                    stagger,
+                    delay,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start,
+                        toggleActions: once ? "play none none none" : "play reverse play reverse",
+                        once,
+                        invalidateOnRefresh: true,
+                    },
+                },
+            );
+        },
+        { scope: ref },
+    );
 
     return (
         <Tag
