@@ -39,6 +39,8 @@ export default function DetailsCard() {
                     alt="Image of the view from apartment"
                     fill
                     className="object-cover"
+                    sizes="(max-width: 478px) calc(100vw - 48px), 430px"
+                    priority
                 />
             </div>
             <div className="flex flex-col gap-24 items-start justify-center px-24 py-16 w-full text-black">

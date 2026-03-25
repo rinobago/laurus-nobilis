@@ -1,14 +1,62 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useMemo, useState } from "react";
 import { ArrowLeft, ArrowRight } from "../svg_icons/ArrowIcons";
 import Dots from "./Dots";
 
 export type Img = { src: string; alt: string };
 
-const ACTIVE_W = 1080;
-const INACTIVE_W = 900;
+const SWIPE_THRESHOLD = 50;
+
+type LayoutValues = {
+    isMobile: boolean;
+    activeW: number;
+    inactiveW: number;
+    stageH?: number;
+};
+
+function getLayoutValues(viewportWidth: number): LayoutValues {
+    const mobile = viewportWidth < 730;
+
+    if (mobile) {
+        return {
+            isMobile: true,
+            activeW: 1080,
+            inactiveW: 900,
+            stageH: undefined,
+        };
+    }
+
+    if (viewportWidth < 890) {
+        const activeW = 648;
+        const inactiveW = 540;
+        return {
+            isMobile: false,
+            activeW,
+            inactiveW,
+            stageH: Math.round((activeW * 2) / 3),
+        };
+    }
+
+    if (viewportWidth < 1140) {
+        const activeW = 810;
+        const inactiveW = 675;
+        return {
+            isMobile: false,
+            activeW,
+            inactiveW,
+            stageH: Math.round((activeW * 2) / 3),
+        };
+    }
+
+    return {
+        isMobile: false,
+        activeW: 1080,
+        inactiveW: 900,
+        stageH: Math.round((1080 * 2) / 3),
+    };
+}
 
 export default function InfiniteStage({
     images,
@@ -20,66 +68,38 @@ export default function InfiniteStage({
     showDots?: boolean;
 }) {
     const [active, setActive] = useState(0);
-    const [isMobile, setIsMobile] = useState(false);
+
+    const [layout, setLayout] = useState<LayoutValues | null>(null);
+    const [isReady, setIsReady] = useState(false);
 
     const [touchStartX, setTouchStartX] = useState<number | null>(null);
     const [touchEndX, setTouchEndX] = useState<number | null>(null);
-
-    const SWIPE_THRESHOLD = 50; // minimum px to count as swipe
-
-    // ✅ derived widths instead of scaling
-    const [activeW, setActiveW] = useState(ACTIVE_W);
-    const [inactiveW, setInactiveW] = useState(INACTIVE_W);
-    const stageH = isMobile ? undefined : Math.round((activeW * 2) / 3);
 
     const count = images.length;
 
     const prev = () => setActive((i) => (i - 1 + count) % count);
     const next = () => setActive((i) => (i + 1) % count);
 
-    // distance from start to the CENTER of the active card (desktop mode)
-    const centerOffset = active * inactiveW + activeW / 2;
-
-    useEffect(() => {
+    useLayoutEffect(() => {
         const update = () => {
-            const w = window.innerWidth;
-
-            const mobile = w < 730;
-            setIsMobile(mobile);
-
-            if (mobile) {
-                // mobile: full width slides
-                setActiveW(ACTIVE_W);
-                setInactiveW(INACTIVE_W);
-                return;
-            }
-
-            // >=700 and <860 => scale 0.60
-            if (w < 890) {
-                setActiveW(648); // 1080 * 0.60
-                setInactiveW(540); // 900  * 0.60
-                return;
-            }
-
-            // >=860 and <1140 => scale 0.75
-            if (w < 1140) {
-                setActiveW(810); // 1080 * 0.75
-                setInactiveW(675); // 900  * 0.75
-                return;
-            }
-
-            // >=1140 => scale 1.00
-            setActiveW(1080);
-            setInactiveW(900);
+            const nextLayout = getLayoutValues(window.innerWidth);
+            setLayout(nextLayout);
+            setIsReady(true);
         };
 
         update();
+
         window.addEventListener("resize", update);
         return () => window.removeEventListener("resize", update);
     }, []);
 
+    const centerOffset = useMemo(() => {
+        if (!layout) return 0;
+        return active * layout.inactiveW + layout.activeW / 2;
+    }, [active, layout]);
+
     const handleTouchStart = (e: React.TouchEvent) => {
-        setTouchEndX(null); // reset
+        setTouchEndX(null);
         setTouchStartX(e.targetTouches[0].clientX);
     };
 
@@ -88,28 +108,39 @@ export default function InfiniteStage({
     };
 
     const handleTouchEnd = () => {
-        if (!touchStartX || !touchEndX) return;
+        if (touchStartX == null || touchEndX == null) return;
 
         const distance = touchStartX - touchEndX;
 
-        if (distance > SWIPE_THRESHOLD) {
-            // swiped left
-            next();
-        }
-
-        if (distance < -SWIPE_THRESHOLD) {
-            // swiped right
-            prev();
-        }
+        if (distance > SWIPE_THRESHOLD) next();
+        if (distance < -SWIPE_THRESHOLD) prev();
     };
+
+    // Prevent incorrect first paint
+    if (!layout || !isReady) {
+        return (
+            <div className="w-full">
+                <div className="relative w-full overflow-hidden invisible" />
+                {showDots && (
+                    <div className="mt-[48px]">
+                        <Dots
+                            count={count}
+                            active={active}
+                            onGo={setActive}
+                        />
+                    </div>
+                )}
+            </div>
+        );
+    }
+
+    const { isMobile, activeW, inactiveW, stageH } = layout;
 
     return (
         <div className="w-full">
-            {/* STAGE (full width) */}
             <div
                 className="relative w-full overflow-hidden"
                 style={{ height: stageH }}>
-                {/* ARROWS */}
                 {isMobile ? (
                     <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-between px-8">
                         <button
@@ -150,9 +181,8 @@ export default function InfiniteStage({
                     </div>
                 )}
 
-                {/* TRACK */}
                 <div
-                    className="flex items-center transition-transform duration-500 ease-out"
+                    className="flex items-center transition-transform duration-500 ease-out will-change-transform"
                     onTouchStart={isMobile ? handleTouchStart : undefined}
                     onTouchMove={isMobile ? handleTouchMove : undefined}
                     onTouchEnd={isMobile ? handleTouchEnd : undefined}
@@ -167,7 +197,9 @@ export default function InfiniteStage({
                         return (
                             <div
                                 key={img.src}
-                                className={`shrink-0 flex items-center justify-center transition-[width,filter] duration-300 ${isActive ? "brightness-100" : "brightness-50"}`}
+                                className={`shrink-0 flex items-center justify-center transition-[width,filter] duration-300 ${
+                                    isActive ? "brightness-100" : "brightness-50"
+                                }`}
                                 style={{
                                     width: isMobile
                                         ? "100%"
@@ -179,7 +211,9 @@ export default function InfiniteStage({
                                     <button
                                         type="button"
                                         onClick={isActive ? () => openGallery?.(i) : undefined}
-                                        className={`absolute inset-0 focus:outline-none ${isActive ? "cursor-pointer" : "pointer-events-none"}`}
+                                        className={`absolute inset-0 focus:outline-none ${
+                                            isActive ? "cursor-pointer" : "pointer-events-none"
+                                        }`}
                                         aria-label={isActive ? "Open gallery" : undefined}>
                                         <Image
                                             src={img.src}
@@ -193,6 +227,7 @@ export default function InfiniteStage({
                                                       ? `${activeW}px`
                                                       : `${inactiveW}px`
                                             }
+                                            priority={i === 0}
                                         />
                                     </button>
                                 </div>
@@ -202,7 +237,6 @@ export default function InfiniteStage({
                 </div>
             </div>
 
-            {/* DOTS */}
             {showDots && (
                 <div className="mt-[48px]">
                     <Dots

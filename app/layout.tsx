@@ -75,7 +75,8 @@ export default async function RootLayout({
     return (
         <html
             lang={locale}
-            className={montserrat.className}>
+            className={montserrat.className}
+            data-scroll-behavior="smooth">
             <body>
                 <NextIntlClientProvider>
                     <CookiePrefsProvider>

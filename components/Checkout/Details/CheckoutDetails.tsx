@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { Suspense } from "react";
+import Reveal from "../../Animation/FadeIn";
 import { PreviousButton } from "../../svg_icons/ChevronButtons";
 import DetailsCard from "./DetailsCard";
 import FormDetails from "./FormDetails";
@@ -36,7 +37,9 @@ export default function CheckoutDetails() {
                         </Suspense>
                     </div>
                     <Suspense fallback={null}>
-                        <DetailsCard />
+                        <Reveal className="max-w-107.5 w-full">
+                            <DetailsCard />
+                        </Reveal>
                     </Suspense>
                 </div>
             </div>
