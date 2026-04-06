@@ -8,9 +8,6 @@ export default function Gallery() {
             <CarouselWithGallery
                 images={[
                     { src: "/apartment-images/IMG_7222.jpg", alt: "Pool" },
-                    { src: "/apartment-images/image-copy-2.png", alt: "Pool" },
-                    { src: "/apartment-images/image-copy.png", alt: "Pool" },
-                    { src: "/apartment-images/image.png", alt: "Pool" },
                     { src: "/apartment-images/IMG_7223.jpg", alt: "Pool" },
                     { src: "/apartment-images/IMG_7224.jpg", alt: "Pool" },
                     { src: "/apartment-images/IMG_7225.jpg", alt: "Terrace" },
