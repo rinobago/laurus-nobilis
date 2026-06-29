@@ -34,6 +34,8 @@ function buildIcsCalendar(bookings: BookingRange[]): string {
             `DTSTART;VALUE=DATE:${toIcsDate(booking.checkin_date)}`,
             `DTEND;VALUE=DATE:${toIcsDate(booking.checkout_date)}`,
             "SUMMARY:Reserved",
+            "STATUS:CONFIRMED",
+            "TRANSP:OPAQUE",
             "END:VEVENT",
         );
     }
