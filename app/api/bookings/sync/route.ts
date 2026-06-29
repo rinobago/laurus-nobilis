@@ -135,7 +135,7 @@ async function importBookingsIntoSupabase(bookings: ParsedIcsBooking[]) {
             continue;
         }
 
-        /* const { error } = await supabase.from("bookings").insert({
+        const { error } = await supabase.from("bookings").insert({
             customer_id: null,
             checkin_date: booking.checkin_date,
             checkout_date: booking.checkout_date,
@@ -145,15 +145,7 @@ async function importBookingsIntoSupabase(bookings: ParsedIcsBooking[]) {
 
         if (error) {
             throw new Error(`Failed to insert booking: ${error.message}`);
-        } */
-
-        console.log("Booking to import:", {
-            customer_id: null,
-            checkin_date: booking.checkin_date,
-            checkout_date: booking.checkout_date,
-            guests_count: null,
-            status: "active",
-        });
+        }
 
         imported++;
     }
@@ -181,12 +173,6 @@ export async function POST(req: Request) {
     try {
         const authHeader = req.headers.get("authorization");
         const token = authHeader?.replace("Bearer ", "");
-
-        console.log("authHeader:", authHeader);
-        console.log("token exists:", Boolean(token));
-        console.log("cron secret exists:", Boolean(CRON_SECRET));
-        console.log("token length:", token?.length);
-        console.log("secret length:", CRON_SECRET?.length);
 
         if (!CRON_SECRET || token !== CRON_SECRET) {
             return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
