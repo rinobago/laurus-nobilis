@@ -182,6 +182,12 @@ export async function POST(req: Request) {
         const authHeader = req.headers.get("authorization");
         const token = authHeader?.replace("Bearer ", "");
 
+        console.log("authHeader:", authHeader);
+        console.log("token exists:", Boolean(token));
+        console.log("cron secret exists:", Boolean(CRON_SECRET));
+        console.log("token length:", token?.length);
+        console.log("secret length:", CRON_SECRET?.length);
+
         if (!CRON_SECRET || token !== CRON_SECRET) {
             return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
         }
